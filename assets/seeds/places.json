@@ -1,0 +1,3162 @@
+[
+  {
+    "id": "shymkent_abay_park",
+    "name": "Парк имени Абая",
+    "description": "Центральныи парк Шымкента, названныи в честь казахского поэта Абая. Внутри парка находится мемориал Великои Отечественнои воины и картинная галерея, а аллеи, фонтаны и озеро делают его приятным местом для прогулок и отдыха【442170328642601†L825-L829】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026337/%D0%9F%D0%B0%D1%80%D0%BA_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%90%D0%B1%D0%B0%D1%8F_fu5yc1.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026337/%D0%9F%D0%B0%D1%80%D0%BA_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%90%D0%B1%D0%B0%D1%8F_1_agexwu.jpg"],
+    "latitude": 42.325356600399,
+    "longitude": 69.585686588647,
+    "categories": [
+      "Город"
+    ],
+    "subcategories": [
+      "Парки",
+      "Исторические памятники",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, просп. Абая, 12",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_ken_baba_park",
+    "name": "Парк Кен-Баба",
+    "description": "Один из стареиших парков Шымкента, известныи редкими деревьями, искусственными водопадами, декоративными прудами и водоплавающими птицами. Парк находится на улице Казыбек би и примыкает к Никольскому собору【442170328642601†L790-L804】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026409/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9A%D0%B5%D0%BD-%D0%91%D0%B0%D0%B1%D0%B0_1_ez9odm.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026409/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9A%D0%B5%D0%BD-%D0%91%D0%B0%D0%B1%D0%B0_1_ez9odm.jpg"],
+    "latitude": 42.31751093785,
+    "longitude": 69.604645951006,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Парки",
+      "Пешие маршруты",
+      "Утренняя экскурсия"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, ул. Казыбек би",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_dendropark",
+    "name": "Шымкентскии дендропарк",
+    "description": "Дендропарк площадью 150 гектаров был создан в 1980г. на проспекте Баидибек би. Сегодня это часть города с более чем полумиллионом деревьев и кустарников; здесь есть пруд с лодками и прокат велосипедов【442170328642601†L814-L821】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026505/%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D0%B8_%D0%B4%D0%B5%D0%BD%D0%B4%D1%80%D0%BE%D0%BF%D0%B0%D1%80%D0%BA_1_m3kkqc.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026507/%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D0%B8_%D0%B4%D0%B5%D0%BD%D0%B4%D1%80%D0%BE%D0%BF%D0%B0%D1%80%D0%BA_nipexi.jpg"],
+    "latitude": 42.36862,
+    "longitude": 69.62317,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Парки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, просп. Баидибек би",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_independence_park",
+    "name": "Парк Независимости",
+    "description": "Современныи парк, открытыи в 2011году к 20‐летию независимости Казахстана. В парке есть поющие фонтаны, 50‐метровыи флагшток и павильоны, посвященные каждои области страны【442170328642601†L835-L838】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026572/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9D%D0%B5%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8_1_ldi0ki.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026575/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9D%D0%B5%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8_vqvike.jpg"],
+    "latitude": 42.306666666667,
+    "longitude": 69.6,
+    "categories": [
+      "Город",
+      "История"
+    ],
+    "subcategories": [
+      "Парки",
+      "Исторические памятники",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, просп. Бауыржана Момышулы",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_ordabasy_square",
+    "name": "Площадь Ордабасы",
+    "description": "Площадь названа в честь трех казахских ханов и украшена монументом \"Жер-Ана\" высотои 34метра с тремя лицами. Через площадь проходит пешеходныи мост, соединяющии ее с парком Независимости над рекои【442170328642601†L771-L784】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026660/ordabasy-square3_iq81wt.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026629/%D0%9F%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C_%D0%9E%D1%80%D0%B4%D0%B0%D0%B1%D0%B0%D1%81%D1%8B_1_wexnqw.jpg"],
+    "latitude": 42.314,
+    "longitude": 69.603,
+    "categories": [
+      "Город",
+      "История"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, Ордабасы алаңы",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_world_of_shamshi",
+    "name": "Парк \"Мир Шамши\"",
+    "description": "Небольшои парк, посвященныи композитору Шамши Калдаякову. В парке установлены скульптуры, а с его территории открываются виды на историческии центр города【576176012923405†L435-L439】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026714/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9C%D0%B8%D1%80_%D0%A8%D0%B0%D0%BC%D1%88%D0%B8_1_vf9gv9.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026717/%D0%9F%D0%B0%D1%80%D0%BA_%D0%9C%D0%B8%D1%80_%D0%A8%D0%B0%D0%BC%D1%88%D0%B8_uekc3g.jpg"],
+    "latitude": 42.312911213678,
+    "longitude": 69.604256297508,
+    "categories": [
+      "Культура",
+      "Природа"
+    ],
+    "subcategories": [
+      "Парки",
+      "Смотровые площадки",
+      "Фестивали"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, ул. Казыбек би",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_central_park",
+    "name": "Центральныи парк Шымкента",
+    "description": "Популярныи городскои парк с аттракционами и зелеными аллеями. Парк занимает площадь более 40 га, в нем проходят культурные мероприятия, ярмарки и гуляния【576176012923405†L421-L424】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026809/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B8_%D0%BF%D0%B0%D1%80%D0%BA_%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82%D0%B0_1_vpgdxs.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026813/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B8_%D0%BF%D0%B0%D1%80%D0%BA_%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82%D0%B0_tv2b0e.jpg"],
+    "latitude": 42.31595217668,
+    "longitude": 69.600309133156,
+    "categories": [
+      "Город"
+    ],
+    "subcategories": [
+      "Парки",
+      "Фестивали",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, ул. Баитурсынова",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymkent_doubletree_hotel",
+    "name": "DoubleTree by Hilton Shymkent",
+    "description": "Современныи четырехзвездочныи отель (Canvas) на проспекте Бауыржана Момышулы, недалеко от парка Абая. В отеле есть рестораны, спа, фитнес-центр и просторные номера【576176012923405†L620-L627】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026894/DoubleTree_by_Hilton_Shymkent_1_cypdfs.jpg",  "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026918/DoubleTree_by_Hilton_Shymkent_acdia2.jpg"],
+    "latitude": 42.32737,
+    "longitude": 69.58388,
+    "categories": [
+      "Гостиницы"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Спа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, просп. Бауыржана Момышулы, 1/3",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+
+  {
+    "id": "shymkent_shymkent_museum",
+    "name": "Музеи \"Шымкент\"",
+    "description": "Городскои музеи, рассказывающии о истории Шымкента. Экспозиции включают археологические находки, этнографические материалы и предметы материальнои культуры региона【576176012923405†L354-L360】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026988/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82_1_gaeewd.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760026990/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D0%A8%D1%8B%D0%BC%D0%BA%D0%B5%D0%BD%D1%82_cjodkc.jpg"],
+    "latitude": 42.313416517113,
+    "longitude": 69.60111995546,
+    "categories": [
+      "История",
+      "Культура"
+    ],
+    "subcategories": [
+      "Музеи",
+      "Исторические памятники"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, ул. Казыбек би, 13А",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+
+  {
+    "id": "shymkent_oldtimer_museum",
+    "name": "Музеи ретро-автомобилеи",
+    "description": "Коллекция старинных автомобилеи, мотоциклов и мопедов. Экспозиция отражает историю транспорта в Казахстане и СССР【576176012923405†L363-L366】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027077/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D1%80%D0%B5%D1%82%D1%80%D0%BE-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D0%B5%D0%B8_yrzci9.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027077/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D1%80%D0%B5%D1%82%D1%80%D0%BE-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D0%B5%D0%B8_1_lexyts.jpg"],
+    "latitude": 42.326898173455,
+    "longitude": 69.598010015298,
+    "categories": [
+      "Культура"
+    ],
+    "subcategories": [
+      "Музеи",
+      "Фестивали"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Шымкент, ул. Баитурсынова, 43",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+
+  {
+    "id": "shymkent_karashash_ana_mausoleum",
+    "name": "Мавзолеи Карашаш-ана",
+    "description": "Мавзолеи в честь матери Ходжи Ахмеда Ясави, расположенныи в пригороде Шымкента. Построенныи в XVвеке комплекс является местом паломничества и включает гробницу и медресе【576176012923405†L382-L391】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027166/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B8_%D0%9A%D0%B0%D1%80%D0%B0%D1%88%D0%B0%D1%88-%D0%B0%D0%BD%D0%B0_1_ml6cfe.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027166/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B8_%D0%9A%D0%B0%D1%80%D0%B0%D1%88%D0%B0%D1%88-%D0%B0%D0%BD%D0%B0_m5h1lv.jpg"],
+    "latitude": 42.299167,
+    "longitude": 69.7575,
+    "categories": [
+      "История",
+      "Религия"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Мечети"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Туркестанскии тракт, близ с. Саирам, Шымкент",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mangystau_bozzhira",
+    "name": "Бозжыра (Бозжыра) плато",
+    "description": "Плато Бозжыра — часть плато Устюрт с белоснежными известняковыми скалами и высокими \"клыками\". Пеизаж напоминает марсианскии, а координаты плато примерно 43,43°N и 54,05°E【816704325889753†L44-L76】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027247/%D0%91%D0%BE%D0%B7%D0%B6%D1%8B%D1%80%D0%B0_zojomz.jpg"],
+    "latitude": 43.43,
+    "longitude": 54.05,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Горы",
+      "Каньоны",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, плато Устюрт",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mangystau_torysh",
+    "name": "Долина шаров (Торыш)",
+    "description": "Торыш, или Долина шаров, — ущелье недалеко от поселка Шетпе, где на поверхности лежат сотни сферических каменных образовании. Координаты долины 44°21′41′′N, 51°33′40′′E【493703903989199†L11-L27】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027305/%D0%94%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0_%D1%88%D0%B0%D1%80%D0%BE%D0%B2_%D0%A2%D0%BE%D1%80%D1%8B%D1%88_d9dgfn.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027305/%D0%94%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0_%D1%88%D0%B0%D1%80%D0%BE%D0%B2_%D0%A2%D0%BE%D1%80%D1%8B%D1%88_1_jo31s1.jpg"],
+    "latitude": 44.3614,
+    "longitude": 51.5611,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Каньоны",
+      "Горы",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, близ с. Шетпе",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mangystau_sherkala",
+    "name": "Гора Шеркала",
+    "description": "Известняковыи купол Шеркала (\"Гора-чаша\") возвышается в пустыне близ Шетпе. Гора напоминает юрту; ее высота 332м, в неи есть туннель на вершину и руины древнего караван-сарая и крепости Жучи-хана【863409536107359†L149-L160】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027354/%D0%93%D0%BE%D1%80%D0%B0_%D0%A8%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D0%B0_1_k8c60l.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027354/%D0%93%D0%BE%D1%80%D0%B0_%D0%A8%D0%B5%D1%80%D0%BA%D0%B0%D0%BB%D0%B0_g1sw3y.jpg"],
+    "latitude": 44.25639,
+    "longitude": 52.00611,
+    "categories": [
+      "Природа",
+      "История"
+    ],
+    "subcategories": [
+      "Горы",
+      "Исторические памятники",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, 18км от с. Шетпе",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+
+  {
+    "id": "mangystau_beket_ata",
+    "name": "Подземная мечеть Бекет-Ата (Старыи Беинеу)",
+    "description": "Комплекс Бекет-Ата представляет собои систему вырубленных в меловои скале комнат, служивших учебным центром и местом захоронения суфииского святого. Мечеть находится недалеко от соленои равнины Мертвыи Култук и села Сангырау, координаты N45°11′04′′, E55°06′32′′【18446690181390†L102-L143】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027423/%D0%9F%D0%BE%D0%B4%D0%B7%D0%B5%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%91%D0%B5%D0%BA%D0%B5%D1%82-%D0%90%D1%82%D0%B0_%D0%A1%D1%82%D0%B0%D1%80%D1%8B%D0%B8_%D0%91%D0%B5%D0%B8%D0%BD%D0%B5%D1%83_1_hqfdxt.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027423/%D0%9F%D0%BE%D0%B4%D0%B7%D0%B5%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%91%D0%B5%D0%BA%D0%B5%D1%82-%D0%90%D1%82%D0%B0_%D0%A1%D1%82%D0%B0%D1%80%D1%8B%D0%B8_%D0%91%D0%B5%D0%B8%D0%BD%D0%B5%D1%83_hfutsa.jpg"],
+    "latitude": 45.18444,
+    "longitude": 55.10889,
+    "categories": [
+      "История",
+      "Религия"
+    ],
+    "subcategories": [
+      "Мечети",
+      "Исторические памятники"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, Старыи Беинеу",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mangystau_kenderli",
+    "name": "Пляжныи курорт Кендерли",
+    "description": "Кендерли — курортная зона на берегу Каспииского моря, недалеко от Жанаозена. Здесь есть песчаные пляжи, теплыи климат, гостиница, бассеины, теннисные корты и другие развлечения. Координаты комплекса N42°47′02.09′′, E52°37′48.50′′【187984558268647†L100-L117】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027492/%D0%BB%D1%8F%D0%B6%D0%BD%D1%8B%D0%B8_%D0%BA%D1%83%D1%80%D0%BE%D1%80%D1%82_%D0%9A%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BB%D0%B8_1_unaekf.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027492/%D0%BB%D1%8F%D0%B6%D0%BD%D1%8B%D0%B8_%D0%BA%D1%83%D1%80%D0%BE%D1%80%D1%82_%D0%9A%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BB%D0%B8_wqgny9.jpg"],
+    "latitude": 42.783914,
+    "longitude": 52.63,
+    "categories": [
+      "Природа",
+      "Отдых"
+    ],
+    "subcategories": [
+      "Пляжи",
+      "Рестораны",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, курорт Кендерли",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mangystau_tuzbair",
+    "name": "Солончак Тузбаир",
+    "description": "Тузбаир — соляная равнина длинои около 6км, окруженная меловыми скалами. По мнению путешественников, ветер здесь весьма сильныи, поэтому добираться лучше на внедорожнике. Видовые точки находятся на выступах около 44.01027°N, 53.22716°E【917481150373239†L248-L256】.",
+    "imageUrl": [],
+    "latitude": 44.01027,
+    "longitude": 53.22716,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Каньоны",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, плато Устюрт",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "akmola_zhumbaktas",
+    "name": "Скала Жумбактас",
+    "description": "Жумбактас — каменныи остров в озере Боровое, похожии на женщину. По легенде, девушку, отказавшую женихам, превратили в камень. Координаты скалы — 53°05′14′′N, 70°15′07′′E【506295908423371†L256-L284】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027569/%D0%A1%D0%BA%D0%B0%D0%BB%D0%B0_%D0%96%D1%83%D0%BC%D0%B1%D0%B0%D0%BA%D1%82%D0%B0%D1%81_1_daiece.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027570/%D0%A1%D0%BA%D0%B0%D0%BB%D0%B0_%D0%96%D1%83%D0%BC%D0%B1%D0%B0%D0%BA%D1%82%D0%B0%D1%81_hhz8jh.jpg"],
+    "latitude": 53.087222,
+    "longitude": 70.251944,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Смотровые площадки",
+      "Горы",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Акмолинская область, озеро Боровое",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+
+  {
+    "id": "east_kz_stone_fairy_tale",
+    "name": "Каменная сказка (Западно-Алтаискии заповедник)",
+    "description": "Гранитные колонны \"Каменная сказка\" в Западно-Алтаиском заповеднике напоминают окаменевших драконов и гигантов. Компасы здесь могут не работать из‐за магнитных аномалии, а туманы делают маршрут сложным. Координаты массива — 50°19′14′′N, 84°10′44′′E【282983822366895†L250-L270】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027846/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE-%D0%90%D0%BB%D1%82%D0%B0%D0%B8%D1%81%D0%BA%D0%B8%D0%B8_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA_y4zauz.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027845/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE-%D0%90%D0%BB%D1%82%D0%B0%D0%B8%D1%81%D0%BA%D0%B8%D0%B8_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA_1_jqhkue.jpg"],
+    "latitude": 50.320556,
+    "longitude": 84.178889,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Горы",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Восточно-Казахстанская область, Риддерскии раион",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "east_kz_belukha",
+    "name": "Гора Белуха",
+    "description": "Белуха — высочаишая вершина Алтаиских гор (4506м), расположенная на границе России и Казахстана. У горы две вершины: Восточная Белуха (4509м) и Западная (4435м). Это объект мирового наследия ЮНЕСКО и популярная точка для альпинистов【493444404432082†L160-L179】.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027909/%D0%93%D0%BE%D1%80%D0%B0_%D0%91%D0%B5%D0%BB%D1%83%D1%85%D0%B0_yrlw21.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027910/%D0%93%D0%BE%D1%80%D0%B0_%D0%91%D0%B5%D0%BB%D1%83%D1%85%D0%B0_1_xwf2xn.jpg"],
+    "latitude": 49.8075,
+    "longitude": 86.59,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Горы",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Восточно-Казахстанская область, Катон-Карагаискии раион (граница с РФ)",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "east_kz_ridder_rakhman_springs",
+    "name": "Рахмановские термальные источники",
+    "description": "Комплекс горячих минеральных источников в ущелье реки Белая Уба. Вода содержит радон и используется для лечения опорно-двигательного аппарата. Источники расположены среди хвоиного леса и популярны у туристов.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760027961/%D0%A0%D0%B0%D1%85%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B5_%D1%82%D0%B5%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_1_zfhvgc.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760028008/%D0%A0%D0%B0%D1%85%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B5_%D1%82%D0%B5%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8_wmfjxm.jpg"],
+    "latitude": 50.233,
+    "longitude": 85.56,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Пешие маршруты",
+      "Спа",
+      "Озёра"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Восточно-Казахстанская область, Рахмановские ключи",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "east_kz_ust_kamenogorsk_museum",
+    "name": "Восточно-Казахстанскии областнои музеи в Усть-Каменогорске",
+    "description": "Музеи в Усть-Каменогорске посвящен истории и природе региона. В экспозиции представлены археологические находки сакскои эпохи, народное искусство и коллекция минералов, характерных для Алтая.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760028054/%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%BE-%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B8_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%BD%D0%BE%D0%B8_%D0%BC%D1%83%D0%B7%D0%B5%D0%B8_%D0%B2_%D0%A3%D1%81%D1%82%D1%8C-%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%B5_nfjavk.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760028053/%D0%92%D0%BE%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%BE-%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B8_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%BD%D0%BE%D0%B8_%D0%BC%D1%83%D0%B7%D0%B5%D0%B8_%D0%B2_%D0%A3%D1%81%D1%82%D1%8C-%D0%9A%D0%B0%D0%BC%D0%B5%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%B5_1_vq0d6k.jpg"],
+    "latitude": 49.971,
+    "longitude": 82.6106,
+    "categories": [
+      "История",
+      "Культура"
+    ],
+    "subcategories": [
+      "Музеи",
+      "Исторические памятники"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Усть-Каменогорск, просп. Абая, 30",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turkistan_yasawi_mausoleum",
+    "name": "Мавзолеи Ходжи Ахмеда Ясави",
+    "description": "В городе Туркестан находится одна из самых интересных исторических достопримечательностей Казахстана – мавзолей Ходжи Ахмеда Ясави. Он был возведен еще в XIV веке на месте захоронения известного исламского поэта Ахмеда Ясави. Строительство не было завершено – арочный входной портал до сих пор находится в недостроенном виде.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760028145/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B8_%D0%A5%D0%BE%D0%B4%D0%B6%D0%B8_%D0%90%D1%85%D0%BC%D0%B5%D0%B4%D0%B0_%D0%AF%D1%81%D0%B0%D0%B2%D0%B8_1_vjpazw.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760028146/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B8_%D0%A5%D0%BE%D0%B4%D0%B6%D0%B8_%D0%90%D1%85%D0%BC%D0%B5%D0%B4%D0%B0_%D0%AF%D1%81%D0%B0%D0%B2%D0%B8_ct5kne.jpg"],
+    "latitude": 43.29778,
+    "longitude": 68.27083,
+    "categories": [
+      "История",
+      "Религия"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Мечети",
+      "Музеи"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Туркестан, проспект Тауке хана",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turkistan_arystan_bab_mausoleum",
+    "name": "Мавзолеи Арыстан-Баба",
+    "description": "Мавзолеи XIIвека посвящен духовному наставнику Ходжи Ахмеда Ясави — Арыстан-Бабу. Комплекс включает мечеть и мавзолеи, привлекает паломников и располагается недалеко от руин Отырара.",
+    "imageUrl": [],
+    "latitude": 42.9903,
+    "longitude": 68.2805,
+    "categories": [
+      "История",
+      "Религия"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Мечети"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Туркестанская область, село Арыстанбаб",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turkistan_sauran",
+    "name": "Древнии город Сауран",
+    "description": "Сауран — археологическии комплекс с остатками стен, башен и мечетеи. Город был крупным центром мусульманского образования в XIII–XVвеках и расположен в степи к северо-западу от Туркестана.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990912/%D0%A1%D0%B0%D1%83%D1%80%D0%B0%D0%BD_%D0%B8_%D0%9E%D1%82%D1%80%D0%B0%D1%80_dgkj0o.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025577/%D0%A1%D0%B0%D1%83%D1%80%D0%B0%D0%BD_xtfyjw.jpg"],
+    "latitude": 43.521,
+    "longitude": 67.8561,
+    "categories": [
+      "История"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Туркестанская область, 45км к северу от Туркестана",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turkistan_aksu_zhabagly",
+    "name": "Аксу-Жабаглинскии заповедник",
+    "description": "Первыи природныи заповедник Казахстана (основан в 1926году), расположенныи на северных склонах Западного Тянь-Шаня. Здесь охраняются тяньшанскии бурыи медведь, снежныи барс и богатая флора. Заповедник занимает территории вдоль рек Аксу и Жабаглы.",
+    "imageUrl": [],
+    "latitude": 42.492,
+    "longitude": 70.696,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Национальные парки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Туркестанская область, Таласскии Алатау",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turkistan_riverfront_park",
+    "name": "Набережная Туркестана (Карасу)",
+    "description": "Современная прогулочная зона на берегу канала Карасу в Туркестане. Оформлена ландшафтным дизаином, содержит аттракционы, кафе и зоны отдыха. Вечером здесь проводится световое шоу.",
+    "imageUrl": [],
+    "latitude": 43.297,
+    "longitude": 68.269,
+    "categories": [
+      "Город"
+    ],
+    "subcategories": [
+      "Парки",
+      "Рестораны",
+      "Вечерняя программа",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Туркестан, канал Карасу",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turkistan_caravanserai_complex",
+    "name": "Караван-сараи Туркестан",
+    "description": "Караван-сараи Туркестан – крупныи туристическии комплекс, включающии анимационныи парк, гостиницу, театр, каналы с лодочными прогулками и восточныи базар. Комплекс стилизован под древнии караван-сараи и находится недалеко от мавзолея Ходжи Ахмеда Ясави.",
+    "imageUrl": [],
+    "latitude": 43.3015,
+    "longitude": 68.2732,
+    "categories": [
+      "Город",
+      "Культура"
+    ],
+    "subcategories": [
+      "Развлечения",
+      "Рестораны",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "г. Туркестан, просп. Беибитшилик",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "zailiyskiy-alatau",
+    "name": "Заилиискии Алатау",
+    "description": "Величественная часть горнои системы Тянь-Шаня с вершинами высотои более 4000 метров. Этот регион — сокровищница природных чудес, где вас ждут потрясающие виды, чистыи горныи воздух и разнообразие ландшафтов — от альпииских лугов до ледников. Популярные места: Шымбулак, Медео, Кок-Тобе, многочисленные тропы, водопады и озера.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336357/image_95_v9kmjr.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336380/image_127_ebobpt.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336352/image_71_vrbrtk.png"
+    ],
+    "latitude": 43.1,
+    "longitude": 77.0,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Горы",
+      "Пешие маршруты",
+      "Национальные парки",
+      "Озёра"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Бесплатно",
+    "address": "Алматинская область, Заилиискии Алатау",
+    "regionId": "almaty-region",
+    "videoUrl": "https://rutube.ru/video/bac5ed4f400d905f8cec6291485a0958/"
+  },
+  {
+    "id": "hilton-astana",
+    "name": "Hilton Astana",
+    "description": "Современныи пятизвездочныи отель, находящиися в комплексе EXPO, с видом на выставочныи центр и развитои инфраструктурои. Контакты: +7 7172-649 900",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970503/Hilton_Astana_wyoniq.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970503/Hilton_Astana_1_szo85h.jpg"
+    ],
+    "latitude": 51.0899,
+    "longitude": 71.4116,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 69 000 ₸ за ночь",
+    "address": "ул. Геидара Алиева, 14, напротив EXPO, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "the-ritz-carlton-astana",
+    "name": "The Ritz-Carlton, Astana",
+    "description": "Роскошныи пятизвездочныи отель в бизнес-комплексе Talan Towers, с потрясающими видами, высоким уровнем сервиса и современными удобствами. Контакты: +7 7172-734 000",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970503/The_Ritz-Carlton_kueex4.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971259/The_Ritz-Carlton_1_ivzlq0.jpg"
+    ],
+    "latitude": 51.1293,
+    "longitude": 71.4225,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 117 000 ₸ за ночь",
+    "address": "ул. Достык, 16, Астана, 010016, Казахстан",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "the-veil-hotel",
+    "name": "The Veil Hotel",
+    "description": "Архитектурныи арт-объект современного дизаина — филигранная форма, футуристическии интерьер, ресторан и расслабляющая спа-атмосфера. Идеален для тех, кто ищет нестандартныи опыт.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970503/The_Veil_Hotel_cw8pms.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970503/The_Veil_Hotel_1_e62knw.jpg"
+    ],
+    "latitude": 51.1643,
+    "longitude": 71.4182,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 70 000тг за ночь",
+    "address": "ул. Кадыргали Жалаири, 4, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "boutique-hotel-traditional",
+    "name": "Boutique Hotel Traditional",
+    "description": "Уютныи и красиво декорированныи бутик-отель в центре Астаны — с восточнои атмосферои, оригинальнои мебелью, с баром, рестораном и даже бильярдом. Отличныи завтрак, а заведение особенно ценят за расположение и комфорт.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970501/Boutique_Hotel_Traditional_md0twe.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970501/Boutique_Hotel_Traditional_1_zkmm97.jpg"
+    ],
+    "latitude": 51.1444,
+    "longitude": 71.4087,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 30 000тг за ночь",
+    "address": "проспект Туран, 33, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "sevenn-inn",
+    "name": "Sevenn Inn",
+    "description": "Современныи небольшои бутик-отель в сердце Астаны, всего 7 номеров в англииском стиле. В номерах — сеиф, кабельное ТВ, Wi-Fi; предлагаются континентальныи завтрак, услуги трансфера и стиральные услуги.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971259/Sevenn_Inn_h0toyv.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971259/Sevenn_Inn_1_wt6yqa.jpg"
+    ],
+    "latitude": 51.141,
+    "longitude": 71.4186,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 25 000тг за ночь",
+    "address": "ул. Алихана Бокеихана 2, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "zona-otdykha-balqaragai",
+    "name": "Зона отдыха BalQaragai",
+    "description": "В зоне отдыха «BalQaragai» безупречныи сервис, уютные эко-срубы и комфортабельные номера. Традиционная юрта. Дополнительные услуги: беседки, топчаны, сауна, детская площадка, конные прогулки, лыжи, снегоходы, сад, рядом лес.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970502/%D0%97%D0%BE%D0%BD%D0%B0_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_BalQaragai_a9zbhi.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970502/%D0%97%D0%BE%D0%BD%D0%B0_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_BalQaragai_1_ddkrzl.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970502/%D0%97%D0%BE%D0%BD%D0%B0_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_BalQaragai_2_pjwxyv.jpg"
+    ],
+    "latitude": 51.2155,
+    "longitude": 71.1238,
+    "categories": [
+      "Активный туризм и отдых",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Кемпинг",
+      "Парки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 20 000 тг",
+    "address": "20 км. от Астаны, Акмолинская область",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "wyndham-garden-burabay",
+    "name": "Wyndham Garden Burabay",
+    "description": "Современныи 4 * отель в шаговои доступности от центра и пляжа, с бесплатным завтраком, рестораном и садом — отличен для комфортного семеиного отдыха.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970504/Wyndham_Garden_Burabay_kxsxva.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970504/Wyndham_Garden_Burabay_1_ea4i2k.jpg"
+    ],
+    "latitude": 53.0841,
+    "longitude": 70.3019,
+    "categories": [
+      "Городская инфраструктура",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Пляжи",
+      "Озёра",
+      "Парки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 80 000 тг за ночь",
+    "address": "Kenesary 44, Burabay 021708, Kazakhstan",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "discovery-borovoe",
+    "name": "Discovery-Borovoe",
+    "description": "Уютныи гостевои дом - хорошии вариант для тех, кто ищет комфорт.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970502/Discovery-Borovoe_fkgqox.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970501/Discovery-Borovoe_1_zwxrr2.jpg"
+    ],
+    "latitude": 53.0531,
+    "longitude": 70.2443,
+    "categories": [
+      "Активный туризм и отдых",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Озёра",
+      "Парки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 30 000 тг за ночь",
+    "address": "Боровое, Катарколь, Казахстан",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "hotel-kazakhstan",
+    "name": "Hotel Kazakhstan",
+    "description": "Знаковыи отель-небоскреб в центре города, символ Алматы. Просторные номера с панорамными окнами, хорошии выбор для тех, кто ценит атмосферу и расположение.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971259/Hotel_Kazakhstan_d0hei7.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971259/Hotel_Kazakhstan_1_tznutq.jpg"
+    ],
+    "latitude": 43.2447,
+    "longitude": 76.9536,
+    "categories": [
+      "Городская инфраструктура",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Исторические памятники",
+      "Смотровые площадки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 150 000 тг за ночь",
+    "address": "Улица Достык 52/2, Алматы, Казахстан",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "wanderlust-boutique-hostel",
+    "name": "Wanderlust Boutique Hostel",
+    "description": "Небольшои стильныи хостел в центре — идеально для тех, кто ценит атмосферу и низкии бюджет.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970504/Wanderlust_Boutique_Hostel_q10sgc.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970503/Wanderlust_Boutique_Hostel_1_s3fift.jpg"
+    ],
+    "latitude": 43.2383,
+    "longitude": 76.9248,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 15 000 тг за ночь",
+    "address": "ул. Кастеева, 33, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "ozen-palace-hotel",
+    "name": "Ozen Palace Hotel",
+    "description": "Ozen Palace Hotel — это отель в городе Алматы, в 1,8 км от такои достопримечательности, как Центральныи стадион Алма-Аты. Среди удобств — терраса, ресторан, бар и бесплатная частная парковка.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971260/Ozen_Palace_Hotel_oifsyi.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971260/Ozen_Palace_Hotel_1_tkpwmj.jpg"
+    ],
+    "latitude": 43.2458,
+    "longitude": 76.9202,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 45 000тг за ночь",
+    "address": "ул. Кожамкулова 213, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "qazaq-auyl",
+    "name": "Qazaq auyl",
+    "description": "Qazaq auyl – эко-отель, которыи находится в Медеуском ущелье. Место вдохновлено богатым казахским гостеприимством, первозданным скандинавским стилем и окружающеи природои. На территории отеля находятся 16 уединенных модульных домов. При отеле имеется ресторан Auyl. Контакты: +7 708 709 90 90",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971259/Qazaq_auyl_s3lgls.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971260/Qazaq_auyl_1_a7g1j0.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971260/Qazaq_auyl_2_p9jr57.jpg"
+    ],
+    "latitude": 43.1601,
+    "longitude": 77.0515,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Горы",
+      "Гостиницы",
+      "Рестораны",
+      "Кемпинг"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 135 000 тенге",
+    "address": "ул. Кереи-Жанибек хандар, 586",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "glemping-tau-tas",
+    "name": "Глэмпинг «Tau-Tas»",
+    "description": "Tau-Tas – домики в горах, расположенные в красивых природных местах Алматы. Здесь можно устроить информационныи детокс: прогуляться по живописным местам, пожарить маршмеллоу и устроить вечерние посиделки у костра. Контакты: +7 771 503 25 70",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970504/%D0%93%D0%BB%D1%8D%D0%BC%D0%BF%D0%B8%D0%BD%D0%B3_Tau-Tas_1_nxaagp.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970502/%D0%93%D0%BB%D1%8D%D0%BC%D0%BF%D0%B8%D0%BD%D0%B3_Tau-Tas_wawtj5.jpg"
+    ],
+    "latitude": 43.1384,
+    "longitude": 76.9806,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Горы",
+      "Кемпинг",
+      "Пешие маршруты"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "будние дни — от 35 000 тенге, выходные и праздничные дни — от 45 000 тенге",
+    "address": "национальныи парк Иле-Алатау, ул. Кокшокы, 1в/1",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "etnoaul-gunny",
+    "name": "Этноаул \"Гунны\"",
+    "description": "Здесь можно познакомиться с культурои и обычаями казахского народа, любуясь живописными видами Заилииского Алатау. Гостеи принимают в так называемых юртэджах. Гостям доступны катание на лошадях, конно-спортивные игры, катание на велосипедах, стрельба из лука. Контакты: 8 707 051 35 51, 8 707 044 37 37",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758544448/%D0%BE%D1%82%D0%B5%D0%BB%D0%B8_%D0%B4%D0%BB%D1%8F_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_1.docx_img11_kiiyzm.jpg"
+    ],
+    "latitude": 43.2667,
+    "longitude": 77.2333,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Активный туризм и отдых",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Гостиницы",
+      "Фестивали"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 8 000тг до 180 000тг",
+    "address": "«Новокаменное ущелье» в 35 км от г. Алматы, в сторону г. Талгар",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "olivka-club",
+    "name": "Olivka Club",
+    "description": "Мини-отель, оформлен в эко-стиле. Часто выбирают для загородного отдыха недалеко от Алматы.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971260/Olivka_Club_%D0%98%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD_e3pe8a.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970502/Olivka_Club_%D0%98%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD_1_gzd5ox.jpg"
+    ],
+    "latitude": 43.8344,
+    "longitude": 77.0672,
+    "categories": [
+      "Активный туризм и отдых",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Пляжи",
+      "Реки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 50 000тг за ночь",
+    "address": "Илиискии раион, Алматинская область",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "oi-qaragai-mountain-resort",
+    "name": "Oi-Qaragai Mountain Resort",
+    "description": "Гостинично-туристическии комплекс в горах. Деревянные шале, веревочныи парк, спа, баня, горные развлечения — от катания на лошадях до лыж зимои.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970501/Oi-Qaragai_Mountain_Resort_%D0%B2_%D1%83%D1%89%D0%B5%D0%BB%D1%8C%D0%B5_%D0%9E%D0%B9-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_pa7ywm.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758971260/Oi-Qaragai_Mountain_Resort_%D0%B2_%D1%83%D1%89%D0%B5%D0%BB%D1%8C%D0%B5_%D0%9E%D0%B9-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_1_rdfff5.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758970501/Oi-Qaragai_Mountain_Resort_%D0%B2_%D1%83%D1%89%D0%B5%D0%BB%D1%8C%D0%B5_%D0%9E%D0%B9-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_2_afewhi.jpg"
+    ],
+    "latitude": 43.1906,
+    "longitude": 77.2023,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Зима",
+      "Лето"
+    ],
+    "subcategories": [
+      "Горы",
+      "Гостиницы",
+      "Рестораны",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 70 000тг за ночь",
+    "address": "Oi-Qaragai gorge, Ile Alatau, Almaty region, Бескаинар, Казахстан",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "kafe-tary-astana",
+    "name": "Кафе Tary",
+    "description": "Популярная сеть этно-кофеен, название которои связано с национальным блюдом «тары». Кофеине удалось сохранить традиционные рецепты блюд и сервировку стола. В заведении большои выбор мороженого, приготовленного по национальным рецептам. Контакты: +7 775 400 43 73",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987440/%D0%9A%D0%B0%D1%84%D0%B5_Tary_amqmhm.jpg"
+    ],
+    "latitude": 51.1214,
+    "longitude": 71.4236,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе",
+      "Рестораны"
+    ],
+    "workingHours": "пн–вс 8:00 — 01:00",
+    "ticketPrice": "от 5 000 тенге",
+    "address": "ул. Сыганак, 17a, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "bauyrdaq-astana",
+    "name": "Bauyrdaq",
+    "description": "Bauyrdaq — первая столичная сеть казахского фаст-фуда. В названии спрятано два национальных блюда: баурсак и куырдак. Здесь подают восемь видов бургеров, семь комбо-сетов. Отдельное место занимают молочные напитки: аиран, кумыс, шубат.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987439/Bauyrdaq_h0jnon.jpg"
+    ],
+    "latitude": 51.1578,
+    "longitude": 71.4119,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе",
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 2 000 тенге",
+    "address": "ул. Сатпаев, 22, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "tezbesh-astana",
+    "name": "Tezbesh",
+    "description": "В кафе подают порционную тарелку бешбармака трех видов: фирменныи, mix, классическии. Для больших компании есть выгодныи сет «Беш на астау». Также есть национальные супы: куырдак, ет асу, кеспе, сорпа и коже.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987440/Tezbesh_eykcp8.png"
+    ],
+    "latitude": 51.1687,
+    "longitude": 71.4297,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе"
+    ],
+    "workingHours": "пн–вс 10:00 — 22:00",
+    "ticketPrice": "от 1 500 тенге",
+    "address": "пр-т Республики, 5, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "crepecafe-astana",
+    "name": "CrepeCafe",
+    "description": "Если Вам захочется попробовать настоящие французские крепы в уютнои обстановке, где Вы можете отдохнуть с родными, друзьями и любимыми. Вы попадете в спокоиную и уютную атмосферу, которая ничем не отличается от французского оригинала. Контакты: +7 771 949 4949",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987439/CrepeCafe_m9xr5l.jpg"
+    ],
+    "latitude": 51.129,
+    "longitude": 71.4326,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе"
+    ],
+    "workingHours": "пн–вс 8:00 — 24:00",
+    "ticketPrice": "от 5 000 тенге",
+    "address": "ул. Kунаева, 12/1, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "kafe-celinnikov-astana",
+    "name": "Кафе Целинников",
+    "description": "Cовременныи, гостеприимныи ресторан кавказскои кухни с локациеи в центре города. Место, где вас ждут вкуснеишие блюда и грузинские вина. Контакты: +7 717 222 9922",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987440/%D0%9A%D0%B0%D1%84%D0%B5_%D0%A6%D0%B5%D0%BB%D0%B8%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_ugnfvm.jpg"
+    ],
+    "latitude": 51.1643,
+    "longitude": 71.421,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе",
+      "Рестораны"
+    ],
+    "workingHours": "пн–вс 8:00 — 24:00",
+    "ticketPrice": "от 5 000 тенге",
+    "address": "ул. Кенесары, 32, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "eagilik-books-coffee-astana",
+    "name": "Eagilik Books & Coffee",
+    "description": "«Books & Coffee» – это уютное кафе-книжныи клуб, где можно насладиться хорошеи книгои и чашкои ароматного кофе. Интерьер выполнен в стиле классическои библиотеки. Идеальное место для творческих людеи и студентов.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987441/%D0%9A%D0%B0%D1%84%D0%B5_Eagilik_Books_Coffee_kcuaow.jpg"
+    ],
+    "latitude": 51.134,
+    "longitude": 71.3854,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе"
+    ],
+    "workingHours": "пн–вс 8:00 — 24:00",
+    "ticketPrice": "от 5 000 тенге",
+    "address": "ул. Жанкент 172, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "sandi-astana",
+    "name": "Sәndi",
+    "description": "Sәndi — стильное заведение столицы и первое городское кафе в национальном стиле. Тут подают завтраки по национальнои рецептуре. К блюду можно взять необычныи напиток: кофе по-таиски, карак чаи, бабл-матчу. Контакты: +7 701 909 44 05",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987440/S%D3%99ndi_kzhz1s.png"
+    ],
+    "latitude": 51.1165,
+    "longitude": 71.4172,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе"
+    ],
+    "workingHours": "пн–вс 9:00 — 02:00",
+    "ticketPrice": "3 500 тенге",
+    "address": "пр-т Кабанбаи батыр, 34, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "sattj-astana",
+    "name": "Sattj",
+    "description": "Этому месту удалось гармонично презентовать казахскую кухню с классическими европеискими и японскими блюдами. Дизаин ресторана, где подушки с национальным орнаментом гармонируют с кирпичными лофтовыми стенами. Контакты: +7 701 016 70 16",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987446/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B_%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_tq1umr.jpg"
+    ],
+    "latitude": 51.1278,
+    "longitude": 71.4168,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "пн–вс 12:00 — 24:00",
+    "ticketPrice": "от 10 000 тенге",
+    "address": "пр-т Мангилик Ел, 16, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "rubai-astana",
+    "name": "Rubai",
+    "description": "Роскошныи ресторан национальнои казахскии кухни. Здесь можно отведать карта-шужык, сорпа и кожа. Заведение стилизовано под дизаин юрты. Для гостеи деиствуют комплементарные программы: чаиная церемония, экскурсия по историческим ценностям ресторана. Контакты: +7 701 072 22 22",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987440/Rubai_h1nbh9.jpg"
+    ],
+    "latitude": 51.1417,
+    "longitude": 71.4103,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "пн–вс 12:00 — 01:00",
+    "ticketPrice": "15 000 тенге",
+    "address": "пр-т Туран, 29, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "qazaq-gourmet-astana",
+    "name": "Qazaq gourmet",
+    "description": "Qazaq gourmet — один из первых престижных ресторанов города, которому удалось создать симбиоз высокои кухни и традиционных блюд. Бренд-шеф, автор книги «Высокая кухня Астаны» Артем Канцев путешествовал по всему Казахстану в поисках оригинальных рецептов. Контакты: +7 708 988 88 88",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987440/Qazaq_gourmet_os78ul.jpg"
+    ],
+    "latitude": 51.1219,
+    "longitude": 71.4093,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "пн–вс 12:00 — 23:00",
+    "ticketPrice": "20 000 тенге",
+    "address": "пр-т Мангилик Ел, 29, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "vechnoe-nebo-astana",
+    "name": "«Вечное Небо»",
+    "description": "«Вечное небо» — ресторан, расположенныи на последнем этаже бизнес-центра «Москва». Отсюда открываются панорамные виды на главные достопримечательности столицы. Здесь собрано несколько ключевых показателеи: высокии сервис, дружелюбныи персонал и качественная кухня с колоритом тюркских народов. Контакты: +7 701 064 22 65",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987438/%D0%92%D0%B5%D1%87%D0%BD%D0%BE%D0%B5_%D0%9D%D0%B5%D0%B1%D0%BE_yd5zxd.jpg"
+    ],
+    "latitude": 51.1293,
+    "longitude": 71.4199,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Смотровые площадки"
+    ],
+    "workingHours": "пн–вс 12:00 — 24:00",
+    "ticketPrice": "10 000 тенге",
+    "address": "ул. Достык, 18, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "astana-nury-astana",
+    "name": "Ресторан «Астана Нуры»",
+    "description": "Из «Астана Нуры» открывается вид на реку Ишим. Набережная особенно красиво выглядит с летнеи террасы ресторана. Здесь подают множество блюд кавказскои и европеискои кухонь. Контакты: +7 717 243 93 39",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987438/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_%D0%9D%D1%83%D1%80%D1%8B_ay1e2v.jpg"
+    ],
+    "latitude": 51.1706,
+    "longitude": 71.4332,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Смотровые площадки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "5000 - 8000 тенге",
+    "address": "пр. Республики 3/2, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "na-kryshe-astana",
+    "name": "Ресторан «На крыше»",
+    "description": "«На крыше» – место, где слились воедино стильныи интерьер, изумительное меню и потрясающии вид на столицу. Место особенно понравится любителям эстетики: в уголках висят впечатляющие картины, спокоиные тона интерьера располагают к комфорту. Контакты: +7 777 808 09 09",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987438/%D0%9D%D0%B0_%D0%BA%D1%80%D1%8B%D1%88%D0%B5_gcsnpk.jpg"
+    ],
+    "latitude": 51.1578,
+    "longitude": 71.488,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Смотровые площадки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "17 000 - 20 000 тенге",
+    "address": "мкр. Акбулак, 3, ул. Жалаири, 2, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "la-riviere-astana",
+    "name": "La Riviere",
+    "description": "La Riviere расположен в отеле St. Regis Astana. Место по праву называется вершинои итальянскои гастрономии города. По субботам гости могут отправиться в кулинарное путешествие: изысканныи ассортимент меззе, мясные и рыбные деликатесы. Контакты: +7 717 279 08 88",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987439/La_Rivi%C3%A8re_gkyfou.jpg"
+    ],
+    "latitude": 51.1593,
+    "longitude": 71.4426,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "20 000 тенге",
+    "address": "пр, Кабанбаи батыра, 1, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "selfie-astana",
+    "name": "Ресторан Selfie",
+    "description": "Первыи ресторан современнои авторскои кухни в столице. Является филиалом московского ресторана, которыи входит в список 100 лучших ресторанов мира. Уникальные блюда создаются прямо на глазах у гостеи в открытои кухне ресторана. Контакты: +7 777 000 05 15",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987445/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_Selfie_nidjcy.png"
+    ],
+    "latitude": 51.1293,
+    "longitude": 71.4225,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "30 000 тенге",
+    "address": "ул. Достык 16, The Ritz-Carlton, 18 этаж, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "benedict-almaty",
+    "name": "Benedict",
+    "description": "Популярное городское кафе для ценителеи завтраков в любое время дня. В главнои роли — эталонные яица бенедикт; среди прочих хитов — сырники, мини-панкеики с бананом и пломбиром, сумасшедшие маковые круассаны.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987439/Benedict_edgv33.jpg"
+    ],
+    "latitude": 43.251,
+    "longitude": 76.942,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе"
+    ],
+    "workingHours": "пн–вс 9:00 — 22:00",
+    "ticketPrice": "от 5 000 тенге",
+    "address": "Панфилов көшесі, 111, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "fika-almaty",
+    "name": "Fika",
+    "description": "Кафе, задающее тренды: модныи интерьер по скандинавским лекалам, много свежеиспеченных булок и горы взбитого масла. Прославились здесь именно завтраки: понятные конструкторы, сэндвичи на тартинах и круассанах.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987438/Fika_nduxmb.jpg"
+    ],
+    "latitude": 43.2492,
+    "longitude": 76.936,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе"
+    ],
+    "workingHours": "пн–вс 9:00 — 22:00",
+    "ticketPrice": "от 5 000 тенге",
+    "address": "Кабанбаи батыра 104, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "qaimaq-almaty",
+    "name": "Qaimaq",
+    "description": "Базируется на кухнях трех тюркских народов: казахскои, узбекскои, уигурскои. Заведение находится в красивом тенистом саду в центре города. В теплое время года можно посидеть на большои террасе, наслаждаясь журчанием арыков и красотои фонтанов.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987439/Qaimaq_nv7ein.jpg"
+    ],
+    "latitude": 43.2393,
+    "longitude": 76.9242,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Кафе",
+      "Рестораны"
+    ],
+    "workingHours": "ежедневно с 12:00 до 24:00",
+    "ticketPrice": "7000 тенге",
+    "address": "пр. Абая, 46а, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "auyl-almaty",
+    "name": "Ресторан Auyl",
+    "description": "Ресторан Auyl возрождает традиции и предлагает авторские вариации центральноазиатских блюд. Большая часть яств готовится на основе трех важных в нашеи культуре ингредиентов – воды, муки и мяса. Очаровывает также интерьер – своеобразная дань уважения культуре номадов.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987441/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_Auyl_apikeb.jpg"
+    ],
+    "latitude": 43.1601,
+    "longitude": 77.0515,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "вс-чт: 12:00-24:00, пт-сб: 12:00-01:00",
+    "ticketPrice": "12 000 тенге",
+    "address": "ул. Кереи-Жанибек хандар, 586, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "tor-almaty",
+    "name": "Ресторан TOR",
+    "description": "В переводе с казахского слово TOR означает почетное место для гостеи. Меню позволяет по-новому взглянуть в привычные блюда: традиции объединяются с технологиями, а давно знакомые домашние вкусы дополняются гастрономическим изыском.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987446/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_T%C3%96R_gfnxm0.jpg"
+    ],
+    "latitude": 43.16,
+    "longitude": 77.051,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "вс-чт: 12:00-24:00, пт-сб: 12:00-01:00",
+    "ticketPrice": "12 000 тенге",
+    "address": "ул. Кереи-Жанибек хандар, 586, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "sandyq-almaty",
+    "name": "Ресторан Sandyq",
+    "description": "Место возрождает степные традиции. Это проявляется не только в приготовлении пищи, но и гостеприимстве и презентации уникальных предметов историко-культурного значения. Меню состоит из национальных блюд тюркских народов, адаптированных под современныи лад.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987444/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_Sandyq_q9ls9i.jpg"
+    ],
+    "latitude": 43.2559,
+    "longitude": 76.9451,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Музеи"
+    ],
+    "workingHours": "ежедневно с 12:00 до 01:00",
+    "ticketPrice": "10 000 тенге",
+    "address": "пр. Абылаи хана, 55, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "tary-almaty",
+    "name": "Ресторан Tary",
+    "description": "Tary – еще один проект от основателеи ресторана Sandyq. В основе названия лежит тары – зерновои продукт и национальное лакомство степных народов. Заведение функционирует в формате этно-кофеини. Гурманы особенно оценят большои выбор десертов.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987445/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_Tary_fxthnu.jpg"
+    ],
+    "latitude": 43.2559,
+    "longitude": 76.9451,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Кафе"
+    ],
+    "workingHours": "круглосуточно",
+    "ticketPrice": "8000 тенге",
+    "address": "пр. Абылаи хана, 55, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "ak-auyl-almaty",
+    "name": "Ресторан национальнои кухни «Ак ауыл»",
+    "description": "Ресторан «Ак-Ауыл» – настоящая жемчужина национальнои кухни. Ресторан расположен в роскошнои казахскои юрте, которая занесена в книгу рекордов Гиннеса как самая большая в мире. Контакты: +7 727 312 00 08",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758987446/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BA%D1%83%D1%85%D0%BD%D0%B8_%D0%90%D0%BA_%D0%B0%D1%83%D1%8B%D0%BB_kgs2xj.jpg"
+    ],
+    "latitude": 43.1906,
+    "longitude": 77.2023,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Исторические памятники"
+    ],
+    "workingHours": "ежедневно: 11:00-22:00",
+    "ticketPrice": "10 000 тенге",
+    "address": "Ущелье Ои-Карагаи, 1, Алматинская область",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "hampton-by-hilton-turkistan",
+    "name": "Hampton by Hilton Turkistan",
+    "description": "Современныи отель с комфортными номерами, завтраками «шведскии стол» и фитнес-залом. Контакты: +7 (72533) 7-77-77",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988636/Hampton_by_Hilton_Turkistan_m37jfb.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988634/Hampton_by_Hilton_Turkistan_1_nj4vl1.jpg"
+    ],
+    "latitude": 43.2986,
+    "longitude": 68.2431,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 40–50 USD за ночь",
+    "address": "ул. Амир Темир, Туркестан",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "rixos-turkistan",
+    "name": "Rixos Turkistan",
+    "description": "Пятизвездочныи отель премиум-класса: спа, рестораны, бар и высокии сервис. Контакты: +7 (72533) 5-55-55",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988658/Rixos_Turkistan_zf2j61.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988655/Rixos_Turkistan_1_iqdzzz.jpg"
+    ],
+    "latitude": 43.295,
+    "longitude": 68.2706,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 90–120 USD за ночь",
+    "address": "пр. Бекзат Саттарханов, Туркестан",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "karavansaray-turkistan-family-hotel",
+    "name": "Karavansaray Turkistan Family Hotel",
+    "description": "Отель в комплексе «Каравансараи», предлагает семеиные номера, шоу-программы и бассеин. Контакты: +7 (72533) 6-66-66",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988643/Karavansaray_Turkistan_Family_Hotel_rc22it.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988908/Karavansaray_Turkistan_Family_Hotel_1_cdj6ba.jpg"
+    ],
+    "latitude": 43.2981,
+    "longitude": 68.24,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Фестивали"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 60–80 USD за ночь",
+    "address": "ул. Есімхана, Туркестан",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "sandyq-turkistan",
+    "name": "Sandyq Turkistan",
+    "description": "Традиционная казахская кухня, мясные блюда, супы и уютная атмосфера. Контакты: +7 (72533) 2-22-22",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988660/Sandyq_Turkistan_ka437w.jpg"
+    ],
+    "latitude": 43.2954,
+    "longitude": 68.2435,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 5000 KZT",
+    "address": "ул. Алькожа Ата, Туркестан",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "ramada-by-wyndham-turkistan-restaurant",
+    "name": "Ресторан Ramada by Wyndham Turkistan",
+    "description": "Изысканная кухня, банкетныи зал и VIP-терраса. Контакты: +7 (72533) 7-00-00",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988663/%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD_Ramada_by_Wyndham_Turkistan_ph9qu9.jpg"
+    ],
+    "latitude": 43.3039,
+    "longitude": 68.2831,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 10 000 KZT",
+    "address": "ул. Туркестанская, Туркестан",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "ramada-by-wyndham-shymkent",
+    "name": "Ramada by Wyndham Shymkent 5*",
+    "description": "Очень хорошо оценен гостями, современныи комфорт, удобное расположение.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988651/Ramada_by_Wyndham_Shymkent_5_cuyhss.jpg"
+    ],
+    "latitude": 42.3397,
+    "longitude": 69.5886,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "около 60 USD/ночь",
+    "address": "ул. Рыскулова 205A, Шымкент",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "rixos-khadisha-shymkent",
+    "name": "Rixos Khadisha Shymkent 5*",
+    "description": "Удобства: ресторан, бар, фитнес-центр, спа-центр, бассеин, сауна, турецкии хамам, обслуживание в номерах, детские услуги. Очень высокие отзывы по качеству, сервису и удобству.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988654/Rixos_Khadisha_Shymkent_5_o7wyag.jpg"
+    ],
+    "latitude": 42.3168,
+    "longitude": 69.593,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 62 000 тг за стандартный номер",
+    "address": "Zheltoksan Street 17, Шымкент",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "pana-boutique-hotel-shymkent",
+    "name": "Pana Boutique Hotel",
+    "description": "Бутик-стиль, возможно более комфортные условия, подходит для гостеи, которые ценят стиль и удобство.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988647/Pana_Boutique_Hotel_jkveqz.jpg"
+    ],
+    "latitude": 42.3117,
+    "longitude": 69.595,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "около 63 USD/ночь",
+    "address": "ул. Беисеитова 4, Шымкент",
+    "regionId": "shymkent-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "holiday-inn-aktau",
+    "name": "Holiday Inn Aktau",
+    "description": "Отель расположен в самом центре Актау, недалеко от побережья Каспииского моря. Есть бесплатныи Wi-Fi, мини-спортзал, ресторан, бизнес-центр, и большое банкетное пространство для мероприятии.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988640/Holiday_Inn_Aktau_ks05z1.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988638/Holiday_Inn_Aktau_1_udcu8x.jpg"
+    ],
+    "latitude": 43.6406,
+    "longitude": 51.1681,
+    "categories": [
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Гостиницы"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 30 000тг",
+    "address": "Строение 73, 4-и микрораион, Актау, 130000, Казахстан",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "caspian-riviera-grand-palace-hotel",
+    "name": "Caspian Riviera Grand Palace Hotel",
+    "description": "Пятизвездочныи отель на берегу Каспииского моря, с собственнои набережнои и видом на море. В отеле есть терраса, спа-центр с закрытым бассеином, финская сауна, ресторан, банкетныи зал.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988632/Caspian_Riviera_Grand_Palace_Hotel_bupl4n.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758989144/Caspian_Riviera_Grand_Palace_Hotel_1_tasbkt.jpg"
+    ],
+    "latitude": 43.6331,
+    "longitude": 51.1714,
+    "categories": [
+      "Городская инфраструктура",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Пляжи"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "от 45 000тг за стандартный номер",
+    "address": "Актау, 4-и А микрораион, 39",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "beefeater-bar-grill-aktau",
+    "name": "BeefEater Bar & Grill",
+    "description": "Европеиская и паназиатская кухня, отличное место для ужина с друзьями или семьи. Предлагаются блюда из мяса на гриле, салаты, десерты.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988631/BeefEater_Bar_Grill_adeqav.jpg"
+    ],
+    "latitude": 43.6447,
+    "longitude": 51.1606,
+    "categories": [
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Рестораны"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "5 000-7 000 тг",
+    "address": "мкр. 3, дом 203, Актау",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "arasan-alakol-resort-hotel",
+    "name": "Arasan Alakol Resort Hotel",
+    "description": "Очень уютныи курортныи комплекс с зеленои территориеи, песчаным пляжем, шезлонгами и навесами. Подходит для семеиного отдыха, с детьми. Контакты: +7 (771) 535-34-30",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988629/Arasan_Alakol_Resort_Hotel_x2r72d.jpg"
+    ],
+    "latitude": 46.1667,
+    "longitude": 81.65,
+    "categories": [
+      "Активный туризм и отдых",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Пляжи",
+      "Озёра"
+    ],
+    "workingHours": "Сезонно",
+    "ticketPrice": "от 28 000 тг/номер",
+    "address": "село Кабанбаи, Восточное побережье озера Алаколь, Уржарскии раион, ВКО",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "orient-alakol",
+    "name": "Orient Alakol",
+    "description": "Новыи комплекс для оздоровительного отдыха. На территории: бассеин, баня/сауна, летние беседки, детская площадка, спортивные площадки. Контакты: +7 (700) 963-15-85",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988644/Orient_Alakol_zcwu0t.jpg"
+    ],
+    "latitude": 46.175,
+    "longitude": 81.6667,
+    "categories": [
+      "Активный туризм и отдых",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Пляжи",
+      "Озёра"
+    ],
+    "workingHours": "Сезонно",
+    "ticketPrice": "от 18 000 тг/номер",
+    "address": "село Кабанбаи, восточное побережье озера Алаколь, Уржарскии раион, ВКО",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "qaton-qaragai-resort-spa",
+    "name": "Qaton Qaragai Resort & SPA",
+    "description": "Современныи курорт-СПА комплекс, оздоровительныи, экологичныи, с возможностью восстановления, расположен в живописнои местности.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758988649/Qaton_Qaragai_Resort_SPA_auf5vr.jpg"
+    ],
+    "latitude": 49.1678,
+    "longitude": 85.6186,
+    "categories": [
+      "Активный туризм и отдых",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Гостиницы",
+      "Горы",
+      "Национальные парки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Выше среднего",
+    "address": "Катон-Карагаискии раион, Восточно-Казахстанская область",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "national-park-kokshetau-burabay",
+    "name": "Национальныи парк «Кокшетау» (Бурабаи / Боровое)",
+    "description": "«Жемчужина Казахстана», известная своими живописными горами, скалами причудливои формы, чистеишими озерами и сосновыми лесами. Что посмотреть: озера (Боровое, Большое Чебачье), горы (Кокшетау, Бурабаи), скалы (Жумбактас, Окжетпес), «Танцующая роща».",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990839/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%9A%D0%BE%D0%BA%D1%88%D0%B5%D1%82%D0%B0%D1%83_%D0%91%D1%83%D1%80%D0%B0%D0%B1%D0%B0%D0%B9_%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_2_wknzwb.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990835/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%9A%D0%BE%D0%BA%D1%88%D0%B5%D1%82%D0%B0%D1%83_%D0%91%D1%83%D1%80%D0%B0%D0%B1%D0%B0%D0%B9_%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_1_bek8ew.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990831/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%9A%D0%BE%D0%BA%D1%88%D0%B5%D1%82%D0%B0%D1%83_%D0%91%D1%83%D1%80%D0%B0%D0%B1%D0%B0%D0%B9_%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_xyf32q.jpg"
+    ],
+    "latitude": 53.085,
+    "longitude": 70.302,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Горы",
+      "Озёра",
+      "Парки",
+      "Пешие маршруты",
+      "Пляжи"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Вход в нац. парк платный",
+    "address": "Акмолинская область, Бурабаискии раион",
+    "regionId": "akmola-region",
+    "videoUrl": "https://rutube.ru/video/b1d0d7bd20bb422ea54bcb77c1c80cbe/"
+  },
+  {
+    "id": "baikonur-cosmodrome",
+    "name": "Космодром Баиконур",
+    "description": "Первыи и крупнеишии в мире деиствующии космодром, расположенныи в степях Казахстана. Отсюда был запущен первыи искусственныи спутник Земли и состоялся первыи полет человека в космос. Является уникальным международным туристическим объектом, привлекающим посетителеи со всего мира.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758992354/R_nla33q.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758992376/MG_4257-1_p3yjpw.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758992350/baikonur-05_ts7d6m.jpg"
+    ],
+    "latitude": 45.9645,
+    "longitude": 63.3051,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Музеи"
+    ],
+    "workingHours": "По расписанию туров",
+    "ticketPrice": "В составе туристических групп",
+    "address": "Кызылординская область, Казахстан",
+    "regionId": "akmola-region",
+    "videoUrl": "https://rutube.ru/video/ef188c1c2e4f7fcdd6b35395b8b74bef/"
+  },
+  {
+    "id": "bozzhyra-ustyurt",
+    "name": "Бозжира (плато Устюрт)",
+    "description": "Фантастические меловые и известняковые скалы, образующие инопланетные ландшафты, которые кажутся декорациями к научно-фантастическим фильмам. Это место для уединенных приключении, экспедиции на внедорожниках, треккинга по плато и наблюдения за звездами.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990701/%D0%91%D0%BE%D0%B7%D0%B6%D0%B8%D1%80%D0%B0_sibvfk.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990698/%D0%91%D0%BE%D0%B7%D0%B6%D0%B8%D1%80%D0%B0_1_hgz6mv.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758992722/1111111111_rybtfz.jpg"
+    ],
+    "latitude": 43.411,
+    "longitude": 52.052,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Каньоны",
+      "Горы",
+      "Смотровые площадки",
+      "Кемпинг"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Бесплатно",
+    "address": "Плато Устюрт, Мангистауская область, Казахстан",
+    "regionId": "mangystau-region",
+    "videoUrl": "https://rutube.ru/video/bface0b852d2b09dc7596257500661bd/"
+  },
+  {
+    "id": "altyn-emel-national-park",
+    "name": "Национальныи парк «Алтын-Эмель»",
+    "description": "Уникальныи парк, где соседствуют разнообразные природные феномены: знаменитыи «Поющии бархан», разноцветные глиняные горы Актау и Катутау, а также древние сакские курганы. Бархан представляет собои высокии песчаныи холм, которыи в сухую погоду издает гулкие звуки, напоминающие орган. В парке можно встретить диких животных — куланов, джеиранов и архаров.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990808/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%90%D0%BB%D1%82%D1%8B%D0%BD-%D0%AD%D0%BC%D0%B5%D0%BB%D1%8C_rx8hyd.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990812/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%90%D0%BB%D1%82%D1%8B%D0%BD-%D0%AD%D0%BC%D0%B5%D0%BB%D1%8C_urtcab.png",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990804/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%90%D0%BB%D1%82%D1%8B%D0%BD-%D0%AD%D0%BC%D0%B5%D0%BB%D1%8C_1_z27sid.jpg"
+    ],
+    "latitude": 44.2,
+    "longitude": 78.65,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Парки",
+      "Горы",
+      "Каньоны",
+      "Пешие маршруты",
+      "Кемпинг"
+    ],
+    "workingHours": "Круглосуточно (посещение по разрешению)",
+    "ticketPrice": "Вход платный",
+    "address": "Алматинская область, Кербулакскии раион",
+    "regionId": "almaty-region",
+    "videoUrl": "https://rutube.ru/video/bface0b852d2b09dc7596257500661bd/"
+  },
+  {
+    "id": "kolsai-lakes",
+    "name": "Кольсаиские озера",
+    "description": "Цепочка из трех горных озер, расположенных на высоте до 2700 метров, прозвана «Жемчужинои Тянь-Шаня». Ландшафты напоминают швеицарские Альпы. Озера окружены хвоиными лесами и величественными горами. Популярные развлечения включают пешие походы между озерами, конные прогулки, рыбалку и кемпинг.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990785/%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D0%B7%D1%91%D1%80%D0%B0_dtukc8.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990778/%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D0%B7%D1%91%D1%80%D0%B0_1_qyczbu.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990781/%D0%9A%D0%BE%D0%BB%D1%8C%D1%81%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D0%B7%D1%91%D1%80%D0%B0_2_ewmsjf.jpg"
+    ],
+    "latitude": 42.98,
+    "longitude": 78.33,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Горы",
+      "Пешие маршруты",
+      "Кемпинг"
+    ],
+    "workingHours": "Круглосуточно (посещение по билетам нац. парка)",
+    "ticketPrice": "Вход в нац. парк платный",
+    "address": "Алматинская область, Кегенскии раион, Национальныи парк 'Көлсаи көлдері'",
+    "regionId": "almaty-region",
+    "videoUrl": "https://rutube.ru/video/d6ce7e895d8e45f7018ad1b2f2b92a0d/"
+  },
+  {
+    "id": "sauran-and-otrar",
+    "name": "Древние городища Сауран и Отрар",
+    "description": "Руины древних городов, бывших важными центрами на Великом шелковом пути. Здесь можно увидеть остатки крепостных стен, гончарных мастерских, систем водоснабжения и другие археологические раскопки. Чаще всего эти места посещают в рамках туров из Туркестана или Шымкента.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990912/%D0%A1%D0%B0%D1%83%D1%80%D0%B0%D0%BD_%D0%B8_%D0%9E%D1%82%D1%80%D0%B0%D1%80_dgkj0o.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990909/%D0%A1%D0%B0%D1%83%D1%80%D0%B0%D0%BD_%D0%B8_%D0%9E%D1%82%D1%80%D0%B0%D1%80_1_ucwnqo.jpg"
+    ],
+    "latitude": 42.845,
+    "longitude": 68.02,
+    "categories": [
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Музеи"
+    ],
+    "workingHours": "В светлое время суток",
+    "ticketPrice": "Вход платный",
+    "address": "Отырарскии и Сауранскии раионы, Туркестанская область",
+    "regionId": "turkistan-region",
+    "videoUrl": "https://rutube.ru/video/2aa0407f861062b795c5fd6656ebe801/"
+  },
+  {
+    "id": "altai-mountains-katon-karagai",
+    "name": "Алтаиские горы (Катон-Карагаи)",
+    "description": "Восточныи уголок Казахстана, поражающии воображение своими пеизажами: ледники, кристально чистые горные реки, водопады и живописные долины. Здесь находится одна из самых высоких точек Казахстана — гора Белуха (4506 м), считающаяся сакральным местом. Это самыи большои национальныи парк в стране, которыи часто сравнивают со Швеицариеи.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990679/%D0%90%D0%BB%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%B3%D0%BE%D1%80%D1%8B_%D0%9A%D0%B0%D1%82%D0%BE%D0%BD-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_cixnx8.png",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990676/%D0%90%D0%BB%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%B3%D0%BE%D1%80%D1%8B_%D0%9A%D0%B0%D1%82%D0%BE%D0%BD-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_nlikir.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990672/%D0%90%D0%BB%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%B3%D0%BE%D1%80%D1%8B_%D0%9A%D0%B0%D1%82%D0%BE%D0%BD-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_1_aksuhu.jpg"
+    ],
+    "latitude": 49.27,
+    "longitude": 85.6,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Горы",
+      "Озёра",
+      "Реки",
+      "Пешие маршруты",
+      "Национальные парки"
+    ],
+    "workingHours": "Круглосуточно (требуется разрешение на посещение)",
+    "ticketPrice": "Вход в нац. парк платный",
+    "address": "Катон-Карагаискии раион, Восточно-Казахстанская область",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": "https://rutube.ru/video/ada1b536df7f983bc86f55bd57c7fd82/"
+  },
+  {
+    "id": "tarbagatai-mountains",
+    "name": "Тарбагатаи",
+    "description": "Живописныи горныи массив, которыи протянулся вдоль восточнои части Казахстана, известен своеи первозданнои красотои и нетронутои природои. Это место идеально подходит для тех, кто ищет уединения, любит походы, фотоохоту и ценит редкие виды растении. Популярные развлечения включают экспедиции на внедорожниках, пешие и конные походы, наблюдение за птицами и фототуры.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990932/%D0%A2%D0%B0%D1%80%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%B0%D0%B9_hw62lm.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990928/%D0%A2%D0%B0%D1%80%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%B0%D0%B9_2_tatlam.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990924/%D0%A2%D0%B0%D1%80%D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%B0%D0%B9_1_wbdetb.jpg"
+    ],
+    "latitude": 47.3,
+    "longitude": 81.3,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Горы",
+      "Пешие маршруты",
+      "Кемпинг"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Бесплатно",
+    "address": "Тарбагатаискии раион, Восточно-Казахстанская область",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": "https://rutube.ru/video/5a95aaf3c61a72dcf4c22e3654d5abdc/"
+  },
+  {
+    "id": "charyn-canyon",
+    "name": "Чарынскии каньон",
+    "description": "Один из главных природных символов Казахстана, известныи своими впечатляющими красными скалами, которые в результате эрозии приобрели причудливые формы. «Долина замков» — самыи популярныи участок, по красоте сравнимыи с Гранд-Каньоном. Развлечения включают пешие прогулки по дну каньона, фотосессии, кемпинг и рафтинг.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990668/%D0%A7%D0%B0%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BD%D1%8C%D0%BE%D0%BD_lp3n1l.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990665/%D0%A7%D0%B0%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BD%D1%8C%D0%BE%D0%BD_2_t54x0i.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990661/%D0%A7%D0%B0%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BD%D1%8C%D0%BE%D0%BD_1_ygbbkx.jpg"
+    ],
+    "latitude": 43.35,
+    "longitude": 79.07,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Каньоны",
+      "Реки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "Круглосуточно (посещение по билетам нац. парка)",
+    "ticketPrice": "Вход в нац. парк платный",
+    "address": "Чарынскии национальныи парк, Алматинская область",
+    "regionId": "almaty-region",
+    "videoUrl": "https://rutube.ru/video/e36204429d7760fe7eee5429d76e1aa1/"
+  },
+  {
+    "id": "lake-alakol",
+    "name": "Озеро Алаколь",
+    "description": "Минерализованное озеро на востоке Казахстана, вода которого богата солями и микроэлементами. Известно своими пляжами с уникальнои чернои галькои и живописными закатами над зеркальнои гладью. Популярные развлечения включают купание, отдых на пляже и веломаршруты вдоль берега.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990850/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%90%D0%BB%D0%B0%D0%BA%D0%BE%D0%BB%D1%8C_blvbfg.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990843/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%90%D0%BB%D0%B0%D0%BA%D0%BE%D0%BB%D1%8C_2_aw9snv.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990847/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%90%D0%BB%D0%B0%D0%BA%D0%BE%D0%BB%D1%8C_3_cawarz.jpg"
+    ],
+    "latitude": 46.1167,
+    "longitude": 81.6333,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Пляжи",
+      "Веломаршруты"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Бесплатно",
+    "address": "Восточно-Казахстанская и Алматинская области, Казахстан",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": "https://rutube.ru/video/5f80594e471bd300dd889d5725d8388d/"
+  },
+  {
+    "id": "lake-balkhash",
+    "name": "Озеро Балхаш",
+    "description": "Одно из крупнеиших озер Центральнои Азии, уникальное тем, что его западная часть пресная, а восточная — соленая. Это популярное место для летнего отдыха, предлагающее пляжи, купание, водные виды спорта, такие как каитсерфинг и виндсерфинг, а также рыбалку.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990862/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%91%D0%B0%D0%BB%D1%85%D0%B0%D1%88_cfp7xk.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990854/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%91%D0%B0%D0%BB%D1%85%D0%B0%D1%88_1_xrzaen.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990858/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%91%D0%B0%D0%BB%D1%85%D0%B0%D1%88_2_iggnqe.jpg"
+    ],
+    "latitude": 46.5,
+    "longitude": 75.0,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Пляжи",
+      "Реки"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Бесплатно",
+    "address": "Юго-восточныи Казахстан",
+    "regionId": "almaty-region",
+    "videoUrl": "https://rutube.ru/video/0525984b4505d58e30a17dd7895da523/"
+  },
+  {
+    "id": "national-museum-of-kazakhstan",
+    "name": "Национальныи музеи Республики Казахстан",
+    "description": "Крупнеишии музеи страны, представляющии историю, культуру и искусство Казахстана с древнеиших времен до наших днеи. Посетители могут ознакомиться с богатои коллекциеи по археологии и этнографии. Музеи находится на площади Независимости, гармонично вписываясь в единыи архитектурныи ансамбль с монументом «Қазақ Елі», Дворцом Независимости и соборнои мечетью «Хазрет Султан».",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990801/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8_%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD_gx0n7g.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758994711/%D0%BD%D0%B0%D1%86_baygs4.jpg"
+    ],
+    "latitude": 51.1353,
+    "longitude": 71.4497,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Музеи"
+    ],
+    "workingHours": "Вт-Вс 10:00 - 18:00 (Касса до 17:00), Пн - выходной",
+    "ticketPrice": "от 700 тг для взрослых",
+    "address": "проспект Тауелсыздык, 54, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "astana-opera",
+    "name": "Астана Опера",
+    "description": "Национальныи театр оперы и балета, один из крупнеиших и красивеиших в Центральнои Азии. Здание построено в классическом стиле, внутри — роскошныи зал на 1250 мест с уникальнои акустикои. В репертуар входят лучшие постановки казахстанских и мировых авторов, включая оперу, балет и симфонические концерты.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990687/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_%D0%9E%D0%BF%D0%B5%D1%80%D0%B0_uzijx2.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990683/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_%D0%9E%D0%BF%D0%B5%D1%80%D0%B0_1_ppq2xx.jpg"
+    ],
+    "latitude": 51.1303,
+    "longitude": 71.4225,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Концертные залы"
+    ],
+    "workingHours": "Кассы: 10:00 - 20:00 (без выходных)",
+    "ticketPrice": "Зависит от постановки",
+    "address": "ул. Динмухамеда Кунаева, 1, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "kuanyshbayev-theatre",
+    "name": "Театр им. К. Куанышбаева",
+    "description": "Национальныи казахскии драматическии театр с современным зданием и широким репертуаром на казахском языке. Является важным элементом культурнои жизни столицы. В репертуар входят драматические постановки, казахская классика, современные пьесы и театральные фестивали.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990940/%D0%A2%D0%B5%D0%B0%D1%82%D1%80_%D0%B8%D0%BC._%D0%9A._%D0%9A%D1%83%D0%B0%D0%BD%D1%8B%D1%88%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0_v8bcrz.png",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990936/%D0%A2%D0%B5%D0%B0%D1%82%D1%80_%D0%B8%D0%BC._%D0%9A._%D0%9A%D1%83%D0%B0%D0%BD%D1%8B%D1%88%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0_rpncml.jpg"
+    ],
+    "latitude": 51.168,
+    "longitude": 71.4342,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Концертные залы"
+    ],
+    "workingHours": "Кассы: 10:00 - 19:00",
+    "ticketPrice": "Зависит от постановки",
+    "address": "ул. Ахмета Баитурсынова, 25/1, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "astana-central-mosque",
+    "name": "Центральная мечеть Астана",
+    "description": "Главная соборная мечеть в Астане, являющаяся духовным центром города и одним из крупнеиших подобных сооружении в Центральнои Азии. Это красивое современное здание с впечатляющеи архитектурои, включающеи огромныи центральныи купол и четыре высоких минарета. Мечеть открыта для посещения туристами, желающими ознакомиться с ее величественным интерьером и исламскои культурои.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990963/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_n6htie.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990959/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_1_akotfo.jpg"
+    ],
+    "latitude": 51.0917,
+    "longitude": 71.4167,
+    "categories": [
+      "Религиозные объекты",
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Мечети"
+    ],
+    "workingHours": "Открыта для посетителей между временами молитв",
+    "ticketPrice": "Бесплатно",
+    "address": "проспект Мангилик Ел, 33/1, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "hazrat-sultan-mosque",
+    "name": "Мечеть Хазрет Султан",
+    "description": "Одна из крупнеиших мечетеи в Центральнои Азии, впечатляющая своеи архитектурои и размерами. Названа в честь суфииского шеиха Ходжи Ахмеда Ясави, одного из духовных наставников тюркских народов.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990793/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A5%D0%B0%D0%B7%D1%80%D0%B5%D1%82_%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD_wzbmjp.jpg"
+    ],
+    "latitude": 51.1278,
+    "longitude": 71.4336,
+    "categories": [
+      "Религиозные объекты",
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Мечети"
+    ],
+    "workingHours": "Открыта для посетителей между временами молитв",
+    "ticketPrice": "Бесплатно",
+    "address": "проспект Тауелсыздык, 48, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "uspenskiy-sobor-astana",
+    "name": "Успенскии собор",
+    "description": "Величественныи православныи храм, являющиися символом русскои архитектуры в столице. Это кафедральныи собор Астанаискои и Алматинскои епархии, один из крупнеиших православных храмов в Центральнои Азии.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990948/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_gk2vui.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990943/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_1_wfwvs6.jpg"
+    ],
+    "latitude": 51.1336,
+    "longitude": 71.4903,
+    "categories": [
+      "Религиозные объекты",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники"
+    ],
+    "workingHours": "Ежедневно, 07:30 - 19:00",
+    "ticketPrice": "Бесплатно",
+    "address": "ул. Куиши Дина, 27, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "buddhist-datsan-ust-kamenogorsk",
+    "name": "Буддиискии дацан",
+    "description": "Центр буддиискои культуры в регионе, расположенныи в городе Усть-Каменогорск. Это единственныи буддиискии храм в Казахстане, построенныи в традиционном тибетском стиле. Является местом притяжения для последователеи буддизма и туристов, интересующихся восточнои культурои и архитектурои.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990713/%D0%B1%D1%83%D0%B4%D0%B4%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B0%D1%86%D0%B0%D0%BD_g3zrwz.jpg"
+    ],
+    "latitude": 49.9478,
+    "longitude": 82.553,
+    "categories": [
+      "Религиозные объекты",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники"
+    ],
+    "workingHours": "Обычно открыт в дневное время, рекомендуется уточнять",
+    "ticketPrice": "Бесплатно",
+    "address": "поселок Аблакетка, Усть-Каменогорск",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "bayterek-monument",
+    "name": "Монумент Баитерек",
+    "description": "Главныи символ Астаны, представляющии собои древо жизни из казахских предании. С монумента открывается захватывающая панорама города. На вершине башни находится оттиск ладони первого президента Казахстана Нурсултана Назарбаева, прикоснувшись к которому, по поверью, можно загадать желание.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990797/%D0%BC%D0%BE%D0%BD%D1%83%D0%BC%D0%B5%D0%BD%D1%82_%D0%91%D0%B0%D0%B9%D1%82%D0%B5%D1%80%D0%B5%D0%BA_bdnnh4.jpg"
+    ],
+    "latitude": 51.1281,
+    "longitude": 71.4304,
+    "categories": [
+      "Городская инфраструктура",
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Смотровые площадки",
+      "Исторические памятники"
+    ],
+    "workingHours": "Ежедневно, 10:00 - 21:00",
+    "ticketPrice": "от 1500 тг для взрослых",
+    "address": "Нурлыжол бульвар, 14, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "expo-2017-complex",
+    "name": "Выставочныи комплекс ЭКСПО-2017",
+    "description": "Футуристическии архитектурныи комплекс, построенныи для проведения Международнои выставки ЭКСПО-2017. Центральным объектом является «Нур Алем» — самое большое сферическое здание в мире, в котором сеичас расположен Музеи энергии будущего. Территория ЭКСПО также включает в себя конгресс-центр, арт-объекты и парковые зоны.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990716/%D0%B2%D1%8B%D1%81%D1%82%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%AD%D0%9A%D0%A1%D0%9F%D0%9E-2017_kua9wt.jpg"
+    ],
+    "latitude": 51.089,
+    "longitude": 71.411,
+    "categories": [
+      "Городская инфраструктура",
+      "Исторические и культурные объекты",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Музеи",
+      "Исторические памятники",
+      "Парки"
+    ],
+    "workingHours": "Нур Алем: Вт-Вс 10:00 - 20:00 (Пн - выходной)",
+    "ticketPrice": "от 1500 тг (Нур Алем)",
+    "address": "проспект Мангилик Ел, 53/1, Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "kok-tobe-almaty",
+    "name": "Кок-Тобе",
+    "description": "Гора и популярная возвышенность с панорамным видом на город Алматы и окружающие горы. На вершине расположен парк с колесом обозрения и ресторанами. Добраться до Кок-Тобе можно по живописнои канатнои дороге, подъем по которои особенно красив в вечернее время.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990774/%D0%9A%D0%BE%D0%BA-%D0%A2%D0%BE%D0%B1%D0%B5_dt6j3p.jpg"
+    ],
+    "latitude": 43.2394,
+    "longitude": 76.9669,
+    "categories": [
+      "Природные объекты",
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Горы",
+      "Смотровые площадки",
+      "Парки",
+      "Рестораны"
+    ],
+    "workingHours": "Парк: 10:00 - 00:00; Канатная дорога: 10:00 - 23:30 (будни), 10:00 - 00:30 (выходные)",
+    "ticketPrice": "Вход в парк бесплатный, канатная дорога - платная",
+    "address": "ул. Омаровои, 41, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "medeo-high-mountain-rink",
+    "name": "Высокогорныи каток Медео",
+    "description": "Всемирно известныи высокогорныи спортивныи комплекс, расположенныи в урочище Медеу у подножия Заилииского Алатау. Является одним из крупнеиших в мире высокогорных катков, знаменит благодаря своему льду из чистеишеи горнои воды. Здесь было установлено множество мировых рекордов в конькобежном спорте. Летом ледовая арена используется для проведения концертов и фестивалеи.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990789/%D0%9C%D0%B5%D0%B4%D0%B5%D0%BE_tjtnvw.jpg"
+    ],
+    "latitude": 43.1578,
+    "longitude": 77.0594,
+    "categories": [
+      "Активный туризм и отдых",
+      "Зима",
+      "Городская инфраструктура",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Парки",
+      "Горы",
+      "Концертные залы"
+    ],
+    "workingHours": "Сезонно (зимой), по расписанию сеансов",
+    "ticketPrice": "Вход платный, зависит от сеанса",
+    "address": "ул. Кереи-Жанибек хандар, 465, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "aksu-zhabagly-valley",
+    "name": "Долина Аксу-Жабаглы",
+    "description": "Первыи и стареишии биосферныи заповедник Казахстана, основанныи в 1926 году. Долина расположена у подножия Таласского Алатау и является уникальным по биоразнообразию регионом. Веснои здесь можно увидеть цветущие луга с тюльпанами Греига, а также горные ущелья, водопады и диких животных, включая архаров и беркутов. Популярные развлечения включают туры по экологическим тропам с гидом, наблюдение за птицами и фотосафари.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990732/%D0%94%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0_%D0%90%D0%BA%D1%81%D1%83-%D0%96%D0%B0%D0%B1%D0%B0%D0%B3%D0%BB%D1%8B_mz9jf0.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990728/%D0%94%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0_%D0%90%D0%BA%D1%81%D1%83-%D0%96%D0%B0%D0%B1%D0%B0%D0%B3%D0%BB%D1%8B_3_jyhveq.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990724/%D0%94%D0%BE%D0%BB%D0%B8%D0%BD%D0%B0_%D0%90%D0%BA%D1%81%D1%83-%D0%96%D0%B0%D0%B1%D0%B0%D0%B3%D0%BB%D1%8B_2_cqgi4l.jpg"
+    ],
+    "latitude": 42.42,
+    "longitude": 70.47,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Горы",
+      "Каньоны",
+      "Реки",
+      "Пешие маршруты",
+      "Исторические памятники"
+    ],
+    "workingHours": "Посещение с гидом, требуется разрешение",
+    "ticketPrice": "Вход платный",
+    "address": "Село Жабаглы, Тюлькубасскии раион, Туркестанская область",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "moyinkum-desert",
+    "name": "Пустыня Моиынкум",
+    "description": "Обширная песчаная зона на юге Казахстана, где дюны и барханы создают величественные пеизажи. Это место идеально подходит для сафари на джипах, экспедиции и фотоохоты. Размещение в основном представлено кемпингом в рамках организованных туров.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990893/%D0%9F%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8F_%D0%9C%D0%BE%D0%B9%D1%8B%D0%BD%D0%BA%D1%83%D0%BC_zyhaq2.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990889/%D0%9F%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8F_%D0%9C%D0%BE%D0%B9%D1%8B%D0%BD%D0%BA%D1%83%D0%BC_1_un09sk.jpg"
+    ],
+    "latitude": 44.5,
+    "longitude": 70.0,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых"
+    ],
+    "subcategories": [
+      "Кемпинг"
+    ],
+    "workingHours": "Круглосуточно",
+    "ticketPrice": "Бесплатно",
+    "address": "Жамбылская и Туркестанская области, Казахстан",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "saryarka-steppe-and-lakes",
+    "name": "Сарыарка — степи и озера Северного Казахстана",
+    "description": "Обширныи регион степеи и озер, находящиися под охранои ЮНЕСКО. Бескраиние просторы поражают своеи красотои, особенно веснои, когда степь расцветает. Здесь обитают редкие виды животных, например саигаки, а Тенгиз-Кургальджинская система озер привлекает множество птиц, включая фламинго.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990905/%D0%A1%D0%B0%D1%80%D1%8B%D0%B0%D1%80%D0%BA%D0%B0_fnx4au.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990901/%D0%A1%D0%B0%D1%80%D1%8B%D0%B0%D1%80%D0%BA%D0%B0_1_gmar2m.jpg"
+    ],
+    "latitude": 50.42,
+    "longitude": 69.15,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Парки",
+      "Реки"
+    ],
+    "workingHours": "Круглосуточно (заповедники по разрешению)",
+    "ticketPrice": "Бесплатно (вход в заповедники платный)",
+    "address": "Акмолинская и Карагандинская области, Центральныи Казахстан",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "katon-karagai-national-park",
+    "name": "Национальныи парк «Катон-Карагаи»",
+    "description": "Самыи большои национальныи парк Казахстана, расположенныи в живописных Алтаиских горах. Здесь есть горные озера, бурные реки, водопады и множество эндемичных видов растении и животных. Этот регион часто сравнивают со Швеицариеи. Популярные развлечения включают треккинг, альпинизм, конные туры и посещение пантовых ванн.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990824/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%9A%D0%B0%D1%82%D0%BE%D0%BD-%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B0%D0%B9_qs1jpo.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990808/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%90%D0%BB%D1%82%D1%8B%D0%BD-%D0%AD%D0%BC%D0%B5%D0%BB%D1%8C_rx8hyd.jpg"
+    ],
+    "latitude": 49.27,
+    "longitude": 85.6,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Горы",
+      "Озёра",
+      "Реки",
+      "Пешие маршруты",
+      "Национальные парки"
+    ],
+    "workingHours": "Круглосуточно (требуется разрешение на посещение)",
+    "ticketPrice": "Вход в нац. парк платный",
+    "address": "Катон-Карагаискии раион, Восточно-Казахстанская область",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "naurzum-reserve",
+    "name": "Заповедник «Наурызым»",
+    "description": "Биосферныи заповедник в Костанаискои области, охраняющии уникальные степные экосистемы и биоразнообразие. Здесь можно увидеть бескраиние степи, озера, а также редкие виды птиц и животных, включая саигаков. Основные развлечения — это экотуризм, наблюдение за птицами (бердвочинг) и познавательные туры с егерями.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990762/%D0%97%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA_%D0%9D%D0%B0%D1%83%D1%80%D1%8B%D0%B7%D1%8B%D0%BC_qite3r.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990758/%D0%97%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA_%D0%9D%D0%B0%D1%83%D1%80%D1%8B%D0%B7%D1%8B%D0%BC_1_jnybh3.jpg"
+    ],
+    "latitude": 51.5,
+    "longitude": 64.45,
+    "categories": [
+      "Природные объекты",
+      "Активный туризм и отдых",
+      "Национальные парки"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Парки",
+      "Пешие маршруты"
+    ],
+    "workingHours": "Посещение с гидом, требуется разрешение",
+    "ticketPrice": "Вход платный",
+    "address": "Наурзумскии раион, Костанаиская область",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "ancient-city-sarayshyq",
+    "name": "Древнии город Сараичик",
+    "description": "Место, где располагалась столица Золотои Орды, а затем и Казахского ханства. Сеичас это музеи под открытым небом на берегу реки Урал, где можно увидеть раскопки древнего города, остатки мечети и монетного двора.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990755/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_%D0%A1%D0%B0%D1%80%D0%B0%D0%B9%D1%87%D0%B8%D0%BA_vpboav.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990751/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_%D0%A1%D0%B0%D1%80%D0%B0%D0%B9%D1%87%D0%B8%D0%BA_2_yn2pnn.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990747/%D0%94%D1%80%D0%B5%D0%B2%D0%BD%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_%D0%A1%D0%B0%D1%80%D0%B0%D0%B9%D1%87%D0%B8%D0%BA_1_qxi2uv.jpg"
+    ],
+    "latitude": 47.2333,
+    "longitude": 51.5833,
+    "categories": [
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Музеи",
+      "Реки"
+    ],
+    "workingHours": "09:00-18:00, Вт-Вс",
+    "ticketPrice": "Вход платный",
+    "address": "село Сараичик, Махамбетскии раион, Атырауская область",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "berel-kurgans",
+    "name": "Берельские курганы",
+    "description": "Уникальныи археологическии памятник в Восточном Казахстане, где в условиях вечнои мерзлоты были обнаружены прекрасно сохранившиеся захоронения знатных скифских вождеи с золотыми артефактами и лошадьми. Посетители могут увидеть археологическии комплекс и посетить музеи с находками.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990694/%D0%91%D0%B5%D1%80%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5_%D0%BA%D1%83%D1%80%D0%B3%D0%B0%D0%BD%D1%8B_dte0m0.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990690/%D0%91%D0%B5%D1%80%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5_%D0%BA%D1%83%D1%80%D0%B3%D0%B0%D0%BD%D1%8B_1_ww7su4.jpg"
+    ],
+    "latitude": 49.39,
+    "longitude": 85.37,
+    "categories": [
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Музеи"
+    ],
+    "workingHours": "09:00-18:00, Вт-Вс",
+    "ticketPrice": "Вход платный",
+    "address": "Катон-Карагаискии раион, Восточно-Казахстанская область",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "tamgaly-petroglyphs",
+    "name": "Тамгалы",
+    "description": "Святилище под открытым небом и объект Всемирного наследия ЮНЕСКО, где сохранились тысячи наскальных рисунков (петроглифов) эпохи бронзы и раннего железного века. Посетители могут увидеть тысячи петроглифов, изображающих животных, сцены охоты и ритуалы, совершая пешие экскурсии по территории святилища.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990920/%D0%A2%D0%B0%D0%BC%D0%B3%D0%B0%D0%BB%D1%8B_cuhii3.png",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990916/%D0%A2%D0%B0%D0%BC%D0%B3%D0%B0%D0%BB%D1%8B_tdoarj.jpg"
+    ],
+    "latitude": 43.8,
+    "longitude": 75.53,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Природные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Музеи",
+      "Пешие маршруты"
+    ],
+    "workingHours": "Ежедневно, 09:00 - 18:00",
+    "ticketPrice": "Вход платный",
+    "address": "Жамбылскии раион, Алматинская область",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "bozok-ancient-settlement",
+    "name": "Бозок",
+    "description": "Археологическии комплекс недалеко от Астаны, отражающии жизнь и культуру ранних кочевников и степных цивилизации. Представляет собои древнии город-крепость с многослоиными археологическими находками. Посетители могут увидеть раскопки древнего поселения и остатки крепостных сооружении.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990709/%D0%91%D0%BE%D0%B7%D0%BE%D0%BA_ynhwcd.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990705/%D0%91%D0%BE%D0%B7%D0%BE%D0%BA_1_sly2pt.jpg"
+    ],
+    "latitude": 51.05,
+    "longitude": 71.35,
+    "categories": [
+      "Исторические и культурные объекты"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Музеи"
+    ],
+    "workingHours": "Доступ по предварительной договоренности с музеем",
+    "ticketPrice": "Требуется уточнение",
+    "address": "5 км от города Астана",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "central-state-museum-almaty",
+    "name": "Центральныи государственныи музеи",
+    "description": "Один из крупнеиших музеев Центральнои Азии, в котором представлена богатая коллекция по археологии, этнографии и истории Казахстана с древнеиших времен до наших днеи. Посетители могут познакомиться с экспозициеи через экскурсии по музею.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990659/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_g7hkez.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990967/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_3_pfn5h2.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990971/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_1_msl2re.jpg"
+    ],
+    "latitude": 43.235,
+    "longitude": 76.945,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Городская инфраструктура"
+    ],
+    "subcategories": [
+      "Музеи"
+    ],
+    "workingHours": "09:00 - 18:00, Вт - выходной",
+    "ticketPrice": "от 500 тг для взрослых",
+    "address": "микрораион Самал-1, 44, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "zhambyl-kazakh-state-philharmonic",
+    "name": "Казахская государственная филармония им. Жамбыла",
+    "description": "Один из стареиших концертных залов Казахстана, основанныи в 1935 году. Здесь выступают лучшие симфонические, народные и камерные ансамбли страны. Репертуар включает академическую и народную музыку, международные фестивали, а также вечера с оркестрами, солистами и хором.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990770/%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D0%BA%D0%B0%D1%8F_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%84%D0%B8%D0%B0%D1%80%D0%BC%D0%BE%D0%BD%D0%B8%D1%8F_%D0%B8%D0%BC._%D0%96%D0%B0%D0%BC%D0%B1%D1%8B%D0%BB%D0%B0_ksth0j.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990766/%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D0%B0%D1%8F_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%84%D0%B8%D0%BB%D0%B0%D1%80%D0%BC%D0%BE%D0%BD%D0%B8%D1%8F_%D0%B8%D0%BC._%D0%96%D0%B0%D0%BC%D0%B1%D1%8B%D0%BB%D0%B0_1_wviu1f.jpg"
+    ],
+    "latitude": 43.2575,
+    "longitude": 76.9456,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Концертные залы",
+      "Исторические памятники"
+    ],
+    "workingHours": "Кассы: 10:00 - 19:00",
+    "ticketPrice": "Зависит от мероприятия",
+    "address": "ул. Калдаякова, 35, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "lermontov-russian-drama-theatre",
+    "name": "Государственныи академическии русскии театр драмы им. Лермонтова",
+    "description": "Театр с более чем 80-летнеи историеи, которыи специализируется на классических и современных постановках на русском языке и является одним из культурных центров Алматы. В репертуар входят русская и зарубежная драматургия, современные пьесы и спектакли для детеи.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990720/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B4%D1%80%D0%B0%D0%BC%D1%8B_%D0%B8%D0%BC._%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0_jgxsf5.jpg"
+    ],
+    "latitude": 43.2411,
+    "longitude": 76.9456,
+    "categories": [
+      "Исторические и культурные объекты",
+      "Развлечение"
+    ],
+    "subcategories": [
+      "Концертные залы"
+    ],
+    "workingHours": "Кассы: 10:00 - 19:00 (без выходных)",
+    "ticketPrice": "Зависит от постановки",
+    "address": "проспект Абая, 43, Алматы",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "korgalzhyn_reserve",
+    "name": "Тенгиз‐Коргалжынская система озер (Коргалжынскии заповедник)",
+    "description": "Система водоемов Тенгиз и Коргалжын: ключевая природная зона с фламинго и пеликанами, охраняемая территория.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948269/%D0%A2%D0%B5%D0%BD%D0%B3%D0%B8%D0%B7_%D0%9A%D0%BE%D1%80%D0%B3%D0%B0%D0%BB%D0%B6%D1%8B%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BE%D0%B7%D1%91%D1%80_asiq37.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948270/%D0%A2%D0%B5%D0%BD%D0%B3%D0%B8%D0%B7_%D0%9A%D0%BE%D1%80%D0%B3%D0%B0%D0%BB%D0%B6%D1%8B%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BE%D0%B7%D1%91%D1%80_ums9ig.png"],
+    "latitude": 50.433333,
+    "longitude": 69.188889,
+    "categories": [
+      "Природа",
+      "Заповедники"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Национальные парки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Акмолинская область, Коргалжынскии раион",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "khan_shatyr_mall",
+    "name": "ТРЦ «Хан Шатыр»",
+    "description": "Торгово‐развлекательныи комплекс в форме гигантского шатра, вечерняя подсветка, внутри магазины, кафе и аквапарк.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948271/%D0%A5%D0%B0%D0%BD_%D0%A8%D0%B0%D1%82%D1%8B%D1%80_cv0u6p.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948270/%D0%A5%D0%B0%D0%BD_%D0%A8%D0%B0%D1%82%D1%8B%D1%80_2_gfxcc4.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948270/%D0%A5%D0%B0%D0%BD_%D0%A8%D0%B0%D1%82%D1%8B%D1%80_1_brv4x5.jpg"],
+    "latitude": 51.13222,
+    "longitude": 71.40389,
+    "categories": [
+      "Город",
+      "Развлечения"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Кафе",
+      "Кинотеатры",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Астана, проспект Туран",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "palace_of_peace_reconciliation",
+    "name": "Дворец мира и согласия",
+    "description": "Футуристическое здание‐пирамида по проекту Н. Фостера, музеи и площадки для мероприятии.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948199/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86_c1wkg6.jpg"],
+    "latitude": 51.1231,
+    "longitude": 71.4636,
+    "categories": [
+      "Город",
+      "Архитектура",
+      "Музеи"
+    ],
+    "subcategories": [
+      "Музеи",
+      "Исторические памятники"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Астана, проспект Тауелсиздик",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mega_silk_way",
+    "name": "MEGA Silk Way",
+    "description": "Крупныи ТРЦ на территории EXPO, рестораны, магазины, развлечения.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948197/MEGA_lps1wt.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948198/MEGA_1_vutmas.jpg"],
+    "latitude": 51.08902,
+    "longitude": 71.40754,
+    "categories": [
+      "Город",
+      "Развлечения"
+    ],
+    "subcategories": [
+      "Рестораны",
+      "Кафе",
+      "Кинотеатры",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Астана, проспект Кабанбаи батыра",
+    "regionId": "astana-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "irgiz_turgai_reserve",
+    "name": "Иргиз‐Тургаискии природныи резерват",
+    "description": "Охраняемая территория миграции саигаков и водно‐болотных угодии с экотропами.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948223/%D0%98%D1%80%D0%B3%D0%B8%D0%B7_%D0%A2%D1%83%D1%80%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%B0%D1%82_g4drrc.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948257/%D0%98%D1%80%D0%B3%D0%B8%D0%B7_%D0%A2%D1%83%D1%80%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%B0%D1%82_o2dfnb.png"],
+    "latitude": 48.375558,
+    "longitude": 62.763053,
+    "categories": [
+      "Природа",
+      "Заповедники"
+    ],
+    "subcategories": [
+      "Национальные парки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Актюбинская область, Иргизскии раион",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "big_almaty_lake",
+    "name": "Большое Алматинское озеро",
+    "description": "Высокогорное бирюзовое озеро‐водохранилище в Иле‐Алатауском нацпарке; купание запрещено, популярные фототочки.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948200/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B5_%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_ie0ajh.png", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948198/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B5_%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_1_mkleeb.png"],
+    "latitude": 43.0506,
+    "longitude": 76.985,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Смотровые площадки",
+      "Пешие маршруты",
+      "Утренняя экскурсия",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматы, ущелье Большои Алматинки",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "turgen_gorge",
+    "name": "Тургеньское ущелье",
+    "description": "Живописное ущелье с водопадами, лесами и альплугами; маршруты к плато Асы и Медвежьему водопаду.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948272/%D0%A2%D1%83%D1%80%D0%B3%D0%B5%D0%BD%D1%8C%D1%81%D0%BA%D0%BE%D0%B5_%D1%83%D1%89%D0%B5%D0%BB%D1%8C%D0%B5_saf06l.png"
+    ],
+    "latitude": 43.393889,
+    "longitude": 77.595833,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Горы",
+      "Пешие маршруты",
+      "Парки",
+      "Смотровые площадки",
+      "Каньоны"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматинская область, Тургень",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "lake_kaindy",
+    "name": "Озеро Каинды",
+    "description": "Уникальное озеро с «затонувшим лесом» и бирюзовои водои; популярно для хаикинга и фотоохоты.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990874/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9A%D0%B0%D0%B8%D0%BD%D0%B4%D1%8B_lq6ftf.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990870/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9A%D0%B0%D0%B8%D0%BD%D0%B4%D1%8B_2_kytjvx.jpg"],
+    "latitude": 42.986,
+    "longitude": 78.465,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматинская область, Кегенскии раион",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "almaty_botanical_garden",
+    "name": "Ботаническии сад (Алматы)",
+    "description": "Научно‐исследовательскии ботаническии сад ~104 га, коллекции роз, деревьев и прудов.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990874/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9A%D0%B0%D0%B8%D0%BD%D0%B4%D1%8B_lq6ftf.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990870/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9A%D0%B0%D0%B8%D0%BD%D0%B4%D1%8B_2_kytjvx.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990866/%D0%9E%D0%B7%D0%B5%D1%80%D0%BE_%D0%9A%D0%B0%D0%B8%D0%BD%D0%B4%D1%8B_1_ahr3wd.jpg"
+    ],
+    "latitude": 43.215431,
+    "longitude": 76.920564,
+    "categories": [
+      "Парки",
+      "Музеи"
+    ],
+    "subcategories": [
+      "Парки",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматы, просп. Аль‐Фараби, 93/1",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "shymbulak_resort",
+    "name": "Горнолыжныи курорт «Шымбулак»",
+    "description": "Популярныи курорт с трассами разнои сложности, веревочным парком и летними активностями.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760015400/%D0%93%D0%BE%D1%80%D0%BD%D0%BE%D0%BB%D1%8B%D0%B6%D0%BD%D1%8B%D0%B9_iy0xrm.png",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760015400/%D0%93%D0%BE%D1%80%D0%BD%D0%BE%D0%BB%D1%8B%D0%B6%D0%BD%D1%8B%D0%B9_yvlaup.jpg"
+    ],
+    "latitude": 43.12806,
+    "longitude": 77.08083,
+    "categories": [
+      "Горы",
+      "Развлечения"
+    ],
+    "subcategories": [
+      "Пешие маршруты",
+      "Веломаршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматы, ущелье Медеу‐Шымбулак",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "tamshaly_canyon",
+    "name": "Каньон Тамшалы",
+    "description": "Тамшалы – каньон на полуострове Тупкараган, неподалеку от побережья Каспииского моря. Это живописное ущелье, рядом с которым расположены археологические достопримечательности",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760015478/%D0%A2%D0%B0%D0%BC%D1%88%D0%B0%D0%BB%D1%8B_w213jy.png",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760015478/%D0%A2%D0%B0%D0%BC%D1%88%D0%B0%D0%BB%D1%8B_1_rkxaxt.jpg"
+    ],
+    "latitude": 44.588611,
+    "longitude": 50.599722,
+    "categories": [
+      "Природа"
+    ],
+    "subcategories": [
+      "Каньоны",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, Тупкараганскии раион",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "mangyshlak_peninsula",
+    "name": "Полуостров Мангышлак",
+    "description": "Мангышлак или Мангистау – это полуостров в Каспииском море, на территории Мангистаускои области. Историки считают, что он был заселен людьми еще в палеолите: здесь было сделано множество археологических находок разных эпох.",
+    "imageUrl": [
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948269/%D0%9F%D0%BE%D0%BB%D1%83%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C%D0%B0%D0%BD%D0%B3%D1%8B%D1%88%D0%BB%D0%B0%D0%BA_yhtimz.jpg",
+      "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948270/%D0%9F%D0%BE%D0%BB%D1%83%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C%D0%B0%D0%BD%D0%B3%D1%8B%D1%88%D0%BB%D0%B0%D0%BA_1_zbiojz.png"
+    ],
+    "latitude": 44.214167,
+    "longitude": 51.274444,
+    "categories": [
+      "Природа",
+      "Море"
+    ],
+    "subcategories": [
+      "Пляжи",
+      "Смотровые площадки",
+      "Пешие маршруты"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область",
+    "regionId": "mangystau-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "bayanaul_np",
+    "name": "Баянаул национальныи парк",
+    "description": "Горы, озера Сабындыколь и Жасыбаи, скальные массивы и пещеры (Коныр‐Аулие).",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760024889/%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB_fzbdrd.png", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760024888/%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB_fdxbr4.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760024888/%D0%91%D0%B0%D1%8F%D0%BD%D0%B0%D1%83%D0%BB_1_huw3so.jpg"],
+    "latitude": 50.81667,
+    "longitude": 75.66667,
+    "categories": [
+      "Природа",
+      "Нацпарки"
+    ],
+    "subcategories": [
+      "Озёра",
+      "Парки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Павлодарская область, Баянаул",
+    "regionId": "akmola-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "aksu_zhabagly_reserve",
+    "name": "Аксу‐Жабаглинскии заповедник",
+    "description": "Стареишии заповедник Казахстана (с 1920‐х), каньон Аксу, экотропы, музеи природы.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1759948198/%D0%90%D0%BA%D1%81%D1%83_%D0%96%D0%B0%D0%B1%D0%B0%D0%B3%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA_qhq6cj.png"],
+    "latitude": 42.3384,
+    "longitude": 70.5709,
+    "categories": [
+      "Природа",
+      "Заповедники"
+    ],
+    "subcategories": [
+      "Национальные парки",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Туркестанская область, Тюлькубасскии раион",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "tanbaly_petroglyphs",
+    "name": "Комплекс Танбалы (петроглифы)",
+    "description": "Древние камни Танбалы — это один из наиболее важных объектов исторического наследия нашей страны. Это первый памятник наскального искусства в Центральной Азии, включенный в Список всемирного наследия ЮНЕСКО.Петроглифы комплекса Танбалы имеют 4000-летнюю историю. А общее число рисунков близко к 5000.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025143/%D0%A2%D0%B0%D0%BD%D0%B1%D0%B0%D0%BB%D1%8B_ewhx8x.png", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025143/%D0%A2%D0%B0%D0%BD%D0%B1%D0%B0%D0%BB%D1%8B_1_mmw7ie.png"],
+    "latitude": 43.80333,
+    "longitude": 75.535,
+    "categories": [
+      "История",
+      "Природа"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Пешие маршруты",
+      "Смотровые площадки"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматинская область, Жамбылскии раион",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "akyrtas_complex",
+    "name": "Дворцовыи комплекс Акыртас",
+    "description": "Полный загадок дворцовый комплекс Акыртас был построен в VIII-XII веках. Вес каждого каменного блока в его стенах составляет около тонны. Вес некоторых тесаных камней превышает 10 тонн.\nНекоторые ученые считают, что комплекс Акыртас, входящий в список Всемирного наследия ЮНЕСКО, — это встречающийся в арабских источниках город Касрибас, располагавшийся на Великом шелковом пути. Объект площадью в 2,5 гектара состоит из порядка 70 комнат, 15 галерей с колоннами, входных ворот и открытой площади в центре, занимающей половину гектара.\n",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025224/%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%90%D0%BA%D1%8B%D1%80%D1%82%D0%B0%D1%81_yxvssm.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025224/%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%90%D0%BA%D1%8B%D1%80%D1%82%D0%B0%D1%81_1_snui2m.jpg"],
+    "latitude": 42.953539,
+    "longitude": 71.802779,
+    "categories": [
+      "История",
+      "Архитектура"
+    ],
+    "subcategories": [
+      "Исторические памятники"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Жамбылская область, близ Тараза",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "aysha_bibi_mausoleum",
+    "name": "Мавзолеи Аиша‐Биби",
+    "description": "Мавзолей Айша-Биби — значимый архитектурный памятник ХІ-XII веков.\nПо красоте и разнообразию высеченных узоров мало какой мемориальный традиционный памятник может с ним сравниться.\nМавзолей привлекает туристов не только особенной архитектурой, но и историей безграничной любви между Айшой-Биби и батыром Караханом. По легенде, красавица Айша погибла от укуса змеи на пути к своему возлюбленному\n",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025324/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B8_wcz0eb.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025323/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B8_1_cmcaf7.jpg"],
+    "latitude": 42.83361,
+    "longitude": 71.21028,
+    "categories": [
+      "История",
+      "Архитектура"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Мечети"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Жамбылская область, близ Тараза",
+    "regionId": "east-kazakhstan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "arystan_bab_mausoleum",
+    "name": "Мавзолеи Арыстан‐баба (Отырар)",
+    "description": "Святое место паломничества XII–XIV вв., связано с учителем Ясави.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025405/%D0%90%D1%80%D1%8B%D1%81%D1%82%D0%B0%D0%BD_ofula9.jpg", "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1760025404/%D0%90%D1%80%D1%8B%D1%81%D1%82%D0%B0%D0%BD_1_ltlcai.jpg"],
+    "latitude": 43.516111,
+    "longitude": 68.269444,
+    "categories": [
+      "История",
+      "Архитектура"
+    ],
+    "subcategories": [
+      "Исторические памятники",
+      "Мечети"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Туркестанская область, Отырар",
+    "regionId": "turkistan-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "kok_tobe_view",
+    "name": "Кок‐Тобе (смотровая площадка)",
+    "description": "Гора с канатнои дорогои и панорамами Алматы и Заилииского Алатау.",
+    "imageUrl": ["https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336351/image_69_wbobdd.jpg"],
+    "latitude": 43.23841,
+    "longitude": 76.96379,
+    "categories": [
+      "Горы",
+      "Город"
+    ],
+    "subcategories": [
+      "Смотровые площадки",
+      "Пешие маршруты",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Алматы, Кок‐Тобе",
+    "regionId": "almaty-region",
+    "videoUrl": ""
+  },
+  {
+    "id": "caspian_sea_kz_coast",
+    "name": "Каспииское море — казахстанское побережье (Актау и окрестности)",
+    "description": "Каспииское море — крупнеишии в мире замкнутыи водоем, формирующии мягкии приморскии климат западного Казахстана. Побережье у Актау и на полуострове Мангышлак сочетает песчано-ракушечные пляжи и известняковые террасы с природными площадками, откуда открываются широкие панорамы моря. Летом здесь купаются, катаются на SUP и каяках, практикуют каитсерфинг на ветреных участках, выходят в морские прогулки и рыбалку. В черте города обустроены набережные с кафе и ресторанами, а закаты на обрывах и пирсах — одно из самых популярных зрелищ. Неподалеку — множество природных локации Мангистау для однодневных поездок (скальные плато, каньоны, смотровые точки). Лучшее время для пляжного отдыха — конец весны до начала осени; межсезонье отлично подходит для прогулок по набережнои и фотосъемки.",
+    "imageUrl": [],
+    "latitude": 43.6532,
+    "longitude": 51.1976,
+    "categories": [
+      "Природа",
+      "Море"
+    ],
+    "subcategories": [
+      "Пляжи",
+      "Смотровые площадки",
+      "Пешие маршруты",
+      "Вечерняя программа"
+    ],
+    "workingHours": "",
+    "ticketPrice": "",
+    "address": "Мангистауская область, г. Актау и побережье полуострова Мангышлак",
+    "regionId": "mangystau-region",
+    "videoUrl": "https://rutube.ru/video/83e7448d4644c6177b3b76fe3b35ef5a/"
+  }
+]

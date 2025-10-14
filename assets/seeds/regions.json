@@ -1,0 +1,52 @@
+[
+  {
+    "id": "astana-region",
+    "name": "Астана",
+    "description": "Столица Казахстана — отдельный регион с особым статусом. Известна современными архитектурными ансамблями и культурными центрами.",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336379/image_116_ec6ruo.jpg",
+    "places": []
+  },
+  {
+    "id": "turkistan-region",
+    "name": "Туркестанская область",
+    "description": "Южный регион Казахстана, духовный центр страны. Здесь находится мавзолей Ходжи Ахмета Ясави — объект Всемирного наследия ЮНЕСКО.",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336358/image_103_ixl0p2.jpg",
+    "places": []
+  },
+  {
+    "id": "almaty-region",
+    "name": "Алматинская область",
+    "description": "Область у подножия Заилийского Алатау, известная своими горами, Чарынским каньоном, Кольсайскими озёрами и курортами.",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336355/image_80_fcspnk.jpg",
+    "places": []
+  },
+  {
+    "id": "mangystau-region",
+    "name": "Мангистауская область",
+    "description": "Регион на западе Казахстана, знаменит своими инопланетными пейзажами: Бозжира, плато Устюрт, подземные мечети и берег Каспийского моря.",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336355/image_76_yicymx.jpg",
+    "places": []
+  },
+  {
+    "id": "shymkent-region",
+    "name": "Шымкент",
+    "description": "Город республиканского значения, культурный центр юга. Знаменит этнопарком Кен-Баба, базарами и близостью к древнему Туркестану.",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336354/image_50_jqn517.jpg",
+    "places": []
+  },
+  {
+    "id": "east-kazakhstan-region",
+    "name": "Восточно-Казахстанская область",
+    "description": "Регион на востоке Казахстана, знаменитый живописными горами Алтая, Катон-Карагайским национальным парком, озером Маркаколь и минеральными источниками Рахмановских ключей.",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1754336337/image_03_nf0fkh.jpg",
+    "places": []
+  },
+  {
+    "id": "akmola-region",
+    "name": "Акмолинский регион",
+    "description": "Акмолинская область — это регион, в котором находится курортная зона Бурабай (Боровое), известная как «Жемчужина Казахстана». Местность знаменита своими живописными горами, скалами причудливой формы, чистыми озёрами и сосновыми лесами",
+    "imageUrl": "https://res.cloudinary.com/dzlwxb5nl/image/upload/v1758990828/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%D0%9A%D0%BE%D0%BA%D1%88%D0%B5%D1%82%D0%B0%D1%83_%D0%91%D1%83%D1%80%D0%B0%D0%B1%D0%B0%D0%B9_%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_1_jqm4wi.jpg",
+    "places": []
+  }
+
+]

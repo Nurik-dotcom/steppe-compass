@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "845834716358",
+    "project_id": "steppe-compas",
+    "storage_bucket": "steppe-compas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845834716358:android:2885042033c411253583c7",
+        "android_client_info": {
+          "package_name": "com.example.kazakhstan_travel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe-_LRPAn9TH_6cJ9XzaaWL7Zex9HoVRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
