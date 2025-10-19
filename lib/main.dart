@@ -12,6 +12,7 @@ import 'models/region.dart';
 import 'services/favorites_service.dart';
 import 'services/likes_service.dart';
 import 'services/json_import_service.dart';
+import 'services/firebase_data_service.dart';
 
 import 'screens/loading_screen.dart';
 import 'screens/login_screen.dart';
@@ -48,6 +49,9 @@ Future<void> main() async {
 
   final seeder = JsonSeedService();
   await seeder.seedIfNeeded(onLog: (m) => debugPrint(m));
+// 2. Синхронизируем МЕСТА из Firebase в локальный кэш Hive
+  final firebaseService = FirebaseDataService();
+  await firebaseService.syncPlacesFromFirestore();
   // ▲▲▲ КОНЕЦ БЛОКА ИНИЦИАЛИЗАЦИИ ▲▲▲
 
   runApp(const KazakhstanTravelApp());

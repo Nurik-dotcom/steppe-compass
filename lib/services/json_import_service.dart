@@ -150,43 +150,35 @@ class JsonSeedService {
     final meta = await _ensureBox<dynamic>(kBoxMeta);
     final current = meta.get('seedVersion') as int?;
 
-    // Принудительно очищаем боксы перед сидированием, если версия изменилась
-    if (current != kSeedVersion) {
-      onLog?.call('[seed] Новая версия! Очистка старых данных...');
-      await Hive.box<Region>(kBoxRegions).clear();
-      await Hive.box<Place>(kBoxPlaces).clear();
-    }
-
     final regionsBox = await _ensureBox<Region>(kBoxRegions);
-    final placesBox  = await _ensureBox<Place>(kBoxPlaces);
 
-    final needSeed = current != kSeedVersion || regionsBox.isEmpty || placesBox.isEmpty;
+    final needSeed = current != kSeedVersion || regionsBox.isEmpty;
     if (!needSeed) {
       onLog?.call('[seed] пропуск — актуально (v$current)');
       return;
     }
 
-    onLog?.call('[seed] старт сидирования (v$kSeedVersion)…');
+    // Принудительно очищаем бокс регионов, если версия изменилась
+    if (current != kSeedVersion) {
+      onLog?.call('[seed] Новая версия! Очистка старых данных регионов...');
+      await regionsBox.clear();
+    }
+
+    onLog?.call('[seed] старт сидирования регионов (v$kSeedVersion)…');
 
     // Regions
-    final regionsRaw  = await rootBundle.loadString('assets/seeds/regions.json');
-    final regionsList = (jsonDecode(regionsRaw) as List).cast<Map<String, dynamic>>();
-    await regionsBox.putAll({
-      for (final m in regionsList) _safeId(m['id']): Region.fromJson(m),
-    });
-    onLog?.call('[seed] regions: ${regionsList.length}');
-
-    // Places
-    final placesRaw  = await rootBundle.loadString('assets/seeds/places.json');
-    final placesList = (jsonDecode(placesRaw) as List).cast<Map<String, dynamic>>();
-    final toPut = <String, Place>{};
-    for (final m in placesList) {
-      final p = Place.fromJson(m);
-      if ((p.regionId ?? '').isEmpty) continue;
-      toPut[_safeId(p.id)] = p;
+    try {
+      final regionsRaw  = await rootBundle.loadString('assets/seeds/regions.json');
+      final regionsList = (jsonDecode(regionsRaw) as List).cast<Map<String, dynamic>>();
+      await regionsBox.putAll({
+        for (final m in regionsList) _safeId(m['id']): Region.fromJson(m),
+      });
+      onLog?.call('[seed] regions: ${regionsList.length}');
+    } catch (e) {
+      onLog?.call('[seed] Ошибка загрузки regions.json. Возможно, файл отсутствует. $e');
     }
-    await placesBox.putAll(toPut);
-    onLog?.call('[seed] places: ${toPut.length}');
+
+    // БЛОК ЗАГРУЗКИ `places` ПОЛНОСТЬЮ УДАЛЕН
 
     await meta.put('seedVersion', kSeedVersion);
     onLog?.call('[seed] завершено (v$kSeedVersion)');
