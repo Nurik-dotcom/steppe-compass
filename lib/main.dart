@@ -4,16 +4,10 @@ import 'dart:async';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart' as fb;
+
+// ▼▼▼ УБЕДИСЬ, ЧТО ЭТИ ИМПОРТЫ ОСТАЛИСЬ ▼▼▼
 import 'widgets/connectivity_wrapper.dart';
 import 'firebase_options.dart';
-import 'models/user.dart';
-import 'models/place.dart';
-import 'models/region.dart';
-import 'services/favorites_service.dart';
-import 'services/likes_service.dart';
-import 'services/json_import_service.dart';
-import 'services/firebase_data_service.dart';
-
 import 'screens/loading_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/root_shell.dart';
@@ -21,38 +15,35 @@ import 'screens/direction_screen.dart';
 import 'screens/user_profile_screen.dart';
 import 'screens/admin_panel_screen.dart';
 import 'screens/debug_data_screen.dart';
+// ▼▼▼ А ЭТИ НАМ ЗДЕСЬ БОЛЬШЕ НЕ НУЖНЫ (мы перенесем их) ▼▼▼
+// import 'models/user.dart';
+// import 'models/place.dart';
+// import 'models/region.dart';
+// import 'services/favorites_service.dart';
+// import 'services/likes_service.dart';
+// import 'services/json_import_service.dart';
+// import 'services/firebase_data_service.dart';
+
+// Импорт kIsWeb
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 Future<void> main() async {
-  // ▼▼▼ ВСЯ ИНИЦИАЛ-ЗАГРУЗКА ТЕПЕРЬ ЗДЕСЬ, КАК И ДОЛЖНО БЫТЬ ▼▼▼
   WidgetsFlutterBinding.ensureInitialized();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+
+  if (!kIsWeb) {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  // ▼▼▼ ЕДИНСТВЕННАЯ ОПЕРАЦИЯ HIVE ЗДЕСЬ ▼▼▼
   await Hive.initFlutter();
-  await FavoritesService.init();
-  await LikesService.init();
-
-  try { Hive.registerAdapter(UserAdapter()); } catch (_) {}
-  try { Hive.registerAdapter(PlaceAdapter()); } catch (_) {}
-  try { Hive.registerAdapter(RegionAdapter()); } catch (_) {}
-
-  await Hive.openBox<User>('users');
-  await Hive.openBox('session');
-  await Hive.openBox<Place>('places');
-  await Hive.openBox<Region>('regions');
-
-  final seeder = JsonSeedService();
-  await seeder.seedIfNeeded(onLog: (m) => debugPrint(m));
-// 2. Синхронизируем МЕСТА из Firebase в локальный кэш Hive
-  final firebaseService = FirebaseDataService();
-  await firebaseService.syncPlacesFromFirestore();
-  // ▲▲▲ КОНЕЦ БЛОКА ИНИЦИАЛИЗАЦИИ ▲▲▲
+  // ▲▲▲ ВСЕ ОСТАЛЬНОЕ (OPENBOX, ADAPTERS, INIT СЕРВИСОВ) МЫ УБРАЛИ ▲▲▲
 
   runApp(const KazakhstanTravelApp());
 }
@@ -79,7 +70,7 @@ class KazakhstanTravelApp extends StatelessWidget {
   }
 }
 
-/// Этот виджет решает, куда направить пользователя
+
 
 class AuthGate extends StatefulWidget {
   const AuthGate({Key? key}) : super(key: key);
@@ -88,46 +79,46 @@ class AuthGate extends StatefulWidget {
 }
 
 class _AuthGateState extends State<AuthGate> {
-  // Переменная для хранения подписки на поток аутентификации
+  
   late final StreamSubscription<fb.User?> _authSubscription;
-  // Переменная для хранения текущего статуса пользователя
+  
   fb.User? _currentUser;
-  // Флаг, чтобы показать индикатор загрузки только при самом первом запуске
+  
   bool _isInitialized = false;
 
   @override
   void initState() {
     super.initState();
-    // В момент создания виджета мы подписываемся на поток authStateChanges
+    
     _authSubscription = fb.FirebaseAuth.instance.authStateChanges().listen((fb.User? user) {
-      // Когда приходит новое событие (вход или выход), мы вызываем setState
+      
       setState(() {
-        _currentUser = user; // Обновляем текущего пользователя
-        _isInitialized = true; // Отмечаем, что первая проверка прошла
+        _currentUser = user; 
+        _isInitialized = true; 
       });
     });
   }
 
   @override
   void dispose() {
-    // Когда виджет уничтожается, очень важно отписаться от потока,
-    // чтобы избежать утечек памяти
+    
+    
     _authSubscription.cancel();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    // Пока мы не получили первое событие, показываем крутилку
+    
     if (!_isInitialized) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
-    // Если после инициализации пользователя нет — показываем экран входа
+    
     if (_currentUser == null) {
       return const LoginScreen();
     }
-    // Если пользователь есть — показываем экран загрузки
+    
     else {
       return const LoadingScreen();
     }

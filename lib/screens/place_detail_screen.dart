@@ -9,10 +9,13 @@ import 'package:geolocator/geolocator.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart' as fb;
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 import '../widgets/root_shell_host.dart';
 import '../widgets/rutube_embed.dart';
 import '../widgets/rutube_preview_player.dart';
-
+import '../models/review.dart';
+import '../services/review_service.dart';
 import '../models/place.dart';
 import '../services/auth_service.dart';
 import '../services/favorites_service.dart';
@@ -30,46 +33,6 @@ const Color kTextColor = Color(0xFF2C2C2C);
 const Color kLightTextColor = Color(0xFF757575);
 const Color kChipColor = Color(0xFFE8E8E8);
 const Color kShadowColor = Color(0x24000000);
-
-// ▼▼▼ ИЗМЕНЕНИЕ: Модель FakeReview теперь с рейтингом ▼▼▼
-class FakeReview {
-  final String author;
-  final String text;
-  final int rating; // было likes
-  const FakeReview({required this.author, required this.text, required this.rating});
-}
-// ▲▲▲
-
-// ▼▼▼ ИЗМЕНЕНИЕ: Данные теперь содержат rating вместо likes ▼▼▼
-final Map<String, List<FakeReview>> fakeReviewsData = {
-  'zailiyskiy-alatau': [
-    const FakeReview(author: 'Алексей', text: 'Невероятное место, дух захватывает! Поднимались на фуникулере на Шымбулак, виды просто космические. Обязательно к посещению.', rating: 5),
-    const FakeReview(author: 'Мария', text: 'Очень красиво, но летом было слишком жарко. Обязательно берите с собой много воды и головной убор.', rating: 4),
-    const FakeReview(author: 'Тимур', text: 'Прошли по тропе до водопада. Несложный маршрут, подходит для всей семьи. Воздух чистейший!', rating: 5),
-  ],
-  'kolsai-lakes': [
-    const FakeReview(author: 'Виктор', text: 'Чистейший воздух и вода изумрудного цвета. Поднимались ко второму озеру, вид оттуда просто фантастический. Рекомендую!', rating: 5),
-    const FakeReview(author: 'Елена', text: 'Конная прогулка вдоль озера - это незабываемо! Лошади спокойные, инструкторы опытные. Подходит даже для новичков.', rating: 5),
-  ],
-  'charyn-canyon': [
-    const FakeReview(author: 'Игорь', text: 'Марсианские пейзажи! Лучше всего приезжать на закате, цвета просто нереальные. Фотографии получаются 🔥.', rating: 5),
-    const FakeReview(author: 'Светлана', text: 'Дорога занимает время, но оно того стоит. Внизу у реки есть небольшое кафе, можно перекусить и отдохнуть.', rating: 4),
-  ],
-  'bayterek-monument': [
-    const FakeReview(author: 'Айгерим', text: 'Символ столицы! Обязательно поднимитесь наверх, чтобы приложить руку к оттиску ладони президента и посмотреть на город.', rating: 5),
-    const FakeReview(author: 'Дмитрий', text: 'Красиво и днем, и ночью, когда включается подсветка. Очереди бывают большими, лучше приходить в будний день утром.', rating: 4),
-  ],
-  'medeo-high-mountain-rink': [
-    const FakeReview(author: 'Карина', text: 'Кататься на коньках в окружении гор - это сказка! Лед отличный, атмосфера праздничная. Зимой просто обязательно к посещению.', rating: 5),
-    const FakeReview(author: 'Арман', text: 'Летом здесь проходят крутые концерты. Акустика в ущелье особенная. Проверяйте афишу!', rating: 4),
-  ],
-  'bozzhyra-ustyurt': [
-    const FakeReview(author: 'Станислав', text: 'Это другая вселенная. Белые скалы посреди степи. Добираться только на внедорожнике с опытным гидом, но виды окупают все сложности.', rating: 5),
-    const FakeReview(author: 'Ольга', text: 'Ночевали в палатках. Звездное небо здесь такое, какого в городе никогда не увидишь. Абсолютная тишина и величие природы.', rating: 5),
-  ],
-};
-// ▲▲▲
-
 
 // ===================================================================
 // ОСНОВНОЙ ВИДЖЕТ ЭКРАНА
@@ -202,6 +165,7 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
                 onToggleVideo: () => setState(() => _showVideo = !_showVideo),
                 hasLocationPermission: _hasLocationPermission,
                 onMapCreated: (c) => _mapController = c,
+                userId: _userId,
               ),
             ),
           ),
@@ -220,6 +184,7 @@ class _ContentSheet extends StatelessWidget {
   final VoidCallback onToggleVideo;
   final bool hasLocationPermission;
   final void Function(GoogleMapController) onMapCreated;
+  final String userId;
 
   const _ContentSheet({
     Key? key,
@@ -231,6 +196,7 @@ class _ContentSheet extends StatelessWidget {
     required this.onToggleVideo,
     required this.hasLocationPermission,
     required this.onMapCreated,
+    required this.userId,
   }) : super(key: key);
 
   @override
@@ -261,10 +227,10 @@ class _ContentSheet extends StatelessWidget {
           _VideoSection(videoUrl: place.videoUrl!, rutubeId: rutubeId!, showVideo: showVideo, onToggleVideo: onToggleVideo),
         if (place.latitude != null && place.longitude != null)
           _MapSection(place: place, hasLocationPermission: hasLocationPermission, onMapCreated: onMapCreated),
-        if (fakeReviewsData.containsKey(place.id))
-          _FakeReviewsSection(reviews: fakeReviewsData[place.id]!)
-        else
-          const _ReviewFormSection(),
+
+        _RealReviewsSection(placeId: place.id),
+        _ReviewFormSection(placeId: place.id, userId: userId),
+
         SizedBox(height: RootShellHost.bottomGap + 20),
       ],
     ).animate().slideY(begin: 0.1, duration: 400.ms, curve: Curves.easeOut).fadeIn();
@@ -471,12 +437,26 @@ class _RutubeLazyPlayerState extends State<_RutubeLazyPlayer> {
 }
 
 //===================================================================
-// ▼▼▼ ПОЛНОСТЬЮ ОБНОВЛЕННАЯ СЕКЦИЯ ОТЗЫВОВ ▼▼▼
+// ▼▼▼ СЕКЦИЯ ОТЗЫВОВ (РЕАЛЬНЫЕ ДАННЫЕ) ▼▼▼
 //===================================================================
 
-class _FakeReviewsSection extends StatelessWidget {
-  final List<FakeReview> reviews;
-  const _FakeReviewsSection({required this.reviews});
+class _RealReviewsSection extends StatefulWidget {
+  final String placeId;
+  const _RealReviewsSection({required this.placeId});
+
+  @override
+  State<_RealReviewsSection> createState() => _RealReviewsSectionState();
+}
+
+class _RealReviewsSectionState extends State<_RealReviewsSection> {
+  final ReviewService _reviewService = ReviewService();
+  late final Stream<List<PlaceReview>> _reviewsStream;
+
+  @override
+  void initState() {
+    super.initState();
+    _reviewsStream = _reviewService.getReviewsForPlace(widget.placeId, limit: 5);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -486,16 +466,50 @@ class _FakeReviewsSection extends StatelessWidget {
         const Divider(height: 1, indent: 20, endIndent: 20),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
-          child: Text('Отзывы посетителей', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontFamily: 'PlayfairDisplay')),
+          child: Text(
+            'Отзывы посетителей',
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontFamily: 'PlayfairDisplay'),
+          ),
         ),
-        ...reviews.map((review) => _ReviewCard(review: review)).toList(),
+        StreamBuilder<List<PlaceReview>>(
+          stream: _reviewsStream,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator(color: kPrimaryColor));
+            }
+            if (snapshot.hasError) {
+              return const Center(child: Text('Не удалось загрузить отзывы.'));
+            }
+            if (!snapshot.hasData || snapshot.data!.isEmpty) {
+              return const Center(
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 24),
+                  child: Text(
+                    'Отзывов пока нет. Будьте первым!',
+                    style: TextStyle(color: kLightTextColor, fontFamily: 'PlayfairDisplay'),
+                  ),
+                ),
+              );
+            }
+            final reviews = snapshot.data!;
+            return ListView.builder(
+              itemCount: reviews.length,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.zero, // Убираем отступы у ListView
+              itemBuilder: (context, index) {
+                return _ReviewCard(review: reviews[index]);
+              },
+            );
+          },
+        ),
       ],
     );
   }
 }
 
 class _ReviewCard extends StatelessWidget {
-  final FakeReview review;
+  final PlaceReview review;
   const _ReviewCard({required this.review});
 
   Widget _buildStarRating(int rating) {
@@ -512,28 +526,66 @@ class _ReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ▼▼▼ ИЗМЕНЕНИЕ: Добавляем CircleAvatar ▼▼▼
+    Widget avatar;
+    if (review.authorPhotoUrl != null && review.authorPhotoUrl!.isNotEmpty) {
+      avatar = CircleAvatar(
+        radius: 20,
+        backgroundImage: NetworkImage(review.authorPhotoUrl!),
+        backgroundColor: Colors.grey.shade200,
+      );
+    } else {
+      // Плейсхолдер
+      avatar = CircleAvatar(
+        radius: 20,
+        backgroundColor: kPrimaryColor.withOpacity(0.1),
+        child: Text(
+          review.authorName.isNotEmpty ? review.authorName[0].toUpperCase() : '?',
+          style: const TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
+        ),
+      );
+    }
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(review.author, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, fontFamily: 'PlayfairDisplay')),
-              _buildStarRating(review.rating),
+              // 1. Аватар
+              avatar,
+              const SizedBox(width: 12),
+              // 2. Имя и звезды
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      review.authorName,
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, fontFamily: 'PlayfairDisplay'),
+                    ),
+                    const SizedBox(height: 2),
+                    _buildStarRating(review.rating),
+                  ],
+                ),
+              ),
             ],
           ),
-          const SizedBox(height: 8),
+          // 3. Текст отзыва
+          const SizedBox(height: 10),
           Text(review.text, style: const TextStyle(color: kLightTextColor, fontFamily: 'PlayfairDisplay', height: 1.5)),
         ],
       ),
     );
+    // ▲▲▲ КОНЕЦ ИЗМЕНЕНИЙ ▲▲▲
   }
 }
 
 class _ReviewFormSection extends StatefulWidget {
-  const _ReviewFormSection();
+  final String placeId;
+  final String userId;
+  const _ReviewFormSection({required this.placeId, required this.userId});
 
   @override
   State<_ReviewFormSection> createState() => _ReviewFormSectionState();
@@ -541,7 +593,9 @@ class _ReviewFormSection extends StatefulWidget {
 
 class _ReviewFormSectionState extends State<_ReviewFormSection> {
   final _textController = TextEditingController();
+  final ReviewService _reviewService = ReviewService();
   int _currentRating = 0;
+  bool _isSaving = false;
 
   @override
   void dispose() {
@@ -549,15 +603,99 @@ class _ReviewFormSectionState extends State<_ReviewFormSection> {
     super.dispose();
   }
 
+  Future<void> _submitReview() async {
+    if (_currentRating == 0) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Пожалуйста, поставьте оценку (от 1 до 5 звезд).'),
+        backgroundColor: Colors.redAccent,
+      ));
+      return;
+    }
+
+    if (_textController.text.trim().isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Пожалуйста, напишите текстовый отзыв.'),
+        backgroundColor: Colors.redAccent,
+      ));
+      return;
+    }
+
+    final user = fb.FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text('Только авторизованные пользователи могут оставлять отзывы.'),
+        backgroundColor: Colors.redAccent,
+      ));
+      return;
+    }
+
+    setState(() => _isSaving = true);
+
+    try {
+      // ▼▼▼ ИЗМЕНЕНИЕ: Добавляем authorPhotoUrl ▼▼▼
+      final newReview = PlaceReview(
+        id: '',
+        placeId: widget.placeId,
+        userId: user.uid,
+        authorName: user.displayName ?? user.email ?? 'Аноним', // Улучшенный фолбэк
+        authorPhotoUrl: user.photoURL, // <-- Сохраняем URL аватара
+        text: _textController.text.trim(),
+        rating: _currentRating,
+        createdAt: Timestamp.now(),
+      );
+      // ▲▲▲
+
+      await _reviewService.postReview(newReview);
+
+      _textController.clear();
+      setState(() {
+        _currentRating = 0;
+        FocusScope.of(context).unfocus();
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text('Спасибо за ваш отзыв!'),
+          backgroundColor: Colors.green,
+        ));
+      }
+
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Ошибка при отправке: $e'),
+          backgroundColor: Colors.redAccent,
+        ));
+      }
+    } finally {
+      if (mounted) setState(() => _isSaving = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    // Не показываем форму, если пользователь не вошел в систему
+    if (widget.userId == 'guest') {
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+        child: Text(
+          'Войдите в свой профиль, чтобы оставлять отзывы.',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontFamily: 'PlayfairDisplay', color: kLightTextColor.withOpacity(0.8)),
+        ),
+      );
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Divider(height: 1, indent: 20, endIndent: 20),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
-          child: Text('Оставить отзыв', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontFamily: 'PlayfairDisplay')),
+          child: Text(
+            'Оставить отзыв',
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontFamily: 'PlayfairDisplay'),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -572,7 +710,7 @@ class _ReviewFormSectionState extends State<_ReviewFormSection> {
                       color: Colors.amber,
                       size: 32,
                     ),
-                    onPressed: () => setState(() => _currentRating = index + 1),
+                    onPressed: _isSaving ? null : () => setState(() => _currentRating = index + 1),
                   );
                 }),
               ),
@@ -580,6 +718,7 @@ class _ReviewFormSectionState extends State<_ReviewFormSection> {
               TextField(
                 controller: _textController,
                 maxLines: 5,
+                enabled: !_isSaving,
                 style: const TextStyle(fontFamily: 'PlayfairDisplay'),
                 decoration: InputDecoration(
                   hintText: 'Поделитесь впечатлениями...',
@@ -597,8 +736,14 @@ class _ReviewFormSectionState extends State<_ReviewFormSection> {
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                 ),
-                onPressed: () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Спасибо за ваш отзыв с оценкой $_currentRating!'))),
-                child: const Text('Отправить', style: TextStyle(fontFamily: 'PlayfairDisplay')),
+                onPressed: _isSaving ? null : _submitReview,
+                child: _isSaving
+                    ? const SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: CircularProgressIndicator(color: Colors.white, strokeWidth: 3),
+                )
+                    : const Text('Отправить', style: TextStyle(fontFamily: 'PlayfairDisplay')),
               ),
             ],
           ),
