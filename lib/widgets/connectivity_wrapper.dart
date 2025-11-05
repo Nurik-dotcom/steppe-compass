@@ -21,16 +21,14 @@ class ConnectivityWrapper extends StatelessWidget {
       // ▲▲▲ КОНЕЦ ИЗМЕНЕНИЯ ▲▲▲
       stream: Connectivity().onConnectivityChanged,
       builder: (context, snapshot) {
+        if (snapshot.hasError) return const NoInternetScreen();
         if (!snapshot.hasData) {
           return const Scaffold(body: Center(child: CircularProgressIndicator()));
         }
 
-        final connectivityResult = snapshot.data;
-
-        // ▼▼▼ ИЗМЕНЕНИЕ: Проверяем, содержит ли список значение 'none' ▼▼▼
-        if (connectivityResult != null && connectivityResult.contains(ConnectivityResult.none)) {
-          return const NoInternetScreen();
-        }
+        final results = snapshot.data!;
+        if (results.contains(ConnectivityResult.none)) return const NoInternetScreen();
+        return child;
         // ▲▲▲ КОНЕЦ ИЗМЕНЕНИЯ ▲▲▲
 
         return child;

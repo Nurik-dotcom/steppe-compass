@@ -89,7 +89,7 @@ class _LoadingScreenState extends State<LoadingScreen> with SingleTickerProvider
       setState(() => _loadingText = 'Синхронизация с сервером...');
       final firebaseService = FirebaseDataService();
       final placesCount = await firebaseService.syncPlacesFromFirestore();
-      debugPrint('[LoadingScreen] Синхронизировано $placesCount мест из Firebase.');
+      debugPrint('[LoadingScreen] Firestore synced: $placesCount');
 
     } catch (e) {
       debugPrint("[LoadingScreen] КРИТИЧЕСКАЯ ОШИБКА во время загрузки данных: $e");
