@@ -462,7 +462,7 @@ class _HomeScreenState extends State<HomeScreen> {
 class NewsService {
   Future<List<Map<String, String>>> fetchNews() async {
     try {
-      final res = await http.get(Uri.parse("https://travelpress.kz/news/kazakhstan"));
+      final res = await http.get(Uri.parse("https://us-central1-steppe-compas.cloudfunctions.net/getNews"));
       if (res.statusCode == 200) {
         final document = parser.parse(res.body);
         final items = document.querySelectorAll("div.news-item, div.item_news, div[class*=news]");
