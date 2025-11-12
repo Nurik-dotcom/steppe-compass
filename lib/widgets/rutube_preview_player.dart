@@ -1,83 +1,95 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:url_launcher/url_launcher.dart';
+
+// Мобильный WebView для iOS/Android
 import 'package:webview_flutter/webview_flutter.dart';
 
-class RutubePreviewPlayer extends StatefulWidget {
-  final String videoId;
+// ✅ Правильный импорт для Web-регистрации платформенных видов
+import 'dart:ui_web' as ui;          // <-- вместо 'dart:ui'
 
-  const RutubePreviewPlayer({Key? key, required this.videoId}) : super(key: key);
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
+
+class RuTubePreviewPlayer extends StatefulWidget {
+  final String? videoUrl;
+  final String? videoId;
+
+  const RuTubePreviewPlayer({super.key, this.videoUrl, this.videoId})
+      : assert(videoUrl != null || videoId != null,
+  'Нужно передать videoUrl или videoId');
 
   @override
-  State<RutubePreviewPlayer> createState() => _RutubePreviewPlayerState();
+  State<RuTubePreviewPlayer> createState() => _RuTubePreviewPlayerState();
 }
 
-class _RutubePreviewPlayerState extends State<RutubePreviewPlayer> {
-  bool _isPlaying = false;
-  String? _thumbnailUrl;
-  late final WebViewController _controller;
+class _RuTubePreviewPlayerState extends State<RuTubePreviewPlayer> {
+  WebViewController? _mobileController;
+  late final String _resolvedId;
+  late final String _watchUrl;     // https://rutube.ru/video/<id>/
+  late final String _embedUrl;     // https://rutube.ru/play/embed/<id>
+  late final String _viewType;     // уникальный ключ для HtmlElementView
 
   @override
   void initState() {
     super.initState();
-    _loadThumbnail();
 
-    _controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadRequest(
-        Uri.parse("https://rutube.ru/play/embed/${widget.videoId}"),
-      );
-  }
+    _resolvedId = _extractId(widget.videoUrl, widget.videoId);
+    _watchUrl = 'https://rutube.ru/video/$_resolvedId/';
+    _embedUrl = 'https://rutube.ru/play/embed/$_resolvedId';
 
-  /// Загружаем превью через API RuTube
-  Future<void> _loadThumbnail() async {
-    try {
-      final response = await http.get(
-        Uri.parse("https://rutube.ru/api/video/${widget.videoId}/?format=json"),
-      );
+    if (kIsWeb) {
+      _viewType = 'rutube-iframe-${DateTime.now().microsecondsSinceEpoch}';
 
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        setState(() {
-          _thumbnailUrl = data["thumbnail_url"];
-        });
-      }
-    } catch (e) {
-      debugPrint("Ошибка загрузки превью: $e");
+      // ✅ Регистрируем iframe c явными размерами
+      ui.platformViewRegistry.registerViewFactory(_viewType, (int _) {
+        final iframe = html.IFrameElement()
+          ..src = _embedUrl
+          ..style.border = '0'
+          ..style.width = '100%'     // ✅ фикс для Width warning
+          ..style.height = '100%'    // ✅ фикс для Height warning
+          ..allow =
+              'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
+          ..allowFullscreen = true;
+        return iframe;
+      });
+      return;
     }
+
+    // Мобилки
+    _mobileController = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(const Color(0x00000000))
+      ..loadRequest(Uri.parse(_watchUrl));
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_isPlaying) {
+    if (kIsWeb) {
       return AspectRatio(
         aspectRatio: 16 / 9,
-        child: WebViewWidget(controller: _controller),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: HtmlElementView(viewType: _viewType),
+        ),
       );
     }
 
-    return GestureDetector(
-      onTap: () => setState(() => _isPlaying = true),
-      child: AspectRatio(
-        aspectRatio: 16 / 9,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            _thumbnailUrl != null
-                ? Image.network(
-              _thumbnailUrl!,
-              fit: BoxFit.cover,
-              width: double.infinity,
-            )
-                : Container(color: Colors.black26),
-            const Icon(
-              Icons.play_circle_fill,
-              size: 64,
-              color: Colors.white,
-            ),
-          ],
-        ),
-      ),
+    return AspectRatio(
+      aspectRatio: 16 / 9,
+      child: _mobileController == null
+          ? const Center(child: CircularProgressIndicator())
+          : WebViewWidget(controller: _mobileController!),
     );
+  }
+
+  String _extractId(String? url, String? id) {
+    if (id != null && id.isNotEmpty) return id;
+    final uri = Uri.tryParse(url ?? '');
+    if (uri == null) return '';
+    final segs = uri.pathSegments;
+    final idx = segs.indexOf('video');
+    if (idx >= 0 && idx + 1 < segs.length) return segs[idx + 1];
+    return segs.isNotEmpty ? segs.last.replaceAll('/', '') : '';
   }
 }

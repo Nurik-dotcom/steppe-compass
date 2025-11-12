@@ -13,7 +13,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../widgets/root_shell_host.dart';
 import '../widgets/rutube_embed.dart';
-import '../widgets/rutube_preview_player.dart';
+import 'package:kazakhstan_travel/widgets/rutube_player.dart';
 import '../models/review.dart';
 import '../services/review_service.dart';
 import '../models/place.dart';
@@ -294,7 +294,7 @@ class _VideoSection extends StatelessWidget {
             duration: const Duration(milliseconds: 400),
             child: showVideo
                 ? _RutubeLazyPlayer(url: videoUrl, key: const ValueKey('video_open'))
-                : GestureDetector(key: const ValueKey('video_preview'), onTap: onToggleVideo, child: RutubePreviewPlayer(videoId: rutubeId)),
+                : GestureDetector(key: const ValueKey('video_preview'), onTap: onToggleVideo, child: RuTubePreviewPlayer(videoUrl: rutubeId, videoId: videoUrl)),
           ),
         ),
       ],
