@@ -18,12 +18,12 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.steppecompass.kazakhstan_travel"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.steppecompass.kazakhstan_travel"
         minSdk = 23
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 35
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }

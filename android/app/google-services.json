@@ -7,28 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:845834716358:android:2885042033c411253583c7",
-        "android_client_info": {
-          "package_name": "com.example.kazakhstan_travel"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAe-_LRPAn9TH_6cJ9XzaaWL7Zex9HoVRk"
-        },
-        {
-          "current_key": "AIzaSyCfAMgOxmEBtq7XIoHBXu1CQMj-hlOcDBI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:845834716358:android:05625f6844869a933583c7",
         "android_client_info": {
           "package_name": "com.steppecompass.kazakhstan_travel"
@@ -36,9 +14,6 @@
       },
       "oauth_client": [],
       "api_key": [
-        {
-          "current_key": "AIzaSyAe-_LRPAn9TH_6cJ9XzaaWL7Zex9HoVRk"
-        },
         {
           "current_key": "AIzaSyCfAMgOxmEBtq7XIoHBXu1CQMj-hlOcDBI"
         }
