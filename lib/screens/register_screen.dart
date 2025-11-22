@@ -26,7 +26,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
-  
   void _show(BuildContext context, String msg) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
@@ -63,7 +62,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final email = _emailController.text.trim();
     final password = _passwordController.text.trim();
 
-    
     if (email.isEmpty || password.isEmpty) {
       _show(context, 'Пожалуйста, введите email и пароль.');
       return;
@@ -80,13 +78,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
     setState(() => _loading = true);
 
     try {
-      
-      
+      // Выполняем регистрацию пользователя. AuthService бросит исключение при ошибке.
       await _authService
           .register(email, password)
           .timeout(const Duration(seconds: 20));
 
       if (!mounted) return;
+
+      // ✅ Успешная регистрация — переходим на экран авторизации (LoginScreen).
+      // Очищаем поля ввода, чтобы не передавать данные в следующий экран.
+      _emailController.clear();
+      _passwordController.clear();
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => const LoginScreen(),
+        ),
+      );
+      return;
     } on fb.FirebaseAuthException catch (e, st) {
       _log('FirebaseAuthException: ${e.code} ${e.message}', st);
       _show(context, _humanizeAuthError(e));
@@ -139,7 +147,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   style: TextStyle(color: Colors.white70, fontSize: 16),
                 ),
                 const SizedBox(height: 32),
-
                 Card(
                   elevation: 10,
                   shape: RoundedRectangleBorder(
@@ -166,12 +173,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             prefixIcon: const Icon(Icons.lock),
                             labelText: 'Пароль',
                             border: const OutlineInputBorder(),
-                            // Добавляем иконку-переключатель
                             suffixIcon: IconButton(
                               icon: Icon(
-                                _obscureText ? Icons.visibility : Icons.visibility_off,
+                                _obscureText
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
                               ),
-                              // При нажатии меняем состояние и перерисовываем экран
                               onPressed: () {
                                 setState(() {
                                   _obscureText = !_obscureText;
@@ -179,7 +186,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               },
                             ),
                           ),
-                          // Привязываем видимость текста к нашей переменной
                           obscureText: _obscureText,
                           enabled: !_loading,
                         ),
@@ -188,7 +194,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           width: double.infinity,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.symmetric(vertical: 14),
+                              padding:
+                              const EdgeInsets.symmetric(vertical: 14),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -228,7 +235,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           },
                           child: const Text(
                             'Уже есть аккаунт? Войти',
-                            style: TextStyle(fontSize: 16, color: blueKazakhstan),
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: blueKazakhstan,
+                            ),
                           ),
                         ),
                       ],

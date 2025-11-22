@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart' as fb;
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
@@ -38,7 +37,9 @@ class _LoginScreenState extends State<LoginScreen> {
           return 'Ошибка: ${e.code}';
       }
     }
-    if (e is TimeoutException) return 'Сервер не ответил. Попробуйте ещё раз.';
+    if (e is TimeoutException) {
+      return 'Сервер не ответил. Попробуйте ещё раз.';
+    }
     return 'Не удалось выполнить операцию.';
   }
 
@@ -56,15 +57,18 @@ class _LoginScreenState extends State<LoginScreen> {
     _passwordController.dispose();
     super.dispose();
   }
+
   void _show(BuildContext context, String msg) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(msg)),
     );
   }
+
   void _log(Object e, [StackTrace? st]) {
     debugPrint('[AUTH] $e');
     if (st != null) debugPrintStack(stackTrace: st);
   }
+
   Future<void> _login() async {
     FocusScope.of(context).unfocus();
 
@@ -79,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() => _loading = true);
     try {
       // ВАЖНО: пусть AuthService.login бросает исключение при ошибке.
-      final ok = await _authService
+      await _authService
           .login(email, password)
           .timeout(const Duration(seconds: 20));
 
@@ -89,24 +93,32 @@ class _LoginScreenState extends State<LoginScreen> {
         MaterialPageRoute(builder: (_) => const LoadingScreen()),
             (_) => false,
       );
-
     } on fb.FirebaseAuthException catch (e, st) {
       _log('FirebaseAuthException: ${e.code} ${e.message}', st);
       _show(context, _humanizeAuthError(e));
+      // ✅ При ошибке авторизации очищаем введённые email и пароль,
+      // чтобы пользователь мог ввести новые данные.
+      _emailController.clear();
+      _passwordController.clear();
     } on TimeoutException catch (e, st) {
       _log('Timeout: $e', st);
       _show(context, 'Сервер не ответил. Попробуйте ещё раз.');
+      _emailController.clear();
+      _passwordController.clear();
     } on HiveError catch (e, st) {
       _log('HiveError: $e', st);
       _show(context, 'Локальное хранилище (Hive) дало ошибку.');
+      _emailController.clear();
+      _passwordController.clear();
     } catch (e, st) {
       _log('Unknown auth error: $e', st);
       _show(context, 'Не удалось войти: $e');
+      _emailController.clear();
+      _passwordController.clear();
     } finally {
       if (mounted) setState(() => _loading = false);
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -146,10 +158,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(color: Colors.white70, fontSize: 16),
                 ),
                 const SizedBox(height: 32),
-
                 Card(
                   elevation: 10,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Form(
@@ -166,8 +179,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             enabled: !_loading,
                             validator: (v) {
-                              if (v == null || v.trim().isEmpty) return 'Введите email';
-                              if (!v.contains('@')) return 'Некорректный email';
+                              if (v == null || v.trim().isEmpty) {
+                                return 'Введите email';
+                              }
+                              if (!v.contains('@')) {
+                                return 'Некорректный email';
+                              }
                               return null;
                             },
                           ),
@@ -181,14 +198,26 @@ class _LoginScreenState extends State<LoginScreen> {
                               labelText: 'Пароль',
                               border: const OutlineInputBorder(),
                               suffixIcon: IconButton(
-                                icon: Icon(_obscure ? Icons.visibility : Icons.visibility_off),
-                                onPressed: _loading ? null : () => setState(() => _obscure = !_obscure),
+                                icon: Icon(
+                                  _obscure
+                                      ? Icons.visibility
+                                      : Icons.visibility_off,
+                                ),
+                                onPressed: _loading
+                                    ? null
+                                    : () => setState(
+                                      () => _obscure = !_obscure,
+                                ),
                               ),
                             ),
                             enabled: !_loading,
                             validator: (v) {
-                              if (v == null || v.isEmpty) return 'Введите пароль';
-                              if (v.length < 6) return 'Минимум 6 символов';
+                              if (v == null || v.isEmpty) {
+                                return 'Введите пароль';
+                              }
+                              if (v.length < 6) {
+                                return 'Минимум 6 символов';
+                              }
                               return null;
                             },
                           ),
@@ -197,8 +226,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             width: double.infinity,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.symmetric(vertical: 14),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 14,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                                 backgroundColor: blueKazakhstan,
                                 foregroundColor: Colors.white,
                               ),
@@ -207,11 +240,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ? const SizedBox(
                                 height: 22,
                                 width: 22,
-                                child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: Colors.white,
+                                ),
                               )
                                   : const Text(
                                 'Войти',
-                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -222,12 +261,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                 : () {
                               Navigator.pushReplacement(
                                 context,
-                                MaterialPageRoute(builder: (_) => const RegisterScreen()),
+                                MaterialPageRoute(
+                                  builder: (_) => const RegisterScreen(),
+                                ),
                               );
                             },
                             child: const Text(
                               'Нет аккаунта? Зарегистрироваться',
-                              style: TextStyle(fontSize: 16, color: blueKazakhstan),
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: blueKazakhstan,
+                              ),
                             ),
                           ),
                         ],

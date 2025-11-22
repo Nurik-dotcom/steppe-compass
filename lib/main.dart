@@ -10,15 +10,22 @@ import 'screens/loading_screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ✅ Инициализация Firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // ✅ Инициализируем Firebase только   при отсутствии других приложений
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(
+      name: 'steppe-compass',
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } else {
+    // Используем уже инициализированный экземпляр
+    await Firebase.app();
+  }
 
-  // ✅ Инициализация Hive (работает и на web)
+
+  // ✅ инициализируем Hive
   await Hive.initFlutter();
 
-  // 🔒 Ориентация только на мобилках (иначе ломает web)
+  // 🔒 блокируем ориентацию только на мобильных
   if (!kIsWeb) {
     await SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -26,7 +33,6 @@ Future<void> main() async {
     ]);
   }
 
-  // ✅ Запуск приложения
   runApp(const SteppeCompassApp());
 }
 

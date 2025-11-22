@@ -67,9 +67,15 @@ class _LoadingScreenState extends State<LoadingScreen>
       await FavoritesService.init();
       await LikesService.init();
 
-      Hive.registerAdapter(UserAdapter());
-      Hive.registerAdapter(PlaceAdapter());
-      Hive.registerAdapter(RegionAdapter());
+      if (!Hive.isAdapterRegistered(UserAdapter().typeId)) {
+        Hive.registerAdapter(UserAdapter());
+      }
+      if (!Hive.isAdapterRegistered(PlaceAdapter().typeId)) {
+       Hive.registerAdapter(PlaceAdapter());
+      }
+      if (!Hive.isAdapterRegistered(RegionAdapter().typeId)) {
+        Hive.registerAdapter(RegionAdapter());
+      }
 
       setState(() => _loadingText = 'Открытие локального хранилища...');
       await Hive.openBox<User>('users');
