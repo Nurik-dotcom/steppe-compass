@@ -83,10 +83,17 @@ class _RootShellState extends State<RootShell> {
   }
 
   void _goHome() {
-    _popToRoot(_currentKey);
-    if (_index != 1) {
-      setState(() => _index = 1);
+    if (_index == 1) {
+      final nav = _homeKey.currentState;
+      if (nav != null && !nav.canPop()) {
+        // Пользователь на главном экране HomeScreen – открываем каталог регионов
+        nav.pushNamed('/directions');
+        return;
+      }
     }
+    // Иначе возвращаемся на HomeScreen (сброс текущего стека и переключение вкладки)
+    _popToRoot(_currentKey);
+    if (_index != 1) setState(() => _index = 1);
     WidgetsBinding.instance.addPostFrameCallback((_) => _popToRoot(_homeKey));
   }
 
@@ -106,6 +113,7 @@ class _RootShellState extends State<RootShell> {
     return WillPopScope(
       onWillPop: _onWillPop,
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         extendBody: true,
         body: Stack(
           children: [

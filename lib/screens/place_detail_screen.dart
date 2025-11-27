@@ -21,9 +21,6 @@ import '../services/auth_service.dart';
 import '../services/favorites_service.dart';
 import '../services/likes_service.dart';
 
-// ===================================================================
-// ✨ НАСТРОЙКИ ДИЗАЙНА И ТЕМА ✨
-// ===================================================================
 
 const Color kPrimaryColor = Color(0xFF000E6B);
 const Color kAccentColor = Color(0xFFC0A45B);

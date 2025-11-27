@@ -379,7 +379,7 @@ class _HomeScreenState extends State<HomeScreen> {
               final news = snapshot.data!;
               return ListView.separated(
                 scrollDirection: Axis.horizontal, padding: const EdgeInsets.symmetric(horizontal: 16), itemCount: news.length,
-                separatorBuilder: (_, __) => const SizedBox(width: 14),
+                separatorBuilder: (_,  __) => const SizedBox(width: 14),
                 itemBuilder: (context, i) {
                   final n = news[i];
                   return SizedBox(
@@ -396,18 +396,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         }
                       },
                       child: Container(
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(18), color: Colors.white.withOpacity(0.85), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.12), blurRadius: 8, offset: const Offset(0, 4))], border: Border.all(color: Colors.white.withOpacity(0.3), width: 1)),
+                        decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.85),
+                            borderRadius: BorderRadius.vertical(bottom: Radius.circular(18)),
+                            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.12), blurRadius: 8, offset: Offset(0, 4))],
+                            border: Border.all(color: Colors.white.withOpacity(0.3), width: 1),),
                         child: Padding(
                           padding: const EdgeInsets.all(14),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(n["date"] ?? "", style: const TextStyle(fontSize: 12, color: Colors.black54)),
-                              const SizedBox(height: 6),
-                              Expanded(child: Text(n["title"] ?? "", style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xff2A5CAA)), maxLines: 3, overflow: TextOverflow.ellipsis)),
-                              const Align(alignment: Alignment.bottomRight, child: Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xff2A5CAA))),
-                            ],
-                          ),
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                            if (n["imageUrl"] != null && n["imageUrl"]!.isNotEmpty)
+                            ClipRRect(
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
+                      child: Image.network(
+                        n["imageUrl"]!,
+                        width: double.infinity,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(14),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                      Text(n["date"] ?? "", style: const TextStyle(fontSize: 12, color: Colors.black54)),
+                      const SizedBox(height: 6),
+                      Text(
+                        n["title"] ?? "",
+                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xff2A5CAA)),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xff2A5CAA))
+                      ),],))],)
                         ),
                       ),
                     ),
@@ -415,7 +440,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               );
             },
-          ),
+          ), 
         ),
       ],
     );
@@ -465,10 +490,13 @@ class NewsService {
       final res = await http.get(Uri.parse("https://us-central1-steppe-compas.cloudfunctions.net/getNews"));
       if (res.statusCode == 200) {
         final document = parser.parse(res.body);
+
         final items = document.querySelectorAll("div.news-item, div.item_news, div[class*=news]");
         return items.take(5).map((e) {
           final titleEl = e.querySelector("a.title-link, a[href][class*=title], .news-title a, h3 a, h2 a");
           final dateEl = e.querySelector(".news-date, .date, time, .entry-date");
+          final imageEl = e.querySelector('img');
+          final imageUrl = imageEl != null ? (imageEl.attributes['src'] ?? '') : '';
           String link = "";
           if (titleEl != null) {
             final href = titleEl.attributes["href"];
@@ -482,7 +510,11 @@ class NewsService {
               }
             }
           }
-          return {"title": titleEl?.text.trim() ?? "Без заголовка", "date": dateEl?.text.trim() ?? "", "link": link};
+          return {
+            "title": titleEl?.text.trim() ?? "Без заголовка",
+            "date": dateEl?.text.trim() ?? "",
+            "link": link,
+            "imageUrl": imageUrl,          };
         }).toList();
       }
       print('Failed to load news: ${res.statusCode}');
