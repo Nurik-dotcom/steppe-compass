@@ -1,6 +1,9 @@
 // lib/screens/place_detail_screen.dart
 import 'dart:async';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
 
+import '/services/image_gallery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter_animate/flutter_animate.dart';
@@ -298,6 +301,43 @@ class _VideoSection extends StatelessWidget {
     );
   }
 }
+class FullScreenGallery extends StatelessWidget {
+  final List<String> images;
+  final int initialIndex;
+
+  const FullScreenGallery({super.key, required this.images, this.initialIndex = 0});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Stack(
+        children: [
+          PhotoViewGallery.builder(
+            itemCount: images.length,
+            pageController: PageController(initialPage: initialIndex),
+            builder: (context, index) {
+              final imageUrl = images[index];
+              return PhotoViewGalleryPageOptions(
+                imageProvider: NetworkImage(imageUrl),
+                heroAttributes: PhotoViewHeroAttributes(tag: imageUrl),
+              );
+            },
+            backgroundDecoration: const BoxDecoration(color: Colors.black),
+          ),
+          Positioned(
+            top: 40,
+            left: 20,
+            child: IconButton(
+              icon: const Icon(Icons.close, color: Colors.white, size: 30),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class _MapSection extends StatelessWidget {
   final Place place;
@@ -355,12 +395,31 @@ class _PhotosCarouselState extends State<_PhotosCarousel> {
       children: [
         PageView.builder(
           controller: widget.controller,
-          onPageChanged: (i) => setState(() => _index = i),
           itemCount: widget.images.length,
-          itemBuilder: (_, i) => Image.network(widget.images[i], fit: BoxFit.cover, errorBuilder: (_, __, ___) => const _ImagePlaceholder()),
-        ),
-        IgnorePointer(child: Container(decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.black.withOpacity(0.6), Colors.transparent], stops: const [0.0, 0.4], begin: Alignment.topCenter, end: Alignment.bottomCenter)))),
-        Positioned(bottom: 35, left: 0, right: 0, child: _Dots(count: widget.images.length, index: _index)),
+          onPageChanged: (i) => setState(() => _index = i),
+          itemBuilder: (_, i) {
+            return GestureDetector(
+              onTap: () {
+                Navigator.of(context, rootNavigator: true).push(
+                  MaterialPageRoute(
+                    builder: (_) => FullScreenGallery(
+                      images: widget.images,
+                      initialIndex: i,
+                    ),
+                  ),
+                );
+              },
+              child: Hero(
+                tag: widget.images[i],
+                child: Image.network(
+                  widget.images[i],
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, __, ___) => const _ImagePlaceholder(),
+                ),
+              ),
+            );
+          },
+        )
       ],
     );
   }

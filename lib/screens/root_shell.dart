@@ -29,7 +29,10 @@ class _RootShellState extends State<RootShell> {
   final _searchKey  = GlobalKey<NavigatorState>();
   final _homeKey    = GlobalKey<NavigatorState>();
   final _profileKey = GlobalKey<NavigatorState>();
-
+  bool get _isInHomeRoot {
+    final nav = _homeKey.currentState;
+    return _index == 1 && (nav != null && !nav.canPop());
+  }
   List<GlobalKey<NavigatorState>> get _navKeys => [_searchKey, _homeKey, _profileKey];
 
   @override
@@ -83,19 +86,26 @@ class _RootShellState extends State<RootShell> {
   }
 
   void _goHome() {
+    final nav = _homeKey.currentState;
+
     if (_index == 1) {
-      final nav = _homeKey.currentState;
       if (nav != null && !nav.canPop()) {
-        // Пользователь на главном экране HomeScreen – открываем каталог регионов
+        // В HomeScreen и на корне — перейти в DirectionsScreen
         nav.pushNamed('/directions');
+        return;
+      } else {
+        // Внутри HomeStack (например, PlaceDetailScreen) — сбросить до Home
+        _popToRoot(_homeKey);
         return;
       }
     }
-    // Иначе возвращаемся на HomeScreen (сброс текущего стека и переключение вкладки)
+
+    // В другой вкладке — переключиться на Home и сбросить стек
     _popToRoot(_currentKey);
-    if (_index != 1) setState(() => _index = 1);
+    setState(() => _index = 1);
     WidgetsBinding.instance.addPostFrameCallback((_) => _popToRoot(_homeKey));
   }
+
 
   void _goProfile() {
     _popToRoot(_currentKey);
@@ -149,12 +159,20 @@ class _RootShellState extends State<RootShell> {
             shape: const CircleBorder(),
             backgroundColor: activeColor.withOpacity(0.85),
             elevation: 5,
-            child: Image.asset(
+            child: _isInHomeRoot
+                ? Image.asset(
+              'assets/icons/book_white.png',
+              width: 32,
+              height: 32,
+              color: Colors.white,
+            )
+                : Image.asset(
               'assets/icons/yurt.png',
               width: 32,
               height: 32,
               color: Colors.white,
             ),
+
           ),
         ),
         bottomNavigationBar: ClipRRect(

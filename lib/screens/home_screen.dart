@@ -367,10 +367,15 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         const Padding(
           padding: EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Row(children: [Icon(Icons.article_outlined, color: Color(0xff000E6B)), SizedBox(width: 8), Text("Новости", style: TextStyle(color: Color(0xff000E6B), fontSize: 20, fontWeight: FontWeight.bold))]),
+          child: Row(children: [
+            Icon(Icons.article_outlined, color: Color(0xff000E6B)),
+            SizedBox(width: 8),
+            Text("Новости", style: TextStyle(color: Color(0xff000E6B), fontSize: 20, fontWeight: FontWeight.bold))
+          ]),
         ),
+        // УВЕЛИЧИВАЕМ ВЫСОТУ С 160 ДО 280
         SizedBox(
-          height: 160,
+          height: 300,
           child: FutureBuilder<List<Map<String, String>>>(
             future: NewsService().fetchNews(),
             builder: (context, snapshot) {
@@ -378,7 +383,9 @@ class _HomeScreenState extends State<HomeScreen> {
               if (!snapshot.hasData || snapshot.data!.isEmpty) return const Center(child: Text("Нет новостей"));
               final news = snapshot.data!;
               return ListView.separated(
-                scrollDirection: Axis.horizontal, padding: const EdgeInsets.symmetric(horizontal: 16), itemCount: news.length,
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: news.length,
                 separatorBuilder: (_,  __) => const SizedBox(width: 14),
                 itemBuilder: (context, i) {
                   final n = news[i];
@@ -397,42 +404,52 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.85),
-                            borderRadius: BorderRadius.vertical(bottom: Radius.circular(18)),
-                            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.12), blurRadius: 8, offset: Offset(0, 4))],
-                            border: Border.all(color: Colors.white.withOpacity(0.3), width: 1),),
-                        child: Padding(
-                          padding: const EdgeInsets.all(14),
-                            child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                            if (n["imageUrl"] != null && n["imageUrl"]!.isNotEmpty)
-                            ClipRRect(
-                        borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
-                      child: Image.network(
-                        n["imageUrl"]!,
-                        width: double.infinity,
-                        height: 100,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(14),
-                      child: Column(
+                          color: Colors.white.withOpacity(0.85),
+                          borderRadius: BorderRadius.circular(18), // Исправлено: закругление для всех углов
+                          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.12), blurRadius: 8, offset: const Offset(0, 4))],
+                          border: Border.all(color: Colors.white.withOpacity(0.3), width: 1),),
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                      Text(n["date"] ?? "", style: const TextStyle(fontSize: 12, color: Colors.black54)),
-                      const SizedBox(height: 6),
-                      Text(
-                        n["title"] ?? "",
-                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xff2A5CAA)),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const Align(
-                          alignment: Alignment.bottomRight,
-                          child: Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xff2A5CAA))
-                      ),],))],)
+                            if (n["imageUrl"] != null && n["imageUrl"]!.isNotEmpty)
+                              ClipRRect(
+                                borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
+                                child: Image.network(
+                                  n["imageUrl"]!,
+                                  width: double.infinity,
+                                  height: 140, // Немного увеличим картинку
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            Expanded( // Используем Expanded, чтобы занять оставшееся место
+                              child: Padding(
+                                padding: const EdgeInsets.all(14),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // Распределяем контент
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(n["date"] ?? "", style: const TextStyle(fontSize: 12, color: Colors.black54)),
+                                        const SizedBox(height: 6),
+                                        Text(
+                                          n["title"] ?? "",
+                                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xff2A5CAA)),
+                                          maxLines: 3,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ],
+                                    ),
+                                    const Align(
+                                        alignment: Alignment.bottomRight,
+                                        child: Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xff2A5CAA))
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -440,7 +457,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               );
             },
-          ), 
+          ),
         ),
       ],
     );
@@ -487,45 +504,104 @@ class _HomeScreenState extends State<HomeScreen> {
 class NewsService {
   Future<List<Map<String, String>>> fetchNews() async {
     try {
-      final res = await http.get(Uri.parse("https://us-central1-steppe-compas.cloudfunctions.net/getNews"));
+      debugPrint("--- ЗАГРУЗКА НОВОСТЕЙ (v3 - CSS & Backgrounds) ---");
+      final res = await http.get(Uri.parse("https://getnews-5b7bxign2a-uc.a.run.app/"));
+
       if (res.statusCode == 200) {
         final document = parser.parse(res.body);
+        final List<Map<String, String>> news = [];
 
-        final items = document.querySelectorAll("div.news-item, div.item_news, div[class*=news]");
-        return items.take(5).map((e) {
-          final titleEl = e.querySelector("a.title-link, a[href][class*=title], .news-title a, h3 a, h2 a");
-          final dateEl = e.querySelector(".news-date, .date, time, .entry-date");
-          final imageEl = e.querySelector('img');
-          final imageUrl = imageEl != null ? (imageEl.attributes['src'] ?? '') : '';
-          String link = "";
-          if (titleEl != null) {
-            final href = titleEl.attributes["href"];
-            if (href != null) {
-              if (href.startsWith("http")) {
-                link = href;
-              } else if (href.startsWith("/")) {
-                link = "https://travelpress.kz$href";
-              } else {
-                link = "https://travelpress.kz/news/kazakhstan/$href";
+        final allLinks = document.querySelectorAll('a');
+
+        for (final link in allLinks) {
+          final text = link.text.trim();
+          // Фильтр: слишком короткие тексты — это не заголовки
+          if (text.length < 25) continue;
+
+          if (news.any((n) => n['title'] == text)) continue;
+
+          // --- ПОИСК КАРТИНКИ (Включая CSS background-image) ---
+          String imageUrl = "";
+          var currentElement = link;
+
+          // Поднимаемся вверх по дереву, чтобы найти контейнер новости
+          for (int i = 0; i < 4; i++) {
+            if (currentElement.parent == null) break;
+            currentElement = currentElement.parent!;
+
+            // 1. Ищем обычный <img> внутри текущего родителя
+            final img = currentElement.querySelector('img');
+            if (img != null) {
+              var raw = img.attributes['data-src'] ?? img.attributes['src'];
+              if (_isValidUrl(raw)) {
+                imageUrl = _cleanUrl(raw!);
+                break;
               }
             }
+
+            // 2. Ищем элемент с background-image в style="..." (САМОЕ ВАЖНОЕ)
+            // Проверяем самого родителя и всех его детей
+            final elementsWithStyle = [currentElement, ...currentElement.querySelectorAll('[style*="url"]')];
+
+            for (final el in elementsWithStyle) {
+              final style = el.attributes['style'];
+              if (style != null && style.contains('url(')) {
+                // Вытаскиваем ссылку из url('...') с помощью регулярки
+                final match = RegExp(r"url\([']?(.*?)[']?\)").firstMatch(style);
+                if (match != null) {
+                  var raw = match.group(1);
+                  if (_isValidUrl(raw)) {
+                    imageUrl = _cleanUrl(raw!);
+                    break;
+                  }
+                }
+              }
+            }
+            if (imageUrl.isNotEmpty) break;
           }
-          return {
-            "title": titleEl?.text.trim() ?? "Без заголовка",
-            "date": dateEl?.text.trim() ?? "",
-            "link": link,
-            "imageUrl": imageUrl,          };
-        }).toList();
+
+          if (imageUrl.isNotEmpty) {
+            debugPrint("📸 Найдена картинка: $imageUrl");
+          } else {
+            debugPrint("⚠️ Картинка НЕ найдена для '$text'");
+          }
+
+          // Формируем ссылку на новость
+          String href = link.attributes['href'] ?? "";
+          if (href.startsWith('/')) href = "https://travelpress.kz$href";
+
+          news.add({
+            'title': text,
+            'date': '',
+            'link': href,
+            'imageUrl': imageUrl
+          });
+
+          if (news.length >= 5) break;
+        }
+
+        return news;
       }
-      print('Failed to load news: ${res.statusCode}');
       return [];
     } catch (e) {
-      print('Error fetching news: $e');
+      debugPrint("Ошибка: $e");
       return [];
     }
   }
-}
 
+  bool _isValidUrl(String? raw) {
+    return raw != null && raw.isNotEmpty && !raw.contains('logo') && !raw.contains('.svg');
+  }
+
+  String _cleanUrl(String raw) {
+    if (raw.startsWith('/')) {
+      return "https://travelpress.kz$raw";
+    } else if (!raw.startsWith('http')) {
+      return "https://travelpress.kz/$raw";
+    }
+    return raw;
+  }
+}
 // ===================================================================
 // ▼▼▼ НАШ НОВЫЙ ИЗОЛИРОВАННЫЙ ВИДЖЕТ ДЛЯ СЛАЙДЕРА ▼▼▼
 // ===================================================================
