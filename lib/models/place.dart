@@ -42,7 +42,14 @@ class Place {
   @HiveField(12)
   String? videoUrl;
 
-  Place ({
+  // 🔥 СЧЁТЧИКИ
+  @HiveField(13)
+  final int likesCount;
+
+  @HiveField(14)
+  final int commentsCount;
+
+  Place({
     required this.id,
     required this.name,
     required this.description,
@@ -56,9 +63,11 @@ class Place {
     required this.address,
     this.videoUrl,
     required this.regionId,
+    this.likesCount = 0,
+    this.commentsCount = 0,
   });
 
-  // Сохраняем как есть (если где-то используется)
+  // Сохраняем, если где-то юзается
   get category => null;
 
   // ---------- JSON ----------
@@ -75,6 +84,12 @@ class Place {
       return double.tryParse(v.toString());
     }
 
+    int _toInt(dynamic v) {
+      if (v == null) return 0;
+      if (v is num) return v.toInt();
+      return int.tryParse(v.toString()) ?? 0;
+    }
+
     return Place(
       id: (j['id'] ?? '').toString(),
       name: (j['name'] ?? '').toString(),
@@ -89,6 +104,8 @@ class Place {
       address: (j['address'] ?? '').toString(),
       videoUrl: j['videoUrl']?.toString(),
       regionId: (j['regionId'] ?? '').toString(),
+      likesCount: _toInt(j['likesCount']),
+      commentsCount: _toInt(j['commentsCount']),
     );
   }
 
@@ -106,5 +123,7 @@ class Place {
     'address': address,
     'videoUrl': videoUrl,
     'regionId': regionId,
+    'likesCount': likesCount,
+    'commentsCount': commentsCount,
   };
 }

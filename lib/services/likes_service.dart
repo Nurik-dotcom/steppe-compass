@@ -101,13 +101,38 @@ class LikesServiceRemote {
 
   String _docId(String placeId) => '${_uid}_$placeId';
 
-  /// Реал-тайм: текущий пользователь лайкнул ли placeId
+  // 🔥 Тоггл лайка + обновление likesCount в коллекции "place"
+  Future<void> toggleLike(String placeId) async {
+    final likeRef = _db.collection('likes').doc(_docId(placeId));
+    final placeRef = _db.collection('place').doc(placeId); // имя коллекции как в Firestore
+
+    await _db.runTransaction((tx) async {
+      final snap = await tx.get(likeRef);
+      if (snap.exists) {
+        // убираем лайк
+        tx.delete(likeRef);
+        tx.update(placeRef, {
+          'likesCount': FieldValue.increment(-1),
+        });
+      } else {
+        // ставим лайк
+        tx.set(likeRef, {
+          'uid': _uid,
+          'placeId': placeId,
+          'createdAt': FieldValue.serverTimestamp(),
+        });
+        tx.update(placeRef, {
+          'likesCount': FieldValue.increment(1),
+        });
+      }
+    });
+  }
+
   Stream<bool> isLikedStream(String placeId) {
     return _db.collection('likes').doc(_docId(placeId))
         .snapshots().map((d) => d.exists);
   }
 
-  /// Реал-тайм: количество лайков у placeId (самый быстрый путь)
   Stream<int> likeCountStream(String placeId) {
     return _db.collection('likes')
         .where('placeId', isEqualTo: placeId)
@@ -115,26 +140,8 @@ class LikesServiceRemote {
         .map((s) => s.docs.length);
   }
 
-  /// Одноразовая проверка
   Future<bool> isLiked(String placeId) async {
     final d = await _db.collection('likes').doc(_docId(placeId)).get();
     return d.exists;
-  }
-
-  /// Тоггл лайка (create/delete likes/{uid_placeId})
-  Future<void> toggleLike(String placeId) async {
-    final ref = _db.collection('likes').doc(_docId(placeId));
-    await _db.runTransaction((tx) async {
-      final snap = await tx.get(ref);
-      if (snap.exists) {
-        tx.delete(ref);
-      } else {
-        tx.set(ref, {
-          'uid': _uid,
-          'placeId': placeId,
-          'createdAt': FieldValue.serverTimestamp(),
-        });
-      }
-    });
   }
 }

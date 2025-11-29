@@ -65,7 +65,7 @@ class _LoadingScreenState extends State<LoadingScreen>
     try {
       setState(() => _loadingText = 'Инициализация сервисов...');
       await FavoritesService.init();
-      await LikesService.init();
+
 
       if (!Hive.isAdapterRegistered(UserAdapter().typeId)) {
         Hive.registerAdapter(UserAdapter());
@@ -76,12 +76,6 @@ class _LoadingScreenState extends State<LoadingScreen>
       if (!Hive.isAdapterRegistered(RegionAdapter().typeId)) {
         Hive.registerAdapter(RegionAdapter());
       }
-
-      setState(() => _loadingText = 'Открытие локального хранилища...');
-      await Hive.openBox<User>('users');
-      await Hive.openBox('session');
-      await Hive.openBox<Place>('places');
-      await Hive.openBox<Region>('regions');
 
       setState(() => _loadingText = 'Загрузка данных...');
       final seeder = JsonSeedService();

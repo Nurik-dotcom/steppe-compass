@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:kazakhstan_travel/services/favorites_service.dart';
 
 import 'firebase_options.dart';
+import 'models/place.dart';
+import 'models/region.dart';
+import 'models/user.dart';
 import 'screens/loading_screen.dart';
 
 Future<void> main() async {
@@ -13,7 +17,6 @@ Future<void> main() async {
   // ✅ Инициализируем Firebase только   при отсутствии других приложений
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp(
-      name: 'steppe-compass',
       options: DefaultFirebaseOptions.currentPlatform,
     );
   } else {
@@ -21,8 +24,21 @@ Future<void> main() async {
     await Firebase.app();
   }
 
+  await Hive.initFlutter();
 
+  Hive.registerAdapter(UserAdapter());
+  Hive.registerAdapter(PlaceAdapter());
+  Hive.registerAdapter(RegionAdapter());
+  await Hive.deleteBoxFromDisk('places');
+  await Hive.openBox<Place>('places');
+
+  await Hive.openBox<User>('users');
+  await Hive.openBox('session');
+  await Hive.openBox<Region>('regions');
+
+  await FavoritesService.init();
   // ✅ инициализируем Hive
+
   await Hive.initFlutter();
 
   // 🔒 блокируем ориентацию только на мобильных

@@ -93,6 +93,7 @@ class KtPlaceCard extends StatelessWidget {
                     children: [
                       const Icon(Icons.favorite, size: 22, color: Colors.redAccent),
                       const SizedBox(width: 6),
+
                       StreamBuilder<int>(
                         stream: likesRemote.likeCountStream(place.id),
                         builder: (_, snap) => Text(
@@ -104,8 +105,23 @@ class KtPlaceCard extends StatelessWidget {
                           ),
                         ),
                       ),
+
+                      const SizedBox(width: 16),
+
+                      const Icon(Icons.chat_bubble_outline, size: 22, color: Color(0xff000E6B)),
+                      const SizedBox(width: 6),
+
+                      Text(
+                        '${place.commentsCount}',
+                        style: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xff000E6B),
+                        ),
+                      ),
                     ],
                   ),
+
                 ],
               ),
             ),

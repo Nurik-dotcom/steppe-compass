@@ -6,10 +6,15 @@ part of 'place.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
+
 class PlaceAdapter extends TypeAdapter<Place> {
   @override
   final int typeId = 1;
-
+  int _toInt(dynamic v) {
+    if (v == null) return 0;
+    if (v is num) return v.toInt();
+    return int.tryParse(v.toString()) ?? 0;
+  }
   @override
   Place read(BinaryReader reader) {
     final numOfFields = reader.readByte();
@@ -30,13 +35,15 @@ class PlaceAdapter extends TypeAdapter<Place> {
       address: fields[10] as String,
       videoUrl: fields[12] as String?,
       regionId: fields[11] as String,
+      likesCount: _toInt(fields[13]),
+      commentsCount: _toInt(fields[14]),
     );
   }
 
   @override
   void write(BinaryWriter writer, Place obj) {
     writer
-      ..writeByte(13)
+      ..writeByte(15)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -62,7 +69,11 @@ class PlaceAdapter extends TypeAdapter<Place> {
       ..writeByte(11)
       ..write(obj.regionId)
       ..writeByte(12)
-      ..write(obj.videoUrl);
+      ..write(obj.videoUrl)
+      ..writeByte(13)
+      ..write(obj.likesCount)
+      ..writeByte(14)
+      ..write(obj.commentsCount);
   }
 
   @override

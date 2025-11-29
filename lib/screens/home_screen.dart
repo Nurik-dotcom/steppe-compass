@@ -9,6 +9,8 @@ import 'package:html/parser.dart' as parser;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../services/place_stat_service.dart';
+import '../services/popular_places_section.dart';
 import '../widgets/root_shell_host.dart';
 import '../screens/direction_screen.dart';
 import '../models/place.dart';
@@ -36,6 +38,37 @@ final List<Map<String, String>> bannerItems = [
 
 enum Season { winter, spring, summer, autumn }
 enum DayTime { morning, day, evening, night }
+enum PopularFilter {
+  likes,
+  comments,
+}
+
+Stream<List<Place>> popularPlacesStream({
+  required PopularFilter filter,
+  int limit = 8,
+}) {
+  String orderField;
+  switch (filter) {
+    case PopularFilter.likes:
+      orderField = 'likesCount';
+      break;
+    case PopularFilter.comments:
+      orderField = 'commentsCount';
+      break;
+  }
+
+  return FirebaseFirestore.instance
+      .collection('place')
+      .orderBy(orderField, descending: true)
+      .limit(limit)
+      .snapshots()
+      .map((snap) => snap.docs
+      .map((doc) => Place.fromJson({'id': doc.id, ...doc.data()}))
+      .toList());
+}
+
+
+PopularFilter _popularFilter = PopularFilter.likes;
 
 class HomeScreen extends StatefulWidget {
   final DateTime? testDate;
@@ -163,26 +196,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return pool.toList()..shuffle();
   }
 
-  Stream<List<Place>> _popularPlacesStream({int limit = 4, Duration window = const Duration(days: 30)}) {
-    final since = Timestamp.fromDate(DateTime.now().subtract(window));
-    final placesBox = Hive.box<Place>('places');
-    return FirebaseFirestore.instance.collection('likes').where('createdAt', isGreaterThan: since).snapshots().map((qs) {
-      final counts = <String, int>{};
-      for (final d in qs.docs) {
-        final pid = (d.data()['placeId'] ?? '') as String;
-        if (pid.isEmpty) continue;
-        counts[pid] = (counts[pid] ?? 0) + 1;
-      }
-      final sorted = counts.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
-      final ids = sorted.take(limit).map((e) => e.key);
-      final result = <Place>[];
-      for (final id in ids) {
-        final p = placesBox.get(id);
-        if (p != null) result.add(p);
-      }
-      return result;
-    });
-  }
+
+
 
   Widget _buildDirectionsButton(BuildContext context) {
     return Padding(
@@ -316,49 +331,89 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
+  PopularFilter _popularFilter = PopularFilter.likes;
   Widget _buildPopularPlaces() {
-    // фиксированная высота под карточку -> убирает RenderFlex overflow
-    const double cardHeight = 220;
-    const double cardWidth  = 130;
+    const double cardHeight = 242;
+    const double cardWidth  = 140;
 
+    final stream = popularPlacesStream(
+      filter: _popularFilter,
+      limit: 8,
+    );
     return SizedBox(
-      height: cardHeight,
-      child: StreamBuilder<List<Place>>(
-        stream: _popularPlacesStream(limit: 4, window: const Duration(days: 30)),
-        builder: (context, snap) {
-          if (!snap.hasData) {
-            return const Center(child: CircularProgressIndicator(strokeWidth: 3));
-          }
-          final data = snap.data ?? const <Place>[];
-          if (data.isEmpty) {
-            return const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text('Ещё нет популярных мест — ставьте лайки на страницах мест.'),
-              ),
-            );
-          }
+      height: cardHeight + 40, // + место под чипы
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // переключатель Лайки / Комменты
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                ChoiceChip(
+                  label: const Text('По лайкам'),
+                  selected: _popularFilter == PopularFilter.likes,
+                  onSelected: (_) {
+                    setState(() => _popularFilter = PopularFilter.likes);
+                  },
+                ),
+                const SizedBox(width: 8),
+                ChoiceChip(
+                  label: const Text('По комментариям'),
+                  selected: _popularFilter == PopularFilter.comments,
+                  onSelected: (_) {
+                    setState(() => _popularFilter = PopularFilter.comments);
+                  },
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          Expanded(
+            child: StreamBuilder<List<Place>>(
+              stream: stream,
+              builder: (context, snap) {
+                if (!snap.hasData) {
+                  return const Center(
+                    child: CircularProgressIndicator(strokeWidth: 3),
+                  );
+                }
+                final data = snap.data ?? const <Place>[];
+                if (data.isEmpty) {
+                  return const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Ещё нет популярных мест — ставьте лайки и пишите отзывы.',
+                      ),
+                    ),
+                  );
+                }
 
-          return ListView.separated(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            itemCount: data.length,
-            separatorBuilder: (_, __) => const SizedBox(width: 12),
-            itemBuilder: (context, i) {
-              final place = data[i];
-              return SizedBox(
-                width: cardWidth,
-                height: cardHeight,
-                child: KtPlaceCard(place: place),
-              );
-            },
-          );
-        },
+                return ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  itemCount: data.length,
+                  separatorBuilder: (_, __) => const SizedBox(width: 12),
+                  itemBuilder: (context, i) {
+                    final place = data[i];
+                    return SizedBox(
+                      width: cardWidth,
+                      height: cardHeight,
+                      child: KtPlaceCard(place: place),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
+
+
 
 
   Widget _buildNews() {
@@ -487,7 +542,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 _buildCategoriesSection(),
                 _buildDirectionsButton(context),
                 _popularHeader(context),
-                _buildPopularPlaces(),
+                const PopularPlacesSection(),
                 _buildArticlesSection(),
                 const SizedBox(height: 16),
                 _buildNews(),
