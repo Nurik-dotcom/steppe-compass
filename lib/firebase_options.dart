@@ -4,7 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -41,8 +40,8 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAe-_LRPAn9TH_6cJ9XzaaWL7Zex9HoVRk',
-    appId: '1:845834716358:android:2885042033c411253583c7',
+    apiKey: 'AIzaSyCfAMgOxmEBtq7XIoHBXu1CQMj-hlOcDBI',
+    appId: '1:845834716358:android:05625f6844869a933583c7',
     messagingSenderId: '845834716358',
     projectId: 'steppe-compas',
     storageBucket: 'steppe-compas.firebasestorage.app',

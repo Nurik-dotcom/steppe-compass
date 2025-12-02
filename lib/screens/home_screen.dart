@@ -342,6 +342,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
     return SizedBox(
       height: cardHeight + 40, // + место под чипы
+      width: cardWidth + 40,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

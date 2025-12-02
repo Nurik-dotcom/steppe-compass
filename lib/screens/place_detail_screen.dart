@@ -1,11 +1,10 @@
-// lib/screens/place_detail_screen.dart
 import 'dart:async';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
 import '/services/image_gallery_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart' show kReleaseMode;
+import 'package:flutter/foundation.dart' show kReleaseMode, kIsWeb; // Добавил kIsWeb
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
@@ -15,15 +14,17 @@ import 'package:firebase_auth/firebase_auth.dart' as fb;
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../widgets/root_shell_host.dart';
+// Импортируем оба варианта плееров
 import '../widgets/rutube_embed.dart';
-import 'package:kazakhstan_travel/widgets/rutube_player.dart';
+import '../widgets/rutube_player_mobile.dart'; // Убедись, что этот файл существует и класс называется RuTubePreviewPlayer
+
 import '../models/review.dart';
 import '../services/review_service.dart';
 import '../models/place.dart';
 import '../services/auth_service.dart';
 import '../services/favorites_service.dart';
 import '../services/likes_service.dart';
-
+import '../widgets/reviews_count_badge.dart';
 
 const Color kPrimaryColor = Color(0xFF000E6B);
 const Color kAccentColor = Color(0xFFC0A45B);
@@ -277,7 +278,14 @@ class _VideoSection extends StatelessWidget {
   final String rutubeId;
   final bool showVideo;
   final VoidCallback onToggleVideo;
-  const _VideoSection({required this.videoUrl, required this.rutubeId, required this.showVideo, required this.onToggleVideo});
+
+  const _VideoSection({
+    required this.videoUrl,
+    required this.rutubeId,
+    required this.showVideo,
+    required this.onToggleVideo
+  });
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -290,17 +298,43 @@ class _VideoSection extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: AnimatedSwitcher(
+          child: kIsWeb
+              ? ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            // На Web сразу показываем Embed-плеер.
+            // Он работает и как превью (показывает обложку), и играет видео по клику.
+            // Переключатель showVideo тут не нужен, чтобы не перезагружать iframe.
+            child: RutubeEmbed(videoId: rutubeId),
+          )
+              : AnimatedSwitcher(
             duration: const Duration(milliseconds: 400),
             child: showVideo
-                ? _RutubeLazyPlayer(url: videoUrl, key: const ValueKey('video_open'))
-                : GestureDetector(key: const ValueKey('video_preview'), onTap: onToggleVideo, child: RuTubePreviewPlayer(videoUrl: rutubeId, videoId: videoUrl)),
+                ? ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              // Когда видео открыто на телефоне - используем Embed (он чище и без лишнего интерфейса)
+              child: RutubeEmbed(videoId: rutubeId),
+            )
+                : GestureDetector(
+              key: const ValueKey('video_preview'),
+              onTap: onToggleVideo,
+              // ВОЗВРАЩАЕМ ПРЕВЬЮ
+              child: Stack(
+                children: [
+                  // Твой виджет превью
+                  RuTubePreviewPlayer(videoUrl: videoUrl, videoId: rutubeId),
+                  // Прозрачный слой сверху, чтобы перехватить нажатие
+                  // Если его не будет, WebView внутри PreviewPlayer перехватит тап и не даст сработать onToggleVideo
+                  Positioned.fill(child: Container(color: Colors.transparent)),
+                ],
+              ),
+            ),
           ),
         ),
       ],
     );
   }
 }
+
 class FullScreenGallery extends StatelessWidget {
   final List<String> images;
   final int initialIndex;
@@ -362,7 +396,7 @@ class _MapSection extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: GoogleMap(
-                liteModeEnabled: !kReleaseMode,
+                liteModeEnabled: false,
                 myLocationEnabled: hasLocationPermission,
                 myLocationButtonEnabled: hasLocationPermission,
                 initialCameraPosition: CameraPosition(target: latLng, zoom: 12.5),
@@ -471,27 +505,6 @@ String? _rutubeIdFromUrl(String? url) {
   return null;
 }
 
-class _RutubeLazyPlayer extends StatefulWidget {
-  final String url;
-  const _RutubeLazyPlayer({required this.url, Key? key}) : super(key: key);
-  @override
-  State<_RutubeLazyPlayer> createState() => _RutubeLazyPlayerState();
-}
-
-class _RutubeLazyPlayerState extends State<_RutubeLazyPlayer> {
-  WebViewController? _controller;
-  bool _isReady = false, _hasError = false;
-  @override
-  void initState() {
-    super.initState();
-    _controller = WebViewController()..setJavaScriptMode(JavaScriptMode.unrestricted)..setBackgroundColor(const Color(0x00000000))..setNavigationDelegate(NavigationDelegate(onPageFinished: (_) => setState(() => _isReady = true), onWebResourceError: (error) { debugPrint('WebView error: ${error.description}'); setState(() => _hasError = true); }))..loadRequest(Uri.parse(widget.url));
-  }
-  @override
-  Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 16 / 9, child: ClipRRect(borderRadius: BorderRadius.circular(16), child: Stack(alignment: Alignment.center, children: [if (_controller != null) WebViewWidget(controller: _controller!), if (_hasError) const Column(mainAxisAlignment: MainAxisAlignment.center, children: [Icon(Icons.error_outline, color: kLightTextColor, size: 48), SizedBox(height: 8), Text('Не удалось загрузить видео', style: TextStyle(fontFamily: 'PlayfairDisplay', color: kLightTextColor))]) else if (!_isReady) const CircularProgressIndicator(color: kPrimaryColor)])));
-  }
-}
-
 //===================================================================
 // ▼▼▼ СЕКЦИЯ ОТЗЫВОВ (РЕАЛЬНЫЕ ДАННЫЕ) ▼▼▼
 //===================================================================
@@ -522,9 +535,19 @@ class _RealReviewsSectionState extends State<_RealReviewsSection> {
         const Divider(height: 1, indent: 20, endIndent: 20),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
-          child: Text(
-            'Отзывы посетителей',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontFamily: 'PlayfairDisplay'),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Отзывы посетителей',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(fontFamily: 'PlayfairDisplay'),
+              ),
+              // Живой счётчик отзывов
+              ReviewsCountBadge(placeId: widget.placeId),
+            ],
           ),
         ),
         StreamBuilder<List<PlaceReview>>(

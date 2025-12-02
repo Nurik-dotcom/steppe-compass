@@ -14,32 +14,27 @@ import 'screens/loading_screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ✅ Инициализируем Firebase только   при отсутствии других приложений
-  if (Firebase.apps.isEmpty) {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  } else {
-    // Используем уже инициализированный экземпляр
-    await Firebase.app();
-  }
+  // ✅ Инициализируем дефолтное Firebase-приложение
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
+  // ✅ Инициализируем Hive ОДИН раз
   await Hive.initFlutter();
 
   Hive.registerAdapter(UserAdapter());
   Hive.registerAdapter(PlaceAdapter());
   Hive.registerAdapter(RegionAdapter());
-  await Hive.deleteBoxFromDisk('places');
-  await Hive.openBox<Place>('places');
 
+  // ⚠️ если не хочешь каждый запуск чистить места — убери эту строку
+  // await Hive.deleteBoxFromDisk('places');
+
+  await Hive.openBox<Place>('places');
   await Hive.openBox<User>('users');
   await Hive.openBox('session');
   await Hive.openBox<Region>('regions');
 
   await FavoritesService.init();
-  // ✅ инициализируем Hive
-
-  await Hive.initFlutter();
 
   // 🔒 блокируем ориентацию только на мобильных
   if (!kIsWeb) {
@@ -64,7 +59,7 @@ class SteppeCompassApp extends StatelessWidget {
         primaryColor: const Color(0xFF0EAD6B),
         fontFamily: 'PlayfairDisplay',
       ),
-      home: const LoadingScreen(), // Твой экран инициализации
+      home: const LoadingScreen(),
     );
   }
 }

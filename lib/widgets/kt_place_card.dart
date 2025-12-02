@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/place.dart';
 import '../screens/place_detail_screen.dart';
 import '../services/likes_service.dart';
-
+import '../widgets/reviews_count_badge.dart';
 class KtPlaceCard extends StatelessWidget {
   final Place place;
   const KtPlaceCard({Key? key, required this.place}) : super(key: key);
@@ -106,19 +106,12 @@ class KtPlaceCard extends StatelessWidget {
                         ),
                       ),
 
-                      const SizedBox(width: 16),
+                      const SizedBox(width: 10),
 
                       const Icon(Icons.chat_bubble_outline, size: 22, color: Color(0xff000E6B)),
                       const SizedBox(width: 6),
 
-                      Text(
-                        '${place.commentsCount}',
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xff000E6B),
-                        ),
-                      ),
+                      ReviewsCountBadge(placeId: place.id),
                     ],
                   ),
 

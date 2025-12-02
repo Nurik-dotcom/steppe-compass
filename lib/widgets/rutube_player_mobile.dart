@@ -25,7 +25,7 @@ class _RuTubePreviewPlayerState extends State<RuTubePreviewPlayer> {
     super.initState();
 
     final resolvedId = _extractId(widget.videoUrl, widget.videoId);
-    _watchUrl = 'https://rutube.ru/video/$resolvedId/';
+    _watchUrl = 'https://rutube.ru/video/embed/$resolvedId/';
 
     // ✅ Только мобильная логика
     _mobileController = WebViewController()
