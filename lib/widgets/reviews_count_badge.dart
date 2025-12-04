@@ -24,7 +24,7 @@ class ReviewsCountBadge extends StatelessWidget {
         if (count == 0) {
           text = 'Нет отзывов';
         } else if (count == 1) {
-          text = '1 отзыв';
+          text = '1';
         } else if (count >= 2 && count <= 4) {
           text = '$count ';
         } else {

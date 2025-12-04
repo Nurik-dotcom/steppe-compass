@@ -1,4 +1,4 @@
-// lib/screens/no_internet_screen.dart
+
 
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class NoInternetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF0EAD6), // Используем ваш бежевый фон
+      backgroundColor: const Color(0xFFF0EAD6), 
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(24.0),

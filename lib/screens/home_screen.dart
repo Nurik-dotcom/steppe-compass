@@ -68,7 +68,7 @@ Stream<List<Place>> popularPlacesStream({
 }
 
 
-PopularFilter _popularFilter = PopularFilter.likes;
+
 
 class HomeScreen extends StatefulWidget {
   final DateTime? testDate;
@@ -342,7 +342,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
     return SizedBox(
       height: cardHeight + 40, // + место под чипы
-      width: cardWidth + 40,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -473,10 +472,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Image.network(
                                   n["imageUrl"]!,
                                   width: double.infinity,
-                                  height: 140, // Немного увеличим картинку
+                                  height: 140,
                                   fit: BoxFit.cover,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return Container(
+                                      width: double.infinity,
+                                      height: 140,
+                                      color: Colors.grey[300],
+                                      alignment: Alignment.center,
+                                      child: const Icon(
+                                        Icons.broken_image,
+                                        size: 40,
+                                        color: Colors.grey,
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
+
                             Expanded( // Используем Expanded, чтобы занять оставшееся место
                               child: Padding(
                                 padding: const EdgeInsets.all(14),

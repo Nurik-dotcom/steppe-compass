@@ -1,4 +1,4 @@
-// lib/screens/loading_screen.dart
+
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -44,7 +44,7 @@ class _LoadingScreenState extends State<LoadingScreen>
 
     await Future.wait([delay, dataLoadingProcess]);
 
-    // ✅ После загрузки — проверка авторизации
+    
     final user = fb.FirebaseAuth.instance.currentUser;
     if (!mounted) return;
 

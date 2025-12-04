@@ -1,8 +1,8 @@
-// lib/services/auth_service.dart
-import 'package:hive/hive.dart';
-import '../models/user.dart'; // Ваша обновленная Hive-модель User
 
-// Firebase
+import 'package:hive/hive.dart';
+import '../models/user.dart'; 
+
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as fb;
 
@@ -17,7 +17,7 @@ class AuthService {
 
   Future<Box> _sessionBox() async => Hive.openBox('session');
 
-  /// Записывает данные пользователя в локальную сессию Hive.
+  
   Future<void> _writeSession({
     required String email,
     required String displayName,
@@ -26,18 +26,18 @@ class AuthService {
     final session = await _sessionBox();
     await session.put(
       'user',
-      // Пароль больше не храним
+      
       User(email: email, displayName: displayName, isAdmin: isAdmin),
     );
   }
 
-  /// Читает пользователя из локальной сессии Hive.
+  
   Future<User?> _sessionUser() async {
     final session = await _sessionBox();
     return session.get('user') as User?;
   }
 
-  /// Загружает профиль из Firestore и сохраняет его в локальную сессию.
+  
   Future<bool> _pullRemoteProfileToSession() async {
     final fb.User? u = _fa.currentUser;
     if (u == null) return false;
@@ -59,9 +59,9 @@ class AuthService {
     return true;
   }
 
-  // ================== ПУБЛИЧНЫЕ МЕТОДЫ ==================
+  
 
-  /// Регистрация через Firebase.
+  
   Future<void> register(String email, String password, {bool isAdmin = false}) async {
     try {
       final fb.UserCredential res;
@@ -77,10 +77,10 @@ class AuthService {
       final user = res.user;
       if (user == null) throw Exception("Не удалось создать пользователя");
 
-      // Создаем профиль в Firestore
+      
       await _userDoc(user.uid).set({
         'email': email,
-        'displayName': '', // Изначально имя пустое
+        'displayName': '', 
         'photoUrl': null,
         'role': isAdmin ? 'admin' : 'user',
         'provider': 'password',
@@ -88,7 +88,7 @@ class AuthService {
         'updatedAt': FieldValue.serverTimestamp(),
       });
 
-      // Записываем в локальную сессию
+      
       await _writeSession(
         email: email,
         displayName: '',
@@ -101,12 +101,12 @@ class AuthService {
     }
   }
 
-  /// Вход через Firebase.
+  
   Future<void> login(String email, String password) async {
     try {
       await _fa.signInWithEmailAndPassword(email: email, password: password);
 
-      // После успешного входа подтягиваем актуальные данные в сессию
+      
       await _pullRemoteProfileToSession();
 
     } on fb.FirebaseAuthException {
@@ -116,16 +116,16 @@ class AuthService {
     }
   }
 
-  /// Выход: Firebase signOut + очистка локальной session.
+  
   Future<void> logout() async {
     await _fa.signOut();
     final session = await _sessionBox();
     await session.clear();
   }
 
-  // ================== Методы настроек ==================
+  
 
-  /// Обновляет имя и фото пользователя в Firebase Auth и Firestore.
+  
   Future<void> updateUserProfile({
     required String displayName,
     String? photoUrl,
@@ -133,24 +133,24 @@ class AuthService {
     final u = _fa.currentUser;
     if (u == null) throw Exception('Пользователь не авторизован');
 
-    // 1. Обновляем профиль в Firebase Authentication
+    
     await u.updateDisplayName(displayName);
     if (photoUrl != null) {
       await u.updatePhotoURL(photoUrl);
     }
 
-    // 2. Обновляем данные в нашей базе Firestore
+    
     await _userDoc(u.uid).set({
       'displayName': displayName,
       if (photoUrl != null) 'photoUrl': photoUrl,
       'updatedAt': FieldValue.serverTimestamp(),
     }, SetOptions(merge: true));
 
-    // 3. Обновляем локальную сессию, чтобы UI сразу обновился
+    
     await _pullRemoteProfileToSession();
   }
 
-  /// Проверка пароля (reauthenticate).
+  
   Future<bool> verifyPassword(String email, String currentPassword) async {
     try {
       final fb.User? u = _fa.currentUser;
@@ -164,23 +164,34 @@ class AuthService {
     }
   }
 
-  /// Смена email.
+
+
+  /// Смена email (без подтверждения по почте).
+  /// Смена email (С ОБЯЗАТЕЛЬНЫМ ПОДТВЕРЖДЕНИЕМ)
+  /// В новых версиях Firebase мгновенная смена без письма невозможна из приложения.
   Future<void> updateEmail({
     required String currentEmail,
     required String currentPassword,
     required String newEmail,
   }) async {
+    // 1. Проверяем текущий пароль
     final ok = await verifyPassword(currentEmail, currentPassword);
     if (!ok) throw Exception('Неверный текущий пароль');
 
     final u = _fa.currentUser;
     if (u == null) throw Exception('Пользователь не найден');
 
-    // Используем правильный, современный метод
+    // 2. Отправляем письмо для подтверждения на НОВУЮ почту
+    // Метод updateEmail был удален в версии 6.0.0, теперь только так:
     await u.verifyBeforeUpdateEmail(newEmail);
+
+    // 3. В этот момент мы НЕ обновляем Firestore, так как почта фактически еще не сменилась.
+    // Она сменится сама в Auth, когда юзер кликнет по ссылке.
+    // Чтобы обновить Firestore, нужно либо слушать userChanges(), либо полагаться на то,
+    // что юзер перезайдет в приложение.
   }
 
-  /// Смена пароля.
+  
   Future<void> updatePassword({
     required String email,
     required String currentPassword,

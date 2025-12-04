@@ -1,11 +1,11 @@
-// lib/screens/region_detail_screen.dart
+
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:cloud_firestore/cloud_firestore.dart'; // <-- Важный импорт
+import 'package:cloud_firestore/cloud_firestore.dart'; 
 import '../widgets/root_shell_host.dart';
 import '../models/region.dart';
 import '../models/place.dart';
@@ -61,7 +61,7 @@ class RegionDetailScreen extends StatelessWidget {
                   background: _RegionHeader(region: region),
                 ),
               ),
-              // lib/screens/region_detail_screen.dart
+              
 
               SliverToBoxAdapter(
                 child: Container(
@@ -70,14 +70,14 @@ class RegionDetailScreen extends StatelessWidget {
                   child: Text(
                     region.description,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      // ▼▼▼ ИЗМЕНЕНИЯ ЗДЕСЬ ▼▼▼
-                      fontFamily: 'Nunito', // <-- Новый, читаемый шрифт
+                      
+                      fontFamily: 'Nunito', 
                       fontSize: 15,
                       height: 1.6,
-                      color: Colors.black.withOpacity(0.8), // <-- Чуть менее насыщенный цвет для лучшего восприятия
+                      color: Colors.black.withOpacity(0.8), 
                     ),
-                    textAlign: TextAlign.left, // <-- Правильное выравнивание
-                    // ▲▲▲ КОНЕЦ ИЗМЕНЕНИЙ ▲▲▲
+                    textAlign: TextAlign.left, 
+                    
                   ),
                 ),
               ),
@@ -158,12 +158,12 @@ class _PlacesListForRegionState extends State<_PlacesListForRegion> {
     _likeCountsFuture = _fetchLikeCounts();
   }
 
-  // Метод для загрузки всех лайков из Firestore
+  
   Future<Map<String, int>> _fetchLikeCounts() async {
     final counts = <String, int>{};
     try {
-      // Запрос может быть большим, поэтому лучше его оптимизировать,
-      // например, брать лайки только за последний год.
+      
+      
       final querySnapshot = await FirebaseFirestore.instance
           .collection('likes')
           .where('createdAt', isGreaterThan: DateTime.now().subtract(const Duration(days: 365)))
@@ -196,7 +196,7 @@ class _PlacesListForRegionState extends State<_PlacesListForRegion> {
   Widget build(BuildContext context) {
     final placesBox = Hive.box<Place>('places');
 
-    // Используем ValueListenableBuilder, чтобы реагировать на изменения в Hive (добавление новых мест и т.д.)
+    
     return ValueListenableBuilder(
       valueListenable: placesBox.listenable(),
       builder: (context, Box<Place> box, _) {
@@ -209,7 +209,7 @@ class _PlacesListForRegionState extends State<_PlacesListForRegion> {
         };
         if (items.isEmpty) return _EmptyState(title: 'Нет данных', subtitle: msg);
 
-        // FutureBuilder ждет загрузки лайков, а затем строит список
+        
         return FutureBuilder<Map<String, int>>(
           future: _likeCountsFuture,
           builder: (context, snapshot) {
@@ -219,7 +219,7 @@ class _PlacesListForRegionState extends State<_PlacesListForRegion> {
 
             final likeCounts = snapshot.data ?? {};
 
-            // Логика сортировки применяется здесь, после загрузки лайков
+            
             if (_currentSort == _SortType.byPopularity) {
               items.sort((a, b) => (likeCounts[b.id] ?? 0).compareTo(likeCounts[a.id] ?? 0));
             } else {

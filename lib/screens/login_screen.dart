@@ -5,8 +5,8 @@ import 'package:hive/hive.dart';
 import '../services/auth_service.dart';
 import 'loading_screen.dart';
 import 'register_screen.dart';
-import 'home_screen.dart'; // если где-то используешь — можно оставить
-import 'root_shell.dart'; // <-- добавили импорт
+import 'home_screen.dart'; 
+import 'root_shell.dart'; 
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     setState(() => _loading = true);
     try {
-      // ВАЖНО: пусть AuthService.login бросает исключение при ошибке.
+      
       await _authService
           .login(email, password)
           .timeout(const Duration(seconds: 20));
@@ -96,8 +96,8 @@ class _LoginScreenState extends State<LoginScreen> {
     } on fb.FirebaseAuthException catch (e, st) {
       _log('FirebaseAuthException: ${e.code} ${e.message}', st);
       _show(context, _humanizeAuthError(e));
-      // ✅ При ошибке авторизации очищаем введённые email и пароль,
-      // чтобы пользователь мог ввести новые данные.
+      
+      
       _emailController.clear();
       _passwordController.clear();
     } on TimeoutException catch (e, st) {

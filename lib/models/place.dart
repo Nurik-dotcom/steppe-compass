@@ -67,10 +67,9 @@ class Place {
     this.commentsCount = 0,
   });
 
-  // Сохраняем, если где-то юзается
+
   get category => null;
 
-  // ---------- JSON ----------
   factory Place.fromJson(Map<String, dynamic> j) {
     List<String> _stringsFrom(dynamic v) {
       if (v == null) return <String>[];
