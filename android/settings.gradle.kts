@@ -25,9 +25,9 @@ plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
 
     // Версии AGP/Kotlin объявляем один раз на верхнем уровне
-    id("com.android.application") version "8.7.0" apply false
+    id("com.android.application") version "8.2.0" apply false
     id("com.android.library") version "8.7.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.24" apply false
+    id("org.jetbrains.kotlin.android") version "2.1.0" apply false
 
     // Google Services (Firebase) — главное: объявляем версию здесь
     id("com.google.gms.google-services") version "4.4.2" apply false

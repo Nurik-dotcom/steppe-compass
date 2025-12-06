@@ -1,9 +1,11 @@
 // lib/widgets/rutube_player_mobile.dart
 
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart'; // ✅ Только мобильный WebView
+import 'package:webview_flutter/webview_flutter.dart';
+// Импорт для Android-специфичных настроек
+import 'package:webview_flutter_android/webview_flutter_android.dart';
+import 'package:flutter/foundation.dart';
 
-// Имя класса остается тем же
 class RuTubePreviewPlayer extends StatefulWidget {
   final String? videoUrl;
   final String? videoId;
@@ -24,19 +26,38 @@ class _RuTubePreviewPlayerState extends State<RuTubePreviewPlayer> {
   void initState() {
     super.initState();
 
-    final resolvedId = _extractId(widget.videoUrl, widget.videoId);
-    _watchUrl = 'https://rutube.ru/video/embed/$resolvedId/';
+    if (kIsWeb) return;
 
-    // ✅ Только мобильная логика
-    _mobileController = WebViewController()
+    final resolvedId = _extractId(widget.videoUrl, widget.videoId);
+    _watchUrl = 'https://rutube.ru/play/embed/$resolvedId';
+
+
+    final WebViewController controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
-      ..loadRequest(Uri.parse(_watchUrl));
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onNavigationRequest: (request) {
+            return NavigationDecision.navigate;
+          },
+        ),
+      );
+
+    if (controller.platform is AndroidWebViewController) {
+      final androidController = controller.platform as AndroidWebViewController;
+    }
+
+    controller.loadRequest(Uri.parse(_watchUrl));
+
+    _mobileController = controller;
   }
 
   @override
   Widget build(BuildContext context) {
-    // ✅ Только мобильный виджет
+    if (kIsWeb) {
+      return const Center(child: Text("Видео недоступно (Web Error)"));
+    }
+
     return AspectRatio(
       aspectRatio: 16 / 9,
       child: _mobileController == null
@@ -45,7 +66,6 @@ class _RuTubePreviewPlayerState extends State<RuTubePreviewPlayer> {
     );
   }
 
-  // Вспомогательный метод
   String _extractId(String? url, String? id) {
     if (id != null && id.isNotEmpty) return id;
     final uri = Uri.tryParse(url ?? '');

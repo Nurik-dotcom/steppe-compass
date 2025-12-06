@@ -1,8 +1,13 @@
 // lib/widgets/rutube_player.dart
 
-// Эта строка говорит: "По умолчанию используй 'rutube_player_mobile.dart',
-// но если компилируешь для веба (dart.library.html),
-// то вместо него используй 'rutube_player_web.dart'".
+// 1. Импортируем заглушку по умолчанию
+import 'rutube_player_stub.dart'
+// 2. Если это Android/iOS - берем мобильный файл
+if (dart.library.io) 'rutube_player_mobile.dart'
+// 3. Если это Web - берем веб файл
+if (dart.library.html) 'rutube_player_web.dart';
 
-export 'rutube_player_mobile.dart'
+// Экспортируем тот класс, который выбрался выше
+export 'rutube_player_stub.dart'
+if (dart.library.io) 'rutube_player_mobile.dart'
 if (dart.library.html) 'rutube_player_web.dart';

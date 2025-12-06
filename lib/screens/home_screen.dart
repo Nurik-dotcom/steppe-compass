@@ -81,7 +81,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _placeService = PlaceService();
   final _likes = LikesService();
-
+  bool _isRecalcInProgress = false;
   Timer? _tick;
   late DayTime _currentDayTime;
 
@@ -327,10 +327,59 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Text('Популярные места', style: Theme.of(context).textTheme.titleLarge?.copyWith(color: const Color(0xff000E6B), fontWeight: FontWeight.bold))],
+        children: [
+          Text(
+            'Популярные места',
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              color: const Color(0xff000E6B),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+
+          // ▼▼▼ КНОПКА "ОБНОВИТЬ СТАТИСТИКУ" ▼▼▼
+          IconButton(
+            tooltip: 'Пересчитать лайки и отзывы',
+            icon: _isRecalcInProgress
+                ? const SizedBox(
+              width: 18,
+              height: 18,
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+              ),
+            )
+                : const Icon(Icons.refresh),
+            onPressed: _isRecalcInProgress
+                ? null
+                : () async {
+              setState(() => _isRecalcInProgress = true);
+              try {
+                await PlaceStatsService().recalcPlaceStats();
+
+                if (!mounted) return;
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Статистика мест пересчитана'),
+                  ),
+                );
+              } catch (e) {
+                if (!mounted) return;
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Ошибка при пересчёте: $e'),
+                  ),
+                );
+              } finally {
+                if (mounted) {
+                  setState(() => _isRecalcInProgress = false);
+                }
+              }
+            },
+          ),
+        ],
       ),
     );
   }
+
   PopularFilter _popularFilter = PopularFilter.likes;
   Widget _buildPopularPlaces() {
     const double cardHeight = 242;

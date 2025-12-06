@@ -16,8 +16,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../widgets/root_shell_host.dart';
 // Импортируем оба варианта плееров
 import '../widgets/rutube_embed.dart';
-import '../widgets/rutube_player_mobile.dart'; // Убедись, что этот файл существует и класс называется RuTubePreviewPlayer
-
+import '../widgets/rutube_player.dart'; // Твой файл с export ... if ...
 import '../models/review.dart';
 import '../services/review_service.dart';
 import '../models/place.dart';
@@ -301,10 +300,11 @@ class _VideoSection extends StatelessWidget {
           child: kIsWeb
               ? ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            // На Web сразу показываем Embed-плеер.
-            // Он работает и как превью (показывает обложку), и играет видео по клику.
-            // Переключатель showVideo тут не нужен, чтобы не перезагружать iframe.
-            child: RutubeEmbed(videoId: rutubeId),
+            // ИСПРАВЛЕНИЕ: Используем наш универсальный плеер
+            child: RuTubePreviewPlayer(
+              videoId: rutubeId,
+              // videoUrl можно не передавать, если есть ID, или передать widget.videoUrl
+            ),
           )
               : AnimatedSwitcher(
             duration: const Duration(milliseconds: 400),
