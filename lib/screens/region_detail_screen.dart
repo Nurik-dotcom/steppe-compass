@@ -150,36 +150,8 @@ class _PlacesListForRegion extends StatefulWidget {
 
 class _PlacesListForRegionState extends State<_PlacesListForRegion> {
   _SortType _currentSort = _SortType.byPopularity;
-  late Future<Map<String, int>> _likeCountsFuture;
 
-  @override
-  void initState() {
-    super.initState();
-    _likeCountsFuture = _fetchLikeCounts();
-  }
-
-  
-  Future<Map<String, int>> _fetchLikeCounts() async {
-    final counts = <String, int>{};
-    try {
-      
-      
-      final querySnapshot = await FirebaseFirestore.instance
-          .collection('likes')
-          .where('createdAt', isGreaterThan: DateTime.now().subtract(const Duration(days: 365)))
-          .get();
-
-      for (final doc in querySnapshot.docs) {
-        final placeId = doc.data()['placeId'] as String?;
-        if (placeId != null) {
-          counts[placeId] = (counts[placeId] ?? 0) + 1;
-        }
-      }
-    } catch (e) {
-      debugPrint("Error fetching like counts: $e");
-    }
-    return counts;
-  }
+  // Убрали initState и _fetchLikeCounts
 
   bool _filter(Place p) {
     if (p.regionId != widget.regionId) return false;
@@ -196,10 +168,10 @@ class _PlacesListForRegionState extends State<_PlacesListForRegion> {
   Widget build(BuildContext context) {
     final placesBox = Hive.box<Place>('places');
 
-    
     return ValueListenableBuilder(
       valueListenable: placesBox.listenable(),
       builder: (context, Box<Place> box, _) {
+        // 1. Сначала фильтруем
         final items = box.values.where(_filter).toList();
 
         final msg = switch (widget.tab) {
@@ -209,63 +181,53 @@ class _PlacesListForRegionState extends State<_PlacesListForRegion> {
         };
         if (items.isEmpty) return _EmptyState(title: 'Нет данных', subtitle: msg);
 
-        
-        return FutureBuilder<Map<String, int>>(
-          future: _likeCountsFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            }
+        // 2. Сортируем, используя локальное поле likesCount из Hive
+        if (_currentSort == _SortType.byPopularity) {
+          items.sort((a, b) => b.likesCount.compareTo(a.likesCount));
+        } else {
+          items.sort((a, b) => a.name.compareTo(b.name));
+        }
 
-            final likeCounts = snapshot.data ?? {};
-
-            
-            if (_currentSort == _SortType.byPopularity) {
-              items.sort((a, b) => (likeCounts[b.id] ?? 0).compareTo(likeCounts[a.id] ?? 0));
-            } else {
-              items.sort((a, b) => a.name.compareTo(b.name));
-            }
-
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text("Сортировать:", style: Theme.of(context).textTheme.bodySmall),
-                      const SizedBox(width: 8),
-                      DropdownButton<_SortType>(
-                        value: _currentSort,
-                        items: const [
-                          DropdownMenuItem(value: _SortType.byPopularity, child: Text("По популярности")),
-                          DropdownMenuItem(value: _SortType.byName, child: Text("По алфавиту")),
-                        ],
-                        onChanged: (value) {
-                          if (value != null) setState(() => _currentSort = value);
-                        },
-                        underline: const SizedBox(),
-                      ),
+        // 3. Сразу возвращаем UI, без FutureBuilder
+        return Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Сортировать:", style: Theme.of(context).textTheme.bodySmall),
+                  const SizedBox(width: 8),
+                  DropdownButton<_SortType>(
+                    value: _currentSort,
+                    items: const [
+                      DropdownMenuItem(value: _SortType.byPopularity, child: Text("По популярности")),
+                      DropdownMenuItem(value: _SortType.byName, child: Text("По алфавиту")),
                     ],
-                  ),
-                ),
-                Expanded(
-                  child: ListView.separated(
-                    padding: EdgeInsets.fromLTRB(12, 8, 12, 140.0),
-                    itemCount: items.length,
-                    separatorBuilder: (_, __) => Divider(height: 24, thickness: 0.5, indent: 16, endIndent: 16, color: Colors.black.withOpacity(0.1)),
-                    itemBuilder: (context, i) {
-                      final place = items[i];
-                      return InkWell(
-                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => PlaceDetailScreen(place: place))),
-                        child: KtPlaceCard(place: place),
-                      ).animate().fade(duration: 500.ms, delay: (100 * i).ms).slideY(begin: 0.2, curve: Curves.easeOut);
+                    onChanged: (value) {
+                      if (value != null) setState(() => _currentSort = value);
                     },
+                    underline: const SizedBox(),
                   ),
-                ),
-              ],
-            );
-          },
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView.separated(
+                padding: const EdgeInsets.fromLTRB(12, 8, 12, 140.0),
+                itemCount: items.length,
+                separatorBuilder: (_, __) => Divider(height: 24, thickness: 0.5, indent: 16, endIndent: 16, color: Colors.black.withOpacity(0.1)),
+                itemBuilder: (context, i) {
+                  final place = items[i];
+                  return InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => PlaceDetailScreen(place: place))),
+                    child: KtPlaceCard(place: place),
+                  ).animate().fade(duration: 300.ms, delay: (50 * i).ms).slideY(begin: 0.1, curve: Curves.easeOut);
+                  // P.S. Я уменьшил задержки анимации, чтобы список появлялся быстрее
+                },
+              ),
+            ),
+          ],
         );
       },
     );

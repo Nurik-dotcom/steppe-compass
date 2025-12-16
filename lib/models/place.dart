@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:hive/hive.dart';
 part 'place.g.dart';
 
@@ -48,7 +50,8 @@ class Place {
 
   @HiveField(14)
   final int commentsCount;
-
+  @HiveField(15)
+  final String? phone;
   Place({
     required this.id,
     required this.name,
@@ -65,6 +68,7 @@ class Place {
     required this.regionId,
     this.likesCount = 0,
     this.commentsCount = 0,
+    this.phone,
   });
 
 
@@ -105,6 +109,9 @@ class Place {
       regionId: (j['regionId'] ?? '').toString(),
       likesCount: _toInt(j['likesCount']),
       commentsCount: _toInt(j['commentsCount']),
+      phone: (j['phone'] == null || j['phone'].toString().trim().isEmpty)
+          ? null
+          : j['phone'].toString().trim(),
     );
   }
 
@@ -124,5 +131,6 @@ class Place {
     'regionId': regionId,
     'likesCount': likesCount,
     'commentsCount': commentsCount,
+    'phone': phone,
   };
 }

@@ -94,15 +94,12 @@ class KtPlaceCard extends StatelessWidget {
                       const Icon(Icons.favorite, size: 22, color: Colors.redAccent),
                       const SizedBox(width: 6),
 
-                      StreamBuilder<int>(
-                        stream: likesRemote.likeCountStream(place.id),
-                        builder: (_, snap) => Text(
-                          '${snap.data ?? 0}',
-                          style: const TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.redAccent,
-                          ),
+                      Text(
+                        '${place.likesCount}', // Берем значение прямо из модели Hive
+                        style: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.redAccent,
                         ),
                       ),
 

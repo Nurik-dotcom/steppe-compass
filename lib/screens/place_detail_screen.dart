@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
+import '../utils/call_utils.dart';
 
 import '/services/image_gallery_screen.dart';
 import 'package:flutter/material.dart';
@@ -223,6 +224,57 @@ class _ContentSheet extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Text(place.description, style: textTheme.bodyMedium?.copyWith(fontFamily: 'PlayfairDisplay', fontSize: 14, height: 1.6)),
         ),
+        // ✅ Блок "Позвонить" (показываем только если телефон есть)
+        // ✅ Блок "Позвонить" (показываем только если телефон есть)
+        if (place.phone != null && place.phone!.trim().isNotEmpty) ...[
+          const Divider(height: 1, indent: 20, endIndent: 20),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
+            child: Text(
+              'Контакты',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(fontFamily: 'PlayfairDisplay'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: InkWell(
+              onTap: () => callPhone(context, place.phone!),
+              borderRadius: BorderRadius.circular(16),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                decoration: BoxDecoration(
+                  color: kBackgroundColor.withOpacity(0.35),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: Colors.black12),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.phone, color: kPrimaryColor),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        place.phone!,
+                        style: const TextStyle(
+                          fontFamily: 'PlayfairDisplay',
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.w700,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
+                    const Icon(Icons.call, color: kPrimaryColor),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+        ],
+
+
         if (place.videoUrl != null && rutubeId != null)
           _VideoSection(videoUrl: place.videoUrl!, rutubeId: rutubeId!, showVideo: showVideo, onToggleVideo: onToggleVideo),
         if (place.latitude != null && place.longitude != null)
