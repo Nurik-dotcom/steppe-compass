@@ -73,4 +73,5 @@ class DefaultFirebaseOptions {
     authDomain: 'steppe-compas.firebaseapp.com',
     storageBucket: 'steppe-compas.firebasestorage.app',
   );
+
 }

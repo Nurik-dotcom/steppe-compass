@@ -59,8 +59,34 @@ class AuthService {
     return true;
   }
 
-  
 
+  Future<bool> refreshEmailSync() async {
+    final u = _fa.currentUser;
+    if (u == null) return false;
+
+    try {
+      // 1. Пытаемся обновить данные
+      await u.reload();
+      final freshUser = _fa.currentUser;
+
+      if (freshUser != null && freshUser.email != null) {
+        // 2. Если всё ок, обновляем базу
+        await _userDoc(freshUser.uid).update({
+          'email': freshUser.email,
+          'updatedAt': FieldValue.serverTimestamp(),
+        });
+        await _pullRemoteProfileToSession();
+        return true; // Успешно синхронизировали
+      }
+    } catch (e) {
+      // Если токен протух, Firebase выдаст ошибку здесь
+      print("Ошибка при обновлении: $e");
+    }
+
+    // Если мы дошли сюда, значит пользователя "выкинуло" или произошла ошибка
+    await logout(); // Чистим локальный Hive
+    return false;
+  }
   
   Future<void> register(String email, String password, {bool isAdmin = false}) async {
     try {
@@ -174,21 +200,36 @@ class AuthService {
     required String currentPassword,
     required String newEmail,
   }) async {
-    // 1. Проверяем текущий пароль
-    final ok = await verifyPassword(currentEmail, currentPassword);
-    if (!ok) throw Exception('Неверный текущий пароль');
+    try {
+      final u = _fa.currentUser;
+      if (u == null) throw Exception('Пользователь не найден');
 
-    final u = _fa.currentUser;
-    if (u == null) throw Exception('Пользователь не найден');
+      // 1. ПЕРЕЗАГРУЖАЕМ данные пользователя, чтобы убедиться, что токен свежий
+      await u.reload();
 
-    // 2. Отправляем письмо для подтверждения на НОВУЮ почту
-    // Метод updateEmail был удален в версии 6.0.0, теперь только так:
-    await u.verifyBeforeUpdateEmail(newEmail);
+      // 2. Проверяем текущий пароль (Reauthentication)
+      // verifyPassword уже вызывает reauthenticateWithCredential внутри — это правильно.
+      final ok = await verifyPassword(currentEmail, currentPassword);
+      if (!ok) throw Exception('Неверный текущий пароль');
 
-    // 3. В этот момент мы НЕ обновляем Firestore, так как почта фактически еще не сменилась.
-    // Она сменится сама в Auth, когда юзер кликнет по ссылке.
-    // Чтобы обновить Firestore, нужно либо слушать userChanges(), либо полагаться на то,
-    // что юзер перезайдет в приложение.
+      // 3. Отправляем письмо для подтверждения
+      // Важно: вызываем это сразу после reauthenticate
+      await u.verifyBeforeUpdateEmail(newEmail);
+
+    } on fb.FirebaseAuthException catch (e) {
+      // Обработка специфичных ошибок Firebase
+      if (e.code == 'requires-recent-login') {
+        throw Exception('Требуется недавний вход в систему. Пожалуйста, перезайдите.');
+      } else if (e.code == 'invalid-email') {
+        throw Exception('Некорректный формат новой почты.');
+      } else if (e.code == 'email-already-in-use') {
+        throw Exception('Эта почта уже занята другим аккаунтом.');
+      } else {
+        throw Exception('Ошибка Firebase: ${e.message}');
+      }
+    } catch (e) {
+      throw Exception('Не удалось отправить запрос на смену почты: $e');
+    }
   }
 
   

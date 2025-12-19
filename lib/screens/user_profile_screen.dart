@@ -1,9 +1,8 @@
-// lib/screens/user_profile_screen.dart
 import 'dart:async';
-import 'dart:convert'; // Для Cloudinary
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http; // Для Cloudinary
-import 'package:image_picker/image_picker.dart'; // Для выбора изображений
+import 'package:http/http.dart' as http;
+import 'package:image_picker/image_picker.dart';
 
 import '../services/auth_service.dart';
 import 'login_screen.dart';
@@ -11,7 +10,6 @@ import 'admin_panel_screen.dart';
 import 'favorites_screen.dart';
 import 'debug_data_screen.dart';
 
-// Firebase
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as fb;
 
@@ -30,19 +28,17 @@ class UserProfileScreen extends StatefulWidget {
 class _UserProfileScreenState extends State<UserProfileScreen> {
   final _auth = AuthService();
 
-  // Контроллеры форм
   final _emailFormKey = GlobalKey<FormState>();
   final _passFormKey = GlobalKey<FormState>();
-  final _profileFormKey = GlobalKey<FormState>(); // <-- Для имени
+  final _profileFormKey = GlobalKey<FormState>();
 
   final _currentEmailC = TextEditingController();
   final _currentPassForEmailC = TextEditingController();
   final _newEmailC = TextEditingController();
   final _currentPassC = TextEditingController();
   final _newPassC = TextEditingController();
-  final _displayNameC = TextEditingController(); // <-- Для имени
+  final _displayNameC = TextEditingController();
 
-  // Состояния UI
   bool _isEditing = false;
   bool _isSaving = false;
 
@@ -73,8 +69,43 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     _newEmailC.dispose();
     _currentPassC.dispose();
     _newPassC.dispose();
-    _displayNameC.dispose(); // <-- Не забываем
+    _displayNameC.dispose();
     super.dispose();
+  }
+
+  // ==== Метод обновления данных ====
+  Future<void> _handleRefresh() async {
+    setState(() => _isSaving = true);
+    try {
+      // Вызываем обновленный метод
+      bool isStillLoggedIn = await _auth.refreshEmailSync();
+
+      if (!mounted) return;
+
+      if (isStillLoggedIn) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Данные профиля обновлены')),
+        );
+      } else {
+        // ЕСЛИ ВЫКИНУЛО:
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Сессия устарела после смены Email. Войдите заново.')),
+        );
+        // Отправляем на логин
+        Navigator.of(context, rootNavigator: true).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (_) => const LoginScreen()),
+              (route) => false,
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Ошибка: $e')),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _isSaving = false);
+    }
   }
 
   _DayTime _getDayTime(DateTime now) {
@@ -94,8 +125,6 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     }
   }
 
-  // ==== Actions ==== //
-
   Future<void> _logout() async {
     final confirm = await showDialog<bool>(context: context, builder: (ctx) => AlertDialog(title: const Text('Выйти из аккаунта?'), content: const Text('Вы будете перенаправлены на экран входа.'), actions: [TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Отмена')), ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Выйти'))]));
     if (confirm != true) return;
@@ -105,14 +134,13 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
   }
 
   void _showChangeEmailDialog() {
-    showDialog(context: context, builder: (ctx) => AlertDialog(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)), title: const Text("Изменить Email"), content: Form(key: _emailFormKey, child: SingleChildScrollView(child: Column(mainAxisSize: MainAxisSize.min, children: [TextFormField(controller: _currentEmailC, decoration: const InputDecoration(labelText: "Текущий Email"), validator: (v) => v == null || v.trim().isEmpty ? "Введите текущий email" : null), TextFormField(controller: _currentPassForEmailC, obscureText: true, decoration: const InputDecoration(labelText: "Пароль"), validator: (v) => v == null || v.isEmpty ? "Введите пароль" : null), TextFormField(controller: _newEmailC, decoration: const InputDecoration(labelText: "Новый Email"), validator: (v) => v == null || v.trim().isEmpty ? "Введите новый email" : null)]))), actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Отмена")), ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: _kButtonBg, foregroundColor: _kButtonText), onPressed: () async { if (!_emailFormKey.currentState!.validate()) return; FocusScope.of(context).unfocus(); try { await _auth.updateEmail(currentEmail: _currentEmailC.text.trim(), currentPassword: _currentPassForEmailC.text, newEmail: _newEmailC.text.trim()); if (!mounted) return; Navigator.pop(ctx); ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Ссылка для подтверждения отправлена на новый email'))); } catch (e) { if (!mounted) return; ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString()))); }}, child: const Text("Сохранить"))]));
+    showDialog(context: context, builder: (ctx) => AlertDialog(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)), title: const Text("Изменить Email"), content: Form(key: _emailFormKey, child: SingleChildScrollView(child: Column(mainAxisSize: MainAxisSize.min, children: [TextFormField(controller: _currentEmailC, decoration: const InputDecoration(labelText: "Текущий Email"), validator: (v) => v == null || v.trim().isEmpty ? "Введите текущий email" : null), TextFormField(controller: _currentPassForEmailC, obscureText: true, decoration: const InputDecoration(labelText: "Пароль"), validator: (v) => v == null || v.isEmpty ? "Введите пароль" : null), TextFormField(controller: _newEmailC, decoration: const InputDecoration(labelText: "Новый Email"), validator: (v) => v == null || v.trim().isEmpty ? "Введите новый email" : null)]))), actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Отмена")), ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: _kButtonBg, foregroundColor: _kButtonText), onPressed: () async { if (!_emailFormKey.currentState!.validate()) return; FocusScope.of(context).unfocus(); try { await _auth.updateEmail(currentEmail: _currentEmailC.text.trim(), currentPassword: _currentPassForEmailC.text, newEmail: _newEmailC.text.trim()); if (!mounted) return; Navigator.pop(ctx); ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Ссылка для подтверждения отправлена на новый email. После подтверждения нажмите кнопку Обновить в профиле.'))); } catch (e) { if (!mounted) return; ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString()))); }}, child: const Text("Сохранить"))]));
   }
 
   void _showChangePasswordDialog() {
     showDialog(context: context, builder: (ctx) => AlertDialog(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)), title: const Text("Изменить пароль"), content: Form(key: _passFormKey, child: SingleChildScrollView(child: Column(mainAxisSize: MainAxisSize.min, children: [TextFormField(controller: _currentEmailC, readOnly: true, decoration: const InputDecoration(labelText: "Email")), TextFormField(controller: _currentPassC, obscureText: true, decoration: const InputDecoration(labelText: "Текущий пароль"), validator: (v) => v == null || v.isEmpty ? "Введите текущий пароль" : null), TextFormField(controller: _newPassC, obscureText: true, decoration: const InputDecoration(labelText: "Новый пароль"), validator: (v) => v == null || v.length < 6 ? "Минимум 6 символов" : null)]))), actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Отмена")), ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: _kButtonBg, foregroundColor: _kButtonText), onPressed: () async { if (!_passFormKey.currentState!.validate()) return; FocusScope.of(context).unfocus(); try { await _auth.updatePassword(currentPassword: _currentPassC.text, newPassword: _newPassC.text, email: _currentEmailC.text.trim()); if (!mounted) return; Navigator.pop(ctx); ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Пароль обновлён'))); } catch (e) { if (!mounted) return; ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString()))); }}, child: const Text("Сохранить"))]));
   }
 
-  // ==== Новые методы для профиля ==== //
   Future<void> _saveProfile() async {
     if (!_profileFormKey.currentState!.validate()) return;
     FocusScope.of(context).unfocus();
@@ -133,10 +161,8 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     if (image == null) return;
     setState(() => _isSaving = true);
     try {
-      // ▼▼▼ ВАЖНО: ЗАМЕНИТЕ ЭТИ ДАННЫЕ НА ВАШИ ▼▼▼
       const cloudName = 'dzlwxb5nl';
       const uploadPreset = 'steppe-compass';
-
 
       final url = Uri.parse('https://api.cloudinary.com/v1_1/$cloudName/image/upload');
       final request = http.MultipartRequest('POST', url)
@@ -163,7 +189,6 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     }
   }
 
-  // ==== UI helpers ==== //
   Widget _buildProfileCard({ required IconData icon, required String title, required VoidCallback onTap, }) {
     return Container(margin: const EdgeInsets.symmetric(vertical: 8), child: InkWell(borderRadius: BorderRadius.circular(16), onTap: onTap, child: Container(padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16), decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: const Offset(0, 4))]), child: Row(children: [Icon(icon, size: 26, color: Colors.teal), const SizedBox(width: 18), Expanded(child: Text(title, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: Colors.black87))), const Icon(Icons.arrow_forward_ios_rounded, size: 18, color: Colors.black38)]))));
   }
@@ -171,6 +196,96 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
   @override
   Widget build(BuildContext context) {
     final fbUser = fb.FirebaseAuth.instance.currentUser;
-    return AnimatedContainer(duration: const Duration(milliseconds: 600), curve: Curves.easeInOut, decoration: _decorationForTime(_currentDayTime), child: Scaffold(backgroundColor: Colors.transparent, appBar: AppBar(elevation: 0, backgroundColor: Colors.transparent, centerTitle: true, title: const Text("Профиль", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white))), body: fbUser == null ? const Center(child: Text("Вы не авторизованы")) : StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(stream: FirebaseFirestore.instance.collection('users').doc(fbUser.uid).snapshots(), builder: (context, snap) { if (snap.connectionState == ConnectionState.waiting) { return const Center(child: CircularProgressIndicator()); } final data = snap.data?.data() ?? <String, dynamic>{}; final email = (data['email'] as String?) ?? fbUser.email ?? ''; final displayName = (data['displayName'] as String?) ?? fbUser.displayName ?? ''; final role = (data['role'] as String?) ?? 'user'; final isAdmin = role == 'admin'; if (_currentEmailC.text.isEmpty && email.isNotEmpty) _currentEmailC.text = email; return ListView(padding: const EdgeInsets.all(16), children: [const SizedBox(height: 20), Center(child: Form(key: _profileFormKey, child: Column(children: [Stack(alignment: Alignment.bottomRight, children: [CircleAvatar(radius: 45, backgroundImage: fbUser.photoURL != null && fbUser.photoURL!.isNotEmpty ? NetworkImage(fbUser.photoURL!) : const AssetImage('assets/images/avatar_placeholder.jpg') as ImageProvider), Material(color: Colors.teal, shape: const CircleBorder(), clipBehavior: Clip.antiAlias, child: InkWell(onTap: _isSaving ? null : _changeAvatar, child: const Padding(padding: EdgeInsets.all(6.0), child: Icon(Icons.edit, color: Colors.white, size: 18))))]), const SizedBox(height: 12), if (_isEditing) TextFormField(controller: _displayNameC, textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white), decoration: const InputDecoration(isDense: true, hintText: "Ваше имя", hintStyle: TextStyle(color: Colors.white70), border: InputBorder.none), validator: (v) => (v == null || v.trim().isEmpty) ? 'Имя не может быть пустым' : null) else Text(displayName.isNotEmpty ? displayName : "Без имени", style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)), Text(email, style: const TextStyle(fontSize: 14, color: Colors.white70))]))), const SizedBox(height: 16), if (_isSaving) const Center(child: Padding(padding: EdgeInsets.all(8.0), child: CircularProgressIndicator(color: Colors.white))) else if (_isEditing) Row(mainAxisAlignment: MainAxisAlignment.center, children: [TextButton(onPressed: () => setState(() => _isEditing = false), child: const Text("Отмена", style: TextStyle(color: Colors.white))), const SizedBox(width: 16), ElevatedButton.icon(onPressed: _saveProfile, icon: const Icon(Icons.save), label: const Text("Сохранить"))]) else IconButton(icon: const Icon(Icons.edit, color: Colors.white), onPressed: () { _displayNameC.text = fb.FirebaseAuth.instance.currentUser?.displayName ?? ''; setState(() => _isEditing = true); }), const SizedBox(height: 16), _buildProfileCard(icon: Icons.favorite, title: "Избранное", onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_) => const FavoritesScreen())); }), _buildProfileCard(icon: Icons.email, title: "Изменить Email", onTap: _showChangeEmailDialog), _buildProfileCard(icon: Icons.lock, title: "Изменить Пароль", onTap: _showChangePasswordDialog), if (isAdmin) _buildProfileCard(icon: Icons.admin_panel_settings, title: "Админ-панель", onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminPanelScreen())); }), if (isAdmin) _buildProfileCard(icon: Icons.bug_report, title: "Отладка", onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_) => const DebugDataScreen())); }), const SizedBox(height: 16), ElevatedButton.icon(style: ElevatedButton.styleFrom(backgroundColor: Colors.white, foregroundColor: Colors.redAccent, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)), padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24)), icon: const Icon(Icons.logout), label: const Text("Выйти", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), onPressed: _logout)]); })));
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 600),
+      curve: Curves.easeInOut,
+      decoration: _decorationForTime(_currentDayTime),
+      child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            centerTitle: true,
+            title: const Text("Профиль", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white)),
+            actions: [
+              // Кнопка обновления в AppBar
+              IconButton(
+                icon: const Icon(Icons.refresh, color: Colors.white),
+                onPressed: _isSaving ? null : _handleRefresh,
+                tooltip: "Обновить данные",
+              ),
+            ],
+          ),
+          body: fbUser == null
+              ? const Center(child: Text("Вы не авторизованы"))
+              : StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+              stream: FirebaseFirestore.instance.collection('users').doc(fbUser.uid).snapshots(),
+              builder: (context, snap) {
+                if (snap.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+
+                final data = snap.data?.data() ?? <String, dynamic>{};
+                final email = (data['email'] as String?) ?? fbUser.email ?? '';
+                final displayName = (data['displayName'] as String?) ?? fbUser.displayName ?? '';
+                final role = (data['role'] as String?) ?? 'user';
+                final isAdmin = role == 'admin';
+
+                // Если текстовое поле пустое, подтягиваем email из базы
+                if (_currentEmailC.text.isEmpty && email.isNotEmpty) _currentEmailC.text = email;
+
+                return RefreshIndicator(
+                  onRefresh: _handleRefresh, // Pull-to-refresh
+                  color: Colors.teal,
+                  child: ListView(
+                      padding: const EdgeInsets.all(16),
+                      physics: const AlwaysScrollableScrollPhysics(), // Нужно для RefreshIndicator
+                      children: [
+                        const SizedBox(height: 20),
+                        Center(child: Form(key: _profileFormKey, child: Column(children: [
+                          Stack(alignment: Alignment.bottomRight, children: [
+                            CircleAvatar(
+                                radius: 45,
+                                backgroundImage: fbUser.photoURL != null && fbUser.photoURL!.isNotEmpty
+                                    ? NetworkImage(fbUser.photoURL!)
+                                    : const AssetImage('assets/images/avatar_placeholder.jpg') as ImageProvider
+                            ),
+                            Material(color: Colors.teal, shape: const CircleBorder(), clipBehavior: Clip.antiAlias, child: InkWell(onTap: _isSaving ? null : _changeAvatar, child: const Padding(padding: EdgeInsets.all(6.0), child: Icon(Icons.edit, color: Colors.white, size: 18))))
+                          ]),
+                          const SizedBox(height: 12),
+                          if (_isEditing)
+                            TextFormField(controller: _displayNameC, textAlign: TextAlign.center, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white), decoration: const InputDecoration(isDense: true, hintText: "Ваше имя", hintStyle: TextStyle(color: Colors.white70), border: InputBorder.none), validator: (v) => (v == null || v.trim().isEmpty) ? 'Имя не может быть пустым' : null)
+                          else
+                            Text(displayName.isNotEmpty ? displayName : "Без имени", style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                          Text(email, style: const TextStyle(fontSize: 14, color: Colors.white70))
+                        ]))),
+                        const SizedBox(height: 16),
+                        if (_isSaving) const Center(child: Padding(padding: EdgeInsets.all(8.0), child: CircularProgressIndicator(color: Colors.white)))
+                        else if (_isEditing) Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                          TextButton(onPressed: () => setState(() => _isEditing = false), child: const Text("Отмена", style: TextStyle(color: Colors.white))),
+                          const SizedBox(width: 16),
+                          ElevatedButton.icon(onPressed: _saveProfile, icon: const Icon(Icons.save), label: const Text("Сохранить"))
+                        ])
+                        else IconButton(icon: const Icon(Icons.edit, color: Colors.white), onPressed: () { _displayNameC.text = fb.FirebaseAuth.instance.currentUser?.displayName ?? ''; setState(() => _isEditing = true); }),
+                        const SizedBox(height: 16),
+                        _buildProfileCard(icon: Icons.favorite, title: "Избранное", onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_) => const FavoritesScreen())); }),
+                        _buildProfileCard(icon: Icons.email, title: "Изменить Email", onTap: _showChangeEmailDialog),
+                        _buildProfileCard(icon: Icons.lock, title: "Изменить Пароль", onTap: _showChangePasswordDialog),
+                        if (isAdmin) _buildProfileCard(icon: Icons.admin_panel_settings, title: "Админ-панель", onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminPanelScreen())); }),
+                        if (isAdmin) _buildProfileCard(icon: Icons.bug_report, title: "Отладка", onTap: () { Navigator.push(context, MaterialPageRoute(builder: (_) => const DebugDataScreen())); }),
+                        const SizedBox(height: 16),
+                        ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(backgroundColor: Colors.white, foregroundColor: Colors.redAccent, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)), padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24)),
+                            icon: const Icon(Icons.logout),
+                            label: const Text("Выйти", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                            onPressed: _logout
+                        )
+                      ]
+                  ),
+                );
+              }
+          )
+      ),
+    );
   }
 }
